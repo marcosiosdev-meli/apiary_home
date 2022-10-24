@@ -1,0 +1,2548 @@
+FORMAT: 1A
+HOST: https://polls.apiblueprint.org/
+
+# Marcos Felipe
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Home Collection [/home?page_id=mp_home]
+
+### Get home [GET]
+
++ Response 200 (application/json)
+
+        {
+            "header":{
+               "title":"Olá, Front",
+               "link":"mercadopago://webview/?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmercado-pontos%23origin%3Dwidget_header\u0026title=Mercado%20Pontos\u0026use_web_title=false\u0026mp_back=menu\u0026loading_mode=none\u0026authentication_mode=required",
+               "buttons":[
+                  {
+                     "id":"help",
+                     "link":"mercadopago://cx/help?from=home_mp",
+                     "accessibility_text":"Ajuda",
+                     "icon":"wallet_home_help_header",
+                     "event_data":{
+                        "id":"help",
+                        "link":"mercadopago://cx/help?from=home_mp"
+                     }
+                  },
+                  {
+                     "id":"data",
+                     "title":"Pix",
+                     "link":"mercadopago://money-out/accounts/pix/home?from=home_mp",
+                     "accessibility_text":"Pix",
+                     "icon":"wallet_home_pix_header",
+                     "event_data":{
+                        "id":"data",
+                        "link":"mercadopago://money-out/accounts/pix/home?from=home_mp"
+                     }
+                  }
+               ],
+               "accessibility_text":"Olá, Front Nível 1",
+               "event_data":{
+                  "link":"mercadopago://webview/?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmercado-pontos%23origin%3Dwidget_header\u0026title=Mercado%20Pontos\u0026use_web_title=false\u0026mp_back=menu\u0026loading_mode=none\u0026authentication_mode=required",
+                  "buttons":[
+                     "help",
+                     "data"
+                  ]
+               },
+               "avatar":{
+                  "loyalty":{
+                     "percentage_level":0,
+                     "level":1,
+                     "color_level":"#1DBA56",
+                     "fill":"#FFFFFF",
+                     "empty":"#30FFFFFF"
+                  }
+               }
+            },
+            "items":[
+            {
+                    "ordinal": 1,
+                    "id": "banking_v2",
+                    "type": "BANKING_V2",
+                    "partial": false,
+                    "content": {
+                        "items": [
+                            {
+                                "content": {
+                                    "accessibility_text": "472 reais com 33 centavos",
+                                    "amount": {
+                                        "currency_symbol": "R$",
+                                        "decimal_separator": ",",
+                                        "formatted_amount": "472",
+                                        "formatted_cents": "33"
+                                    },
+                                    "event_data": {
+                                        "balance_histogram": 3,
+                                        "hidden": false,
+                                        "pending_balance": false
+                                    },
+                                    "hidden": {
+                                        "accessibility_text": "Contenido oculto",
+                                        "amount": {
+                                            "currency_symbol": "R$",
+                                            "decimal_separator": "",
+                                            "formatted_amount": "***",
+                                            "formatted_cents": ""
+                                        },
+                                        "event_data": {
+                                            "balance_histogram": 3,
+                                            "hidden": true,
+                                            "pending_balance": false
+                                        },
+                                        "hide_button": {
+                                            "accessibility_text": "Mostrar saldo",
+                                            "icon": "wallet_home_closed_eye"
+                                        },
+                                        "link": "mercadopago://my-money?from=home_mp",
+                                        "pill": {
+                                            "accessibility_text": "100% CDI",
+                                            "background_color": "#1a00a650",
+                                            "icon": "wallet_home_asset_pill_up",
+                                            "text": "100% CDI",
+                                            "text_color": "#00A650"
+                                        }
+                                    },
+                                    "hide_button": {
+                                        "accessibility_text": "Ocultar saldo",
+                                        "icon": "wallet_home_opened_eye"
+                                    },
+                                    "link": "mercadopago://my-money?from=home_mp",
+                                    "pill": {
+                                        "accessibility_text": "100% CDI",
+                                        "background_color": "#1a00a650",
+                                        "icon": "wallet_home_asset_pill_up",
+                                        "text": "100% CDI",
+                                        "text_color": "#00A650"
+                                    }
+                                },
+                                "id": "balance",
+                                "partial": false,
+                                "type": "BALANCE"
+                            },
+                            {
+                                "content": {
+                                    "event_data": {
+                                        "shortcut_ids": [
+                                            "money_in_dynamic",
+                                            "money_out_dynamic",
+                                            "money_cash_out_dynamic",
+                                            "credits_action_dynamic"
+                                        ]
+                                    },
+                                    "items": [
+                                        {
+                                            "accessibility_text": "Depositar",
+                                            "content_id": "general_mlb_dynamic",
+                                            "event_data": {
+                                                "component_id": "money_in",
+                                                "content_id": "general_mlb_dynamic",
+                                                "enabled": true,
+                                                "position": 0
+                                            },
+                                            "id": "money_in_dynamic",
+                                            "image_style": {
+                                                "background_color": "#1A479AD1",
+                                                "background_color_pressed": "#33479AD1",
+                                                "text_color": "#009EE3"
+                                            },
+                                            "link": "mercadopago://moneyin/select_method",
+                                            "title": "Depositar"
+                                        },
+                                        {
+                                            "accessibility_text": "Transferir",
+                                            "content_id": "general_mlb_dynamic",
+                                            "event_data": {
+                                                "component_id": "money_out",
+                                                "content_id": "general_mlb_dynamic",
+                                                "enabled": true,
+                                                "position": 1
+                                            },
+                                            "id": "money_out_dynamic",
+                                            "image_style": {
+                                                "background_color": "#1A479AD1",
+                                                "background_color_pressed": "#33479AD1",
+                                                "text_color": "#009EE3"
+                                            },
+                                            "link": "mercadopago://withdraw/",
+                                            "title": "Transferir"
+                                        },
+                                        {
+                                            "accessibility_text": "Sacar",
+                                            "content_id": "general_mlb_dynamic",
+                                            "event_data": {
+                                                "component_id": "money_cash_out",
+                                                "content_id": "general_mlb_dynamic",
+                                                "enabled": true,
+                                                "position": 2
+                                            },
+                                            "id": "money_cash_out_dynamic",
+                                            "image_style": {
+                                                "background_color": "#1A479AD1",
+                                                "background_color_pressed": "#33479AD1",
+                                                "text_color": "#009EE3"
+                                            },
+                                            "link": "mercadopago://cashout/hub",
+                                            "title": "Sacar"
+                                        },
+                                        {
+                                            "accessibility_text": "Empréstimo",
+                                            "content_id": "general_mlb_dynamic",
+                                            "event_data": {
+                                                "component_id": "credits_action",
+                                                "content_id": "general_mlb_dynamic",
+                                                "enabled": true,
+                                                "position": 3
+                                            },
+                                            "id": "credits_action_dynamic",
+                                            "image_style": {
+                                                "background_color": "#1A479AD1",
+                                                "background_color_pressed": "#33479AD1",
+                                                "text_color": "#009EE3"
+                                            },
+                                            "link": "mercadopago://webview/?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcredits%2Fhub%3Fsk%3D8FYeAHSc%23from%3Dhome_mp%26additional_info%3Dmain_action",
+                                            "title": "Empréstimo"
+                                        }
+                                    ],
+                                    "items_format": "dynamic"
+                                },
+                                "id": "actions",
+                                "partial": false,
+                                "type": "ACTIONS"
+                            },
+                            {
+                                "content": {
+                                    "background_color": "#232A37",
+                                    "background_image": "card_row_background_hybrid",
+                                    "event_data": {},
+                                    "sections": [
+                                        {
+                                            "type": "buttons",
+                                            "value": {
+                                                "buttons": [
+                                                    {
+                                                        "type": "standard_button",
+                                                        "value": {
+                                                            "accessibility_text": "Cartão virtual",
+                                                            "animation_icon": "",
+                                                            "bottom_text": {
+                                                                "alignment": "",
+                                                                "color": "#FFFFFF",
+                                                                "font": "ProximaNova-Semibold",
+                                                                "size": 12,
+                                                                "text": "virtual"
+                                                            },
+                                                            "component_id": "virtual",
+                                                            "event_data": {
+                                                                "card_status": "no-card"
+                                                            },
+                                                            "icon": "card_row_virtual_card",
+                                                            "link": "mercadopago://cards-request/hybrid/virtual/init-point?from=home_mp",
+                                                            "single_text": {
+                                                                "alignment": "",
+                                                                "color": "#FFFFFF",
+                                                                "font": "ProximaNova-Semibold",
+                                                                "size": 12,
+                                                                "text": "Cartão virtual"
+                                                            },
+                                                            "top_text": {
+                                                                "alignment": "",
+                                                                "color": "#FFFFFF",
+                                                                "font": "ProximaNova-Regular",
+                                                                "size": 10,
+                                                                "text": "Cartão"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "nfc_button",
+                                                        "value": {
+                                                            "card_status": {
+                                                                "available_mode": null,
+                                                                "business_mode": null,
+                                                                "card_id": null,
+                                                                "has_active_nfc_card": false,
+                                                                "has_nfc_card": false,
+                                                                "has_pin": false,
+                                                                "priority": null
+                                                            },
+                                                            "semaphore": {
+                                                                "configured": {
+                                                                    "accessibility_text": "Pagar com celular por aproximação",
+                                                                    "animation_icon": "nfc_ready",
+                                                                    "bottom_text": {
+                                                                        "alignment": "",
+                                                                        "color": "#FFFFFF",
+                                                                        "font": "ProximaNova-Semibold",
+                                                                        "size": 12,
+                                                                        "text": "aproximação"
+                                                                    },
+                                                                    "component_id": "nfc",
+                                                                    "event_data": {
+                                                                        "has_nfc_card": false
+                                                                    },
+                                                                    "icon": "card_row_nfc",
+                                                                    "link": "mercadopago://nfc-payments/payment?from=home_mp",
+                                                                    "modal_link": "mercadopago://nfc-payments/awareness-modal?from=home_mp",
+                                                                    "pulse": false,
+                                                                    "top_text": {
+                                                                        "alignment": "",
+                                                                        "color": "#FFFFFF",
+                                                                        "font": "ProximaNova-Regular",
+                                                                        "size": 10,
+                                                                        "text": "Pagar com celular por"
+                                                                    }
+                                                                },
+                                                                "not_configured": {
+                                                                    "accessibility_text": "Pagar com celular por aproximação",
+                                                                    "animation_icon": "nfc_pulse",
+                                                                    "bottom_text": {
+                                                                        "alignment": "",
+                                                                        "color": "#FFFFFF",
+                                                                        "font": "ProximaNova-Semibold",
+                                                                        "size": 12,
+                                                                        "text": "aproximação"
+                                                                    },
+                                                                    "component_id": "nfc",
+                                                                    "event_data": {
+                                                                        "has_nfc_card": false
+                                                                    },
+                                                                    "icon": "card_row_nfc",
+                                                                    "link": "mercadopago://nfc-payments/onboarding?from=home_mp",
+                                                                    "pulse": true,
+                                                                    "top_text": {
+                                                                        "alignment": "",
+                                                                        "color": "#FFFFFF",
+                                                                        "font": "ProximaNova-Regular",
+                                                                        "size": 10,
+                                                                        "text": "Pagar com celular por"
+                                                                    }
+                                                                },
+                                                                "without_nfc": {
+                                                                    "accessibility_text": "Pagar com celular por aproximação",
+                                                                    "animation_icon": "",
+                                                                    "bottom_text": {
+                                                                        "alignment": "",
+                                                                        "color": "#FFFFFF",
+                                                                        "font": "ProximaNova-Semibold",
+                                                                        "size": 12,
+                                                                        "text": "aproximação"
+                                                                    },
+                                                                    "component_id": "nfc",
+                                                                    "event_data": {
+                                                                        "has_nfc_card": false
+                                                                    },
+                                                                    "icon": "card_row_nfc",
+                                                                    "link": "mercadopago://nfc-payments/crosselling?from=home_mp",
+                                                                    "pulse": false,
+                                                                    "top_text": {
+                                                                        "alignment": "",
+                                                                        "color": "#FFFFFF",
+                                                                        "font": "ProximaNova-Regular",
+                                                                        "size": 10,
+                                                                        "text": "Pagar com celular por"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "highlightedrow",
+                                            "value": {
+                                                "accessibility_text": "Ir para meu Cartão Mercado Pago",
+                                                "background_color": "#33FFFFFF",
+                                                "chevron": true,
+                                                "component_id": "opciones",
+                                                "event_data": {
+                                                    "has_card": false
+                                                },
+                                                "link": "mercadopago://cards-engagement/hybrid/dashboard?from=home_mp",
+                                                "title": {
+                                                    "alignment": "",
+                                                    "color": "#FFFFFF",
+                                                    "font": "ProximaNova-Semibold",
+                                                    "size": 12,
+                                                    "text": "Ir para meu Cartão Mercado Pago"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "id": "mpcard",
+                                "partial": false,
+                                "type": "MPCARD"
+                            }
+                        ],
+                        "spacing": {
+                            "top": 4,
+                            "bottom": 6
+                        }
+                    }
+                },
+                {
+                    "ordinal": 2,
+                    "id": "subaccounts",
+                    "type": "SUBACCOUNTS",
+                    "partial": false,
+                    "content": {
+                        "items": [
+                        {
+                                "content": {
+                                    "accessibility_text": "2 reais com 39 centavos",
+                                    "amount": {
+                                        "currency_symbol": "R$",
+                                        "decimal_separator": ",",
+                                        "formatted_amount": "2",
+                                        "formatted_cents": "39"
+                                    },
+                                    "component_id": "crypto",
+                                    "event_data": {
+                                        "balance_histogram": 1,
+                                        "hidden": false,
+                                        "position": 1
+                                    },
+                                    "hidden": {
+                                        "accessibility_text": "Contenido oculto",
+                                        "amount": {
+                                            "currency_symbol": "R$",
+                                            "decimal_separator": "",
+                                            "formatted_amount": "***",
+                                            "formatted_cents": ""
+                                        },
+                                        "component_id": "crypto",
+                                        "event_data": {
+                                            "balance_histogram": 1,
+                                            "hidden": true,
+                                            "position": 1
+                                        },
+                                        "icon": "subaccounts_crypto_icon",
+                                        "link": "mercadopago://webview/?authentication_mode=required&hides_bottom_bar=true&use_web_title=false&title=Criptomoedas&refresh_mode=pull&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcrypto%2F",
+                                        "title": "Criptomoedas"
+                                    },
+                                    "icon": "subaccounts_crypto_icon",
+                                    "link": "mercadopago://webview/?authentication_mode=required&hides_bottom_bar=true&use_web_title=false&title=Criptomoedas&refresh_mode=pull&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcrypto%2F",
+                                    "title": "Criptomoedas"
+                                },
+                                "type": "tenencia"
+                            },
+                            {
+                                "content": {
+                                    "accessibility_text": "2 reais com 39 centavos",
+                                    "amount": {
+                                        "currency_symbol": "R$",
+                                        "decimal_separator": ",",
+                                        "formatted_amount": "2",
+                                        "formatted_cents": "39"
+                                    },
+                                    "component_id": "crypto",
+                                    "event_data": {
+                                        "balance_histogram": 1,
+                                        "hidden": false,
+                                        "position": 1
+                                    },
+                                    "hidden": {
+                                        "accessibility_text": "Contenido oculto",
+                                        "amount": {
+                                            "currency_symbol": "R$",
+                                            "decimal_separator": "",
+                                            "formatted_amount": "***",
+                                            "formatted_cents": ""
+                                        },
+                                        "component_id": "crypto",
+                                        "event_data": {
+                                            "balance_histogram": 1,
+                                            "hidden": true,
+                                            "position": 1
+                                        },
+                                        "icon": "subaccounts_crypto_icon",
+                                        "link": "mercadopago://webview/?authentication_mode=required&hides_bottom_bar=true&use_web_title=false&title=Criptomoedas&refresh_mode=pull&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcrypto%2F",
+                                        "title": "Criptomoedas"
+                                    },
+                                    "icon": "subaccounts_crypto_icon",
+                                    "link": "mercadopago://webview/?authentication_mode=required&hides_bottom_bar=true&use_web_title=false&title=Criptomoedas&refresh_mode=pull&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcrypto%2F",
+                                    "title": "Criptomoedas"
+                                },
+                                "type": "tenencia"
+                            },
+                            {
+                                "content": {
+                                    "accessibility_text": "2 reais com 39 centavos",
+                                    "amount": {
+                                        "currency_symbol": "R$",
+                                        "decimal_separator": ",",
+                                        "formatted_amount": "2",
+                                        "formatted_cents": "39"
+                                    },
+                                    "component_id": "crypto",
+                                    "event_data": {
+                                        "balance_histogram": 1,
+                                        "hidden": false,
+                                        "position": 1
+                                    },
+                                    "hidden": {
+                                        "accessibility_text": "Contenido oculto",
+                                        "amount": {
+                                            "currency_symbol": "R$",
+                                            "decimal_separator": "",
+                                            "formatted_amount": "***",
+                                            "formatted_cents": ""
+                                        },
+                                        "component_id": "crypto",
+                                        "event_data": {
+                                            "balance_histogram": 1,
+                                            "hidden": true,
+                                            "position": 1
+                                        },
+                                        "icon": "subaccounts_crypto_icon",
+                                        "link": "mercadopago://webview/?authentication_mode=required&hides_bottom_bar=true&use_web_title=false&title=Criptomoedas&refresh_mode=pull&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcrypto%2F",
+                                        "title": "Criptomoedas"
+                                    },
+                                    "icon": "subaccounts_crypto_icon",
+                                    "link": "mercadopago://webview/?authentication_mode=required&hides_bottom_bar=true&use_web_title=false&title=Criptomoedas&refresh_mode=pull&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcrypto%2F",
+                                    "title": "Criptomoedas"
+                                },
+                                "type": "tenencia"
+                            },
+                            {
+                                "content": {
+                                    "component_id": "investments_ftu",
+                                    "icon": "wallet_home_investment_mktp_ftu",
+                                    "link": "mercadopago://webview?authentication_mode=required&hides_bottom_bar=true&use_web_title=false&toolbar_elevation=none&url=https://www.mercadopago.com.br/investment-cdb/home",
+                                    "title": "Invista de um jeito fácil"
+                                },
+                                "type": "ftu"
+                            }
+                        ],
+                        "spacing": {
+                            "top": 2,
+                            "bottom": 20
+                        }
+                    }
+                },
+                {
+                    "ordinal": 3,
+                    "id": "shortcuts",
+                    "type": "SHORTCUTS",
+                    "partial": false,
+                    "content": {
+                        "disable_ripple": false,
+                        "event_data": {
+                            "favorite_ids": [
+                                "pix",
+                                "pay_cellphone_recharge",
+                                "pay_services",
+                                "cripto",
+                                "charge_point",
+                                "charge_link"
+                            ],
+                            "has_view_more": true,
+                            "shortcut_ids": [
+                                "business_shortcut"
+                            ]
+                        },
+                        "favorites": [
+                            {
+                                "content_id": "general",
+                                "event_data": {
+                                    "component_id": "pix",
+                                    "content_id": "general",
+                                    "enabled": true,
+                                    "group_id": "pix",
+                                    "group_position": 0,
+                                    "has_aware": false,
+                                    "has_label": false,
+                                    "is_favorite": true,
+                                    "position": 0,
+                                    "user_profile": "payer"
+                                },
+                                "id": "pix",
+                                "image_style": {
+                                    "background_color": "#FFFFFF",
+                                    "icon": "wallet_home_asset_pix_filled",
+                                    "icon_color": "#31DED2"
+                                },
+                                "link": "mercadopago://money-out/accounts/pix/home?additional_info=shortcuts&from=home_mp",
+                                "title": "Área Pix"
+                            },
+                            {
+                                "content_id": "general_mlb",
+                                "event_data": {
+                                    "component_id": "pay_cellphone_recharge",
+                                    "content_id": "general_mlb",
+                                    "enabled": true,
+                                    "group_id": "pay",
+                                    "group_position": 1,
+                                    "has_aware": false,
+                                    "has_label": false,
+                                    "is_favorite": true,
+                                    "position": 1,
+                                    "user_profile": "payer"
+                                },
+                                "id": "pay_cellphone_recharge",
+                                "image_style": {
+                                    "background_color": "#FFFFFF",
+                                    "icon": "wallet_home_shortcuts_pay_cellphone_recharge",
+                                    "icon_color": "#2BB5F1"
+                                },
+                                "link": "mercadopago://cellphone-recharge?additional_info=shortcuts&from=home_mp",
+                                "title": "Recarregar\ncelular"
+                            },
+                            {
+                                "content_id": "general_mlb",
+                                "event_data": {
+                                    "component_id": "pay_services",
+                                    "content_id": "general_mlb",
+                                    "enabled": true,
+                                    "group_id": "pay",
+                                    "group_position": 1,
+                                    "has_aware": false,
+                                    "has_label": false,
+                                    "is_favorite": true,
+                                    "position": 2,
+                                    "user_profile": "payer"
+                                },
+                                "id": "pay_services",
+                                "image_style": {
+                                    "background_color": "#FFFFFF",
+                                    "icon": "wallet_home_shortcuts_pay_services_mlb",
+                                    "icon_color": "#2BB5F1"
+                                },
+                                "link": "mercadopago://bill-payments/?additional_info=shortcuts&from=home_mp&version=2",
+                                "title": "Contas e serviços"
+                            },
+                            {
+                                "content_id": "mp_mlb",
+                                "event_data": {
+                                    "component_id": "cripto",
+                                    "content_id": "mp_mlb",
+                                    "enabled": true,
+                                    "group_id": "money",
+                                    "group_position": 8,
+                                    "has_aware": false,
+                                    "has_label": false,
+                                    "is_favorite": true,
+                                    "position": 3,
+                                    "user_profile": "payer"
+                                },
+                                "id": "cripto",
+                                "image_style": {
+                                    "background_color": "#FFFFFF",
+                                    "icon": "wallet_home_shortcuts_cripto",
+                                    "icon_color": "#444444"
+                                },
+                                "link": "mercadopago://webview/?additional_info=shortcuts&authentication_mode=required&from=home_mp&hides_bottom_bar=true&refresh_mode=pull&title=Criptomoedas&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcrypto%2F&use_web_title=false",
+                                "title": "Cripto"
+                            },
+                            {
+                                "content_id": "general_mlb",
+                                "event_data": {
+                                    "component_id": "charge_point",
+                                    "content_id": "general_mlb",
+                                    "enabled": true,
+                                    "group_id": "charge",
+                                    "group_position": 2,
+                                    "has_aware": false,
+                                    "has_label": false,
+                                    "is_favorite": true,
+                                    "position": 4,
+                                    "user_profile": "payer"
+                                },
+                                "id": "charge_point",
+                                "image_style": {
+                                    "background_color": "#FFFFFF",
+                                    "icon": "wallet_home_shortcuts_charge_point_mlm_mlb_v2",
+                                    "icon_color": "#475EE8"
+                                },
+                                "link": "mercadopago://start_new_payment?additional_info=shortcuts&from=home_mp&method=point",
+                                "title": "Cobrar\ncom Point"
+                            },
+                            {
+                                "content_id": "webview_mlb_ios",
+                                "event_data": {
+                                    "component_id": "charge_link",
+                                    "content_id": "webview_mlb_ios",
+                                    "enabled": true,
+                                    "group_id": "charge",
+                                    "group_position": 2,
+                                    "has_aware": false,
+                                    "has_label": false,
+                                    "is_favorite": true,
+                                    "position": 5,
+                                    "user_profile": "payer"
+                                },
+                                "id": "charge_link",
+                                "image_style": {
+                                    "background_color": "#FFFFFF",
+                                    "icon": "wallet_home_shortcuts_charge_link",
+                                    "icon_color": "#475EE8"
+                                },
+                                "link": "mercadopago://webview?OPV=fend&additional_info=shortcuts&from=home_mp&hides_bottom_bar=true&navigation_icon=boton-tulink&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Ftools%2Flist%3Forigin%3Dapp",
+                                "title": "Cobrar com\nlink"
+                            }
+                        ],
+                        "sheet": {
+                            "collections": [
+                                {
+                                    "id": "pix",
+                                    "shortcuts": [
+                                        {
+                                            "content_id": "general",
+                                            "event_data": {
+                                                "component_id": "pix",
+                                                "content_id": "general",
+                                                "enabled": true,
+                                                "group_id": "pix",
+                                                "group_position": 0,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 0,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pix",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_asset_pix_filled",
+                                                "icon_color": "#31DED2"
+                                            },
+                                            "link": "mercadopago://money-out/accounts/pix/home?additional_info=shortcuts&from=home_mp",
+                                            "title": "Área Pix"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "pix_money_transfer",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "pix",
+                                                "group_position": 0,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 1,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pix_money_transfer",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_money_out",
+                                                "icon_color": "#31DED2"
+                                            },
+                                            "link": "mercadopago://money-out/home?additional_info=shortcuts&from=home_mp",
+                                            "title": "Transferir dinheiro"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "pix_copy_paste",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "pix",
+                                                "group_position": 0,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 2,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pix_copy_paste",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_asset_copy",
+                                                "icon_color": "#31DED2"
+                                            },
+                                            "link": "mercadopago://webview/?additional_info=shortcuts&authentication_mode=required&back_action=close&from=home_mp&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmoney-out%2Ftransfer%2Fpaste-qr",
+                                            "title": "Copia e cola Pix"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "pix_qr",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "pix",
+                                                "group_position": 0,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 3,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pix_qr",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_asset_qr",
+                                                "icon_color": "#31DED2"
+                                            },
+                                            "link": "mercadopago://instore/scan_qr/?additional_info=shortcuts&from=home_mp",
+                                            "title": "Pagar com QR Pix"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "pix_deposit_money",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "pix",
+                                                "group_position": 0,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 4,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pix_deposit_money",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_money_in",
+                                                "icon_color": "#31DED2"
+                                            },
+                                            "link": "mercadopago://money-in/pix_keys?additional_info=shortcuts&from=home_mp",
+                                            "title": "Depositar dinheiro"
+                                        }
+                                    ],
+                                    "title": "Fazer e receber um Pix"
+                                },
+                                {
+                                    "id": "pay",
+                                    "shortcuts": [
+                                        {
+                                            "content_id": "general",
+                                            "event_data": {
+                                                "component_id": "pay_qr",
+                                                "content_id": "general",
+                                                "enabled": true,
+                                                "group_id": "pay",
+                                                "group_position": 1,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 0,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pay_qr",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_pay_qr",
+                                                "icon_color": "#2BB5F1"
+                                            },
+                                            "link": "mercadopago://instore/scan_qr?additional_info=shortcuts&from=home_mp",
+                                            "title": "Código\nQR"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "pay_cellphone_recharge",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "pay",
+                                                "group_position": 1,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 1,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pay_cellphone_recharge",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_pay_cellphone_recharge",
+                                                "icon_color": "#2BB5F1"
+                                            },
+                                            "link": "mercadopago://cellphone-recharge?additional_info=shortcuts&from=home_mp",
+                                            "title": "Recarregar\ncelular"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "pay_services",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "pay",
+                                                "group_position": 1,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 2,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pay_services",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_pay_services_mlb",
+                                                "icon_color": "#2BB5F1"
+                                            },
+                                            "link": "mercadopago://bill-payments/?additional_info=shortcuts&from=home_mp&version=2",
+                                            "title": "Contas e serviços"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "pay_transport",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "pay",
+                                                "group_position": 1,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 3,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pay_transport",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_pay_transport",
+                                                "icon_color": "#2BB5F1"
+                                            },
+                                            "link": "mercadopago://transport?additional_info=shortcuts&from=home_mp",
+                                            "title": "Cartão de\ntransporte"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "pay_online_credit",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "pay",
+                                                "group_position": 1,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 4,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pay_online_credit",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_pay_online_credit",
+                                                "icon_color": "#2BB5F1"
+                                            },
+                                            "link": "mercadopago://digital-goods?additional_info=shortcuts&from=home_mp",
+                                            "title": "Comprar\ngift cards"
+                                        },
+                                        {
+                                            "content_id": "general",
+                                            "event_data": {
+                                                "component_id": "pay_shell_box",
+                                                "content_id": "general",
+                                                "enabled": true,
+                                                "group_id": "pay",
+                                                "group_position": 1,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 5,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pay_shell_box",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_pay_shell_box",
+                                                "icon_color": "#2BB5F1"
+                                            },
+                                            "link": "mercadopago://instore/gas_station/shell?additional_info=shortcuts&from=home_mp&marketplace_map=true",
+                                            "title": "Pagar com\nShell Box"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "pay_directv",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "pay",
+                                                "group_position": 1,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 6,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pay_directv",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_pay_directv",
+                                                "icon_color": "#2BB5F1"
+                                            },
+                                            "link": "mercadopago://bill-payments/antenna-recharge?additional_info=shortcuts&from=home_mp",
+                                            "title": "Recarregar\nTV pré-paga"
+                                        },
+                                        {
+                                            "content_id": "default_mlb_2_173",
+                                            "event_data": {
+                                                "component_id": "pay_highway",
+                                                "content_id": "default_mlb_2_173",
+                                                "enabled": true,
+                                                "group_id": "pay",
+                                                "group_position": 1,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 7,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pay_highway",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_pay_highway_v2",
+                                                "icon_color": "#2BB5F1"
+                                            },
+                                            "link": "mercadopago://sp-prepaid?additional_info=shortcuts&from=home_mp&init_vertical=toll",
+                                            "title": "Ultrapasse"
+                                        },
+                                        {
+                                            "content_id": "default_mlb",
+                                            "event_data": {
+                                                "component_id": "pay_donate",
+                                                "content_id": "default_mlb",
+                                                "enabled": true,
+                                                "group_id": "pay",
+                                                "group_position": 1,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 8,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "pay_donate",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_pay_donate",
+                                                "icon_color": "#2BB5F1"
+                                            },
+                                            "link": "mercadopago://webview?additional_info=shortcuts&from=home_mp&title=Doar&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fc%2Fhub%2Fong&use_web_title=false",
+                                            "title": "Doar"
+                                        }
+                                    ],
+                                    "title": "Pagar"
+                                },
+                                {
+                                    "id": "charge",
+                                    "shortcuts": [
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "charge_point",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "charge",
+                                                "group_position": 2,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 0,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "charge_point",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_charge_point_mlm_mlb_v2",
+                                                "icon_color": "#475EE8"
+                                            },
+                                            "link": "mercadopago://start_new_payment?additional_info=shortcuts&from=home_mp&method=point",
+                                            "title": "Cobrar\ncom Point"
+                                        },
+                                        {
+                                            "content_id": "webview_mlb_ios",
+                                            "event_data": {
+                                                "component_id": "charge_link",
+                                                "content_id": "webview_mlb_ios",
+                                                "enabled": true,
+                                                "group_id": "charge",
+                                                "group_position": 2,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 1,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "charge_link",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_charge_link",
+                                                "icon_color": "#475EE8"
+                                            },
+                                            "link": "mercadopago://webview?OPV=fend&additional_info=shortcuts&from=home_mp&hides_bottom_bar=true&navigation_icon=boton-tulink&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Ftools%2Flist%3Forigin%3Dapp",
+                                            "title": "Cobrar com\nlink"
+                                        },
+                                        {
+                                            "content_id": "general_mlb_pix",
+                                            "event_data": {
+                                                "component_id": "charge_qr",
+                                                "content_id": "general_mlb_pix",
+                                                "enabled": true,
+                                                "group_id": "charge",
+                                                "group_position": 2,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 2,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "charge_qr",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_charge_qr",
+                                                "icon_color": "#475EE8"
+                                            },
+                                            "link": "mercadopago://start_new_payment?additional_info=shortcuts&from=home_mp&method=qr",
+                                            "title": "Cobrar com\nQR ou Pix"
+                                        },
+                                        {
+                                            "content_id": "general",
+                                            "event_data": {
+                                                "component_id": "charge_caixa",
+                                                "content_id": "general",
+                                                "enabled": true,
+                                                "group_id": "charge",
+                                                "group_position": 2,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 3,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "charge_caixa",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_charge_caixa",
+                                                "icon_color": "#475EE8"
+                                            },
+                                            "link": "mercadopago://start_new_payment?additional_info=shortcuts&from=home_mp&method=caixa",
+                                            "title": "Cobrar com\ndébito Caixa"
+                                        }
+                                    ],
+                                    "title": "Cobrar"
+                                },
+                                {
+                                    "id": "friends",
+                                    "shortcuts": [
+                                        {
+                                            "content_id": "transfer_mlb",
+                                            "event_data": {
+                                                "component_id": "friends_send",
+                                                "content_id": "transfer_mlb",
+                                                "enabled": true,
+                                                "group_id": "friends",
+                                                "group_position": 3,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 0,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "friends_send",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_money_out",
+                                                "icon_color": "#F75CDD"
+                                            },
+                                            "link": "mercadopago://money-out/transfers/home?additional_info=shortcuts&from=home_mp",
+                                            "title": "Transferir\ndinheiro"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "friends_request",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "friends",
+                                                "group_position": 3,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 1,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "friends_request",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_friends_request_v2",
+                                                "icon_color": "#F75CDD"
+                                            },
+                                            "link": "mercadopago://mplayer/money_request?additional_info=shortcuts&from=home_mp",
+                                            "title": "Solicitar\ndinheiro"
+                                        },
+                                        {
+                                            "content_id": "general",
+                                            "event_data": {
+                                                "component_id": "friends_split",
+                                                "content_id": "general",
+                                                "enabled": true,
+                                                "group_id": "friends",
+                                                "group_position": 3,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 2,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "friends_split",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_friends_split",
+                                                "icon_color": "#F75CDD"
+                                            },
+                                            "link": "mercadopago://mplayer/money_split?additional_info=shortcuts&from=home_mp",
+                                            "title": "Dividir\ngastos"
+                                        },
+                                        {
+                                            "content_id": "general",
+                                            "event_data": {
+                                                "component_id": "friends_hub",
+                                                "content_id": "general",
+                                                "enabled": true,
+                                                "group_id": "friends",
+                                                "group_position": 3,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 3,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "friends_hub",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_friends_hub_v2",
+                                                "icon_color": "#F75CDD"
+                                            },
+                                            "link": "mercadopago://mplayer/events?additional_info=shortcuts&from=home_mp",
+                                            "title": "Amigos"
+                                        }
+                                    ],
+                                    "title": "Transferir e solicitar dinheiro"
+                                },
+                                {
+                                    "id": "marketplace",
+                                    "shortcuts": [
+                                        {
+                                            "content_id": "marketplace_mlb",
+                                            "event_data": {
+                                                "component_id": "benefits_discounts",
+                                                "content_id": "marketplace_mlb",
+                                                "enabled": true,
+                                                "group_id": "marketplace",
+                                                "group_position": 4,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 0,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "benefits_discounts",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_discover_stores",
+                                                "icon_color": "#FF7079"
+                                            },
+                                            "link": "mercadopago://discount_center_payers/list?additional_info=shortcuts&from=home_mp#from=/home_wallet/shortcuts",
+                                            "title": "Lojas próximas"
+                                        },
+                                        {
+                                            "content_id": "default_mlb",
+                                            "event_data": {
+                                                "component_id": "marketplace_discounts",
+                                                "content_id": "default_mlb",
+                                                "enabled": true,
+                                                "group_id": "marketplace",
+                                                "group_position": 4,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 1,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "marketplace_discounts",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_benefits_discounts",
+                                                "icon_color": "#FF7079"
+                                            },
+                                            "link": "mercadopago://discount_center_payers/list?additional_info=shortcuts&cluster_id=all_stores_rank&dynamic_discount=true&from=home_mp&skeleton_id=list#from=/home_wallet/shortcuts",
+                                            "title": "Descontos"
+                                        }
+                                    ],
+                                    "title": "Onde comprar"
+                                },
+                                {
+                                    "id": "benefits_v2",
+                                    "shortcuts": [
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "benefits_coupon",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "benefits_v2",
+                                                "group_position": 5,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 0,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "benefits_coupon",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_benefits_coupon",
+                                                "icon_color": "#9B55EA"
+                                            },
+                                            "link": "mercadopago://coupon/input?additional_info=shortcuts&from=home_mp",
+                                            "title": "Inserir\ncupom"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "benefits_loyalty",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "benefits_v2",
+                                                "group_position": 5,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 1,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "benefits_loyalty",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_benefits_loyalty",
+                                                "icon_color": "#9B55EA"
+                                            },
+                                            "link": "mercadopago://loyalty/webview?additional_info=shortcuts&authenticate=true&back_action=close&back_style=menu&from=home_mp&mp_back=menu&swipe_gesture=true&title=Mercado%20Pontos&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmercado-pontos&use_web_title=false",
+                                            "title": "Mercado\nPontos"
+                                        }
+                                    ],
+                                    "title": "Seus benefícios"
+                                },
+                                {
+                                    "id": "mgm",
+                                    "shortcuts": [
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "mgm_point",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "mgm",
+                                                "group_position": 6,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 0,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "mgm_point",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_mgm_point_mlbmlm",
+                                                "icon_color": "#F2AB39"
+                                            },
+                                            "link": "mercadopago://webview?additional_info=shortcuts&from=home_mp&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmp%2Fconvide-e-ganhe%2Fwebview",
+                                            "title": "Recomendar\na Point"
+                                        },
+                                        {
+                                            "content_id": "default_mlb",
+                                            "event_data": {
+                                                "component_id": "mgm_payer",
+                                                "content_id": "default_mlb",
+                                                "enabled": true,
+                                                "group_id": "mgm",
+                                                "group_position": 6,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 1,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "mgm_payer",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_mgm_payer",
+                                                "icon_color": "#F2AB39"
+                                            },
+                                            "link": "mercadopago://mgm/share?additional_info=shortcuts&from=home_mp&program_id=11",
+                                            "title": "Indicar\no app"
+                                        }
+                                    ],
+                                    "title": "Convide e ganhe"
+                                },
+                                {
+                                    "id": "business",
+                                    "shortcuts": [
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "business_dashboard",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "business",
+                                                "group_position": 7,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 0,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "business_dashboard",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_business_dashboard_v2",
+                                                "icon_color": "#578474"
+                                            },
+                                            "link": "mercadopago://dashboard?additional_info=shortcuts&from=home_mp",
+                                            "title": "Métricas do\nseu negócio"
+                                        },
+                                        {
+                                            "content_id": "general_162_mlb",
+                                            "event_data": {
+                                                "component_id": "business_fees_installments",
+                                                "content_id": "general_162_mlb",
+                                                "enabled": true,
+                                                "group_id": "business",
+                                                "group_position": 7,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 1,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "business_fees_installments",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_business_fees_installments_v2",
+                                                "icon_color": "#578474"
+                                            },
+                                            "link": "mercadopago://pricing_section?additional_info=shortcuts&from=home_mp",
+                                            "title": "Custos"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "business_costs_simulator",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "business",
+                                                "group_position": 7,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 2,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "business_costs_simulator",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_business_costs_simulator_v3",
+                                                "icon_color": "#578474"
+                                            },
+                                            "link": "mercadopago://webview/?OPV=fend&additional_info=shortcuts&authentication_mode=required&from=home_mp&title=Simulador%20de%20custos&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcost-simulator&use_web_title=false",
+                                            "title": "Simulador\nde custos"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "business_pos_management",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "business",
+                                                "group_position": 7,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 3,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "business_pos_management",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_business_pos_management_v2",
+                                                "icon_color": "#578474"
+                                            },
+                                            "link": "mercadopago://cash_balance/opt_in?additional_info=shortcuts&from=home_mp",
+                                            "title": "Gestão de\ncaixa"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "business_stores_pos",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "business",
+                                                "group_position": 7,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 4,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "business_stores_pos",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_business_stores_pos_v3",
+                                                "icon_color": "#578474"
+                                            },
+                                            "link": "mercadopago://stores_pos?additional_info=shortcuts&from=home_mp",
+                                            "title": "Lojas e\ncaixas"
+                                        },
+                                        {
+                                            "content_id": "general",
+                                            "event_data": {
+                                                "component_id": "business_colaborators",
+                                                "content_id": "general",
+                                                "enabled": true,
+                                                "group_id": "business",
+                                                "group_position": 7,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 5,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "business_colaborators",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_business_colaborators_v2",
+                                                "icon_color": "#578474"
+                                            },
+                                            "link": "mercadopago://collaborators?additional_info=shortcuts&from=home_mp",
+                                            "title": "Colaboradores"
+                                        },
+                                        {
+                                            "content_id": "general_mlb",
+                                            "event_data": {
+                                                "component_id": "business_catalog",
+                                                "content_id": "general_mlb",
+                                                "enabled": true,
+                                                "group_id": "business",
+                                                "group_position": 7,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 6,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "business_catalog",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_business_catalog_v2",
+                                                "icon_color": "#578474"
+                                            },
+                                            "link": "mercadopago://catalog?additional_info=shortcuts&from=home_mp",
+                                            "title": "Catálogo de\nprodutos"
+                                        },
+                                        {
+                                            "content_id": "mlb_2_124",
+                                            "event_data": {
+                                                "component_id": "business_discounts_admin",
+                                                "content_id": "mlb_2_124",
+                                                "enabled": true,
+                                                "group_id": "business",
+                                                "group_position": 7,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 7,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "business_discounts_admin",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_business_discounts_admin",
+                                                "icon_color": "#578474"
+                                            },
+                                            "link": "mercadopago://webview/?OPV=fend&additional_info=shortcuts&authentication_mode=required&from=home_mp&hides_bottom_bar=true&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Finstore%2Fself-service-discounts%3Ffrom%3Dshortcut&use_web_title=true",
+                                            "title": "Administrar\ncampanhas"
+                                        }
+                                    ],
+                                    "title": "Seu negócio"
+                                },
+                                {
+                                    "id": "money",
+                                    "shortcuts": [
+                                        {
+                                            "content_id": "mp_mlb",
+                                            "event_data": {
+                                                "component_id": "cripto",
+                                                "content_id": "mp_mlb",
+                                                "enabled": true,
+                                                "group_id": "money",
+                                                "group_position": 8,
+                                                "has_aware": false,
+                                                "has_label": false,
+                                                "is_favorite": false,
+                                                "position": 0,
+                                                "user_profile": "payer"
+                                            },
+                                            "id": "cripto",
+                                            "image_style": {
+                                                "background_color": "#FFFFFF",
+                                                "icon": "wallet_home_shortcuts_cripto",
+                                                "icon_color": "#444444"
+                                            },
+                                            "link": "mercadopago://webview/?additional_info=shortcuts&authentication_mode=required&from=home_mp&hides_bottom_bar=true&refresh_mode=pull&title=Criptomoedas&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcrypto%2F&use_web_title=false",
+                                            "title": "Cripto"
+                                        }
+                                    ],
+                                    "title": "Seu dinheiro"
+                                }
+                            ],
+                            "event_data": {
+                                "favorites_ids": null,
+                                "group_ids": [
+                                    "pix",
+                                    "pay",
+                                    "charge",
+                                    "friends",
+                                    "marketplace",
+                                    "benefits_v2",
+                                    "mgm",
+                                    "business",
+                                    "money"
+                                ],
+                                "shortcut_ids": [
+                                    "pix",
+                                    "pix_money_transfer",
+                                    "pix_copy_paste",
+                                    "pix_qr",
+                                    "pix_deposit_money",
+                                    "pay_qr",
+                                    "pay_cellphone_recharge",
+                                    "pay_services",
+                                    "pay_transport",
+                                    "pay_online_credit",
+                                    "pay_shell_box",
+                                    "pay_directv",
+                                    "pay_highway",
+                                    "pay_donate",
+                                    "charge_point",
+                                    "charge_link",
+                                    "charge_qr",
+                                    "charge_caixa",
+                                    "friends_send",
+                                    "friends_request",
+                                    "friends_split",
+                                    "friends_hub",
+                                    "benefits_discounts",
+                                    "marketplace_discounts",
+                                    "benefits_coupon",
+                                    "benefits_loyalty",
+                                    "mgm_point",
+                                    "mgm_payer",
+                                    "business_dashboard",
+                                    "business_fees_installments",
+                                    "business_costs_simulator",
+                                    "business_pos_management",
+                                    "business_stores_pos",
+                                    "business_colaborators",
+                                    "business_catalog",
+                                    "business_discounts_admin",
+                                    "cripto"
+                                ]
+                            },
+                            "favorites": {
+                                "action": {
+                                    "cancel": "Cancelar",
+                                    "edit": "Editar favoritos",
+                                    "save": "Salvar",
+                                    "success": "Pronto! Aproveite seus favoritos agora mesmo"
+                                },
+                                "disable_ftu": false,
+                                "empty_collection_message": "São todos favoritos!",
+                                "header": {
+                                    "edit": "Seus favoritos",
+                                    "ftu": "Seus favoritos",
+                                    "select": "Saiba mais"
+                                },
+                                "max": 6,
+                                "message": {
+                                    "edit": "Você pode escolher até 6 atalhos e ordená-los como quiser.",
+                                    "ftu": "Selecione os atalhos que quiser, \ncustomize seu app!",
+                                    "max_reached": "Você tem 6 atalhos, exclua algum deles antes de adicionar outro."
+                                },
+                                "modal": {
+                                    "primary_button": {
+                                        "text": "Salvar"
+                                    },
+                                    "secondary_button": {
+                                        "text": "Descartar"
+                                    },
+                                    "title": "Você quer salvar as últimas alterações?"
+                                }
+                            },
+                            "force_rehash": true,
+                            "header": {
+                                "title": "Saiba mais"
+                            },
+                            "tracking_info": {
+                                "events": {
+                                    "print": {
+                                        "event_data": {},
+                                        "stream": "component_prints"
+                                    },
+                                    "pull": {
+                                        "event_data": {},
+                                        "stream": "melidata"
+                                    },
+                                    "show": {
+                                        "event_data": {},
+                                        "stream": "melidata"
+                                    }
+                                }
+                            }
+                        },
+                        "shortcuts": [
+                            {
+                                "content_id": "MLB_MP_SHORTCUT-MP_X_CC_MARA_ADQ_ALL_20210804_MARABIERTO",
+                                "event_data": {
+                                    "audience": "consumer_credits_acquisition_2021_mlb",
+                                    "bu": "4",
+                                    "bu_line": "6",
+                                    "component_id": "business_shortcut",
+                                    "content_id": "MLB_MP_SHORTCUT-MP_X_CC_MARA_ADQ_ALL_20210804_MARABIERTO",
+                                    "enabled": true,
+                                    "flow": "40",
+                                    "has_aware": false,
+                                    "has_label": true,
+                                    "is_favorite": false,
+                                    "logic": "campaigns",
+                                    "position": 6,
+                                    "user_profile": "payer"
+                                },
+                                "id": "business_shortcut",
+                                "image_style": {
+                                    "background_color": "#FFFFFF",
+                                    "icon": "ic_navigation_credit"
+                                },
+                                "label": {
+                                    "background_color": "#009EE3",
+                                    "border_color": "#009EE3",
+                                    "text": "NOVO",
+                                    "text_color": "#FFFFFF"
+                                },
+                                "link": "mercadopago://credits-opensea/?sk=NcZemlY1&from=MLB_MP_SHORTCUT-MP_X_CC_MARA_ADQ_ALL_20210804_MARABIERTO",
+                                "title": "Mercado Crédito"
+                            }
+                        ],
+                        "view_more": {
+                            "accessibility_text": "Mostrar mais acessos",
+                            "content_id": "default",
+                            "event_data": {
+                                "component_id": "view_more",
+                                "content_id": "default",
+                                "enabled": true,
+                                "has_aware": false,
+                                "has_label": false,
+                                "is_favorite": false,
+                                "position": 7,
+                                "user_profile": "payer"
+                            },
+                            "id": "view_more",
+                            "image_style": {
+                                "background_color": "#FFFFFF",
+                                "icon": "wallet_home_view_more",
+                                "icon_color": "#595959"
+                            },
+                            "link": "mercadopago://shortcuts_sheet/?section_id=shortcuts",
+                            "title": "Ver mais"
+                        }
+                    }
+                },
+                {
+                    "ordinal": 4,
+                    "id": "ads_top_banner",
+                    "type": "ADS_CAROUSEL",
+                    "partial": false,
+                    "content": {
+                        "experiments": {},
+                        "items": [
+                            {
+                                "content": {
+                                    "actions": {
+                                        "content_link": {
+                                            "action_id": "ativar",
+                                            "event_data": {},
+                                            "link": "mercadopago://webview?authentication_mode=required&url=https://mercadopago.com.br/investment-cdb/home&from=MLB_MP_BANN-MP_XSELL_DACC_ALL_ACT_IND_20220420_CDB",
+                                            "target": "internal_link"
+                                        }
+                                    },
+                                    "background_color": "#00B1EA",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_DACC_ALL_ACT_IND_20220420_CDB",
+                                    "footer": " ",
+                                    "front_image": "xsell_80x80_cdb",
+                                    "header": "INVESTIMENTOS",
+                                    "text_color": "#FFFFFF",
+                                    "title": "COMECE A INVESTIR \nA PARTIR DE R$1",
+                                    "title_border_sprite": "merchengine_home_section_cross_selling_border_sprite_light_blue"
+                                },
+                                "end_date": "2022-08-01T02:59:00Z",
+                                "event_data": {
+                                    "audience": "dogfoodinversionescdb_mlb",
+                                    "bu": "4",
+                                    "bu_line": "3",
+                                    "component_id": "cross_selling_home_mp_0",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_DACC_ALL_ACT_IND_20220420_CDB",
+                                    "flow": "66",
+                                    "logic": "campaigns",
+                                    "position": 0
+                                },
+                                "event_tracking": {
+                                    "click": [],
+                                    "print": []
+                                },
+                                "source": "MERCH",
+                                "start_date": "2022-04-27T13:00:00Z",
+                                "type": "native"
+                            },
+                            {
+                                "content": {
+                                    "actions": {
+                                        "content_link": {
+                                            "action_id": "action_multiproducto",
+                                            "event_data": {},
+                                            "link": "mercadopago://webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fpoint%2Finvite%3Fcode%3DPOINT_XS%26utm_source%3Dapp%26utm_source%3Dapp%26utm_medium%3Dbanner%26utm_campaign%3DMLB_MP_APP_AO_P_X_BANNER_SELL_CONV_APP-MULTIPRODUCTO&from=MLB_MP_BANN-MP_XSELL_W_ALL_ACT_ALL__BUY_POINT",
+                                            "target": "internal_link"
+                                        }
+                                    },
+                                    "background_color": "#2e59af",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_W_ALL_ACT_ALL__BUY_POINT",
+                                    "front_image": "merchengine_home_xselling_multiproducto",
+                                    "header": "POINT",
+                                    "text_color": "#ffffff",
+                                    "title": "ACEITE CARTÕES SEM\nPAGAR ALUGUEL",
+                                    "title_border_sprite": "merchengine_home_section_cross_selling_border_sprite_light_blue"
+                                },
+                                "end_date": "2025-01-01T03:00:00Z",
+                                "event_data": {
+                                    "audience": "all",
+                                    "bu": "4",
+                                    "bu_line": "9",
+                                    "component_id": "cross_selling_home_mp_1",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_W_ALL_ACT_ALL__BUY_POINT",
+                                    "flow": "49",
+                                    "logic": "campaigns",
+                                    "position": 1
+                                },
+                                "event_tracking": {
+                                    "click": [],
+                                    "print": []
+                                },
+                                "source": "MERCH",
+                                "start_date": "2020-08-19T03:00:00Z",
+                                "type": "native"
+                            },
+                            {
+                                "content": {
+                                    "actions": {
+                                        "content_link": {
+                                            "action_id": "default",
+                                            "event_data": {},
+                                            "link": "mercadopago://cards-request/hybrid/physical/init-point?from=home_mp&additional_info=cross_selling",
+                                            "target": "internal_link"
+                                        }
+                                    },
+                                    "background_color": "#00B1EA",
+                                    "content_id": "offering_fisica_debit_cross_sell",
+                                    "discount_image": "mlb_asset_new-banner-xsell_oferta-fisica-debito",
+                                    "front_image": "merchengine_crosselling_debit_physical",
+                                    "header": "CARTÃO MERCADO PAGO",
+                                    "text_color": "#FFFFFF",
+                                    "title": "PEÇA GRÁTIS PARA COMPRAR EM LOJAS FÍSICAS",
+                                    "title_border_sprite": "merchengine_home_section_cross_selling_border_sprite_light_blue"
+                                },
+                                "end_date": "2026-01-01T02:00:00Z",
+                                "event_data": {
+                                    "audience": "all",
+                                    "bu": "4",
+                                    "bu_line": "3",
+                                    "component_id": "cross_selling_home_mp_2",
+                                    "content_id": "offering_fisica_debit_cross_sell",
+                                    "flow": "53",
+                                    "logic": "campaigns",
+                                    "position": 2
+                                },
+                                "event_tracking": {
+                                    "click": [],
+                                    "print": []
+                                },
+                                "source": "MERCH",
+                                "start_date": "2021-08-26T13:00:00Z",
+                                "type": "native"
+                            },
+                            {
+                                "content": {
+                                    "actions": {
+                                        "content_link": {
+                                            "action_id": "default",
+                                            "event_data": {},
+                                            "link": "mercadopago://insurtech/webview?back_style=cross&use_web_title=false&toolbar_elevation=none&hides_bottom_bar=true&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fprotections%2Fcards%2Foffer%3Ftouchpoint%3Dhome_mp%26touchpoint_detail%3Dbanner-pix%26standalone%3Dtrue%26callback_url%3Dmercadopago%3A%2F%2Fhome&from=MLB_MP_BANN-MP_XSELL_INTECH_ALL_ALL_ALL_202112_LAUNCH-ONLY-PIX",
+                                            "target": "internal_link"
+                                        }
+                                    },
+                                    "background_color": "#009EE3",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_INTECH_ALL_ALL_ALL_202112_LAUNCH-ONLY-PIX",
+                                    "footer": "CONHEÇA!",
+                                    "front_image": "xsell_mlb_card_insurance",
+                                    "header": "CARTEIRA PROTEGIDA",
+                                    "text_color": "#FFFFFF",
+                                    "title": "SEGURO PARA PIX \nPOR R$ 4,50/MÊS!",
+                                    "title_border_sprite": "merchengine_home_section_cross_selling_border_sprite_dark_blue"
+                                },
+                                "end_date": "2023-01-01T02:59:00Z",
+                                "event_data": {
+                                    "audience": "insurtech_onlypix_p2_mlb",
+                                    "bu": "4",
+                                    "bu_line": "30",
+                                    "component_id": "cross_selling_home_mp_3",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_INTECH_ALL_ALL_ALL_202112_LAUNCH-ONLY-PIX",
+                                    "flow": "59",
+                                    "logic": "campaigns",
+                                    "position": 3
+                                },
+                                "event_tracking": {
+                                    "click": [],
+                                    "print": []
+                                },
+                                "source": "MERCH",
+                                "start_date": "2021-11-24T03:00:00Z",
+                                "type": "native"
+                            },
+                            {
+                                "content": {
+                                    "actions": {
+                                        "content_link": {
+                                            "action_id": "default_ver",
+                                            "event_data": {},
+                                            "link": "mercadopago://webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcodigo-qr%2Fkit-oficial%2F%3Futm_source%3Dapp%26utm_medium%3Dbanner%26utm_campaign%3Dkitqr&from=MLB_MP_BANN-MP_XSELL_QR-SELL_QR_ALL_ALL_20210604_KIT-QR-APP",
+                                            "target": "external_link"
+                                        }
+                                    },
+                                    "background_color": "#3568EC",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_QR-SELL_QR_ALL_ALL_20210604_KIT-QR-APP",
+                                    "front_image": "Kit_QR_MLB_nuevo",
+                                    "header": "KIT OFICIAL CÓDIGO QR",
+                                    "text_color": "#FFFFFF",
+                                    "title": "COMPRE SEU KIT E IMPULSIONE SUAS VENDAS",
+                                    "title_border_sprite": "merchengine_home_section_cross_selling_border_sprite_light_blue"
+                                },
+                                "end_date": "2027-10-01T23:00:00Z",
+                                "event_data": {
+                                    "audience": "all_no_seller_qr_mlb",
+                                    "bu": "4",
+                                    "bu_line": "33",
+                                    "component_id": "cross_selling_home_mp_4",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_QR-SELL_QR_ALL_ALL_20210604_KIT-QR-APP",
+                                    "flow": "75",
+                                    "logic": "campaigns",
+                                    "position": 4
+                                },
+                                "event_tracking": {
+                                    "click": [],
+                                    "print": []
+                                },
+                                "source": "MERCH",
+                                "start_date": "2021-06-04T17:00:00Z",
+                                "type": "native"
+                            },
+                            {
+                                "content": {
+                                    "actions": {
+                                        "content_link": {
+                                            "action_id": "buy_reseller",
+                                            "event_data": {},
+                                            "link": "mercadopago://webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fpoint%2Fbecome-reseller%3Futm_source%3Dapp%26utm_medium%3Dbanner%26utm_campaign%3Dbanner_hunting&from=MLB_MP_BANN-MP_XSELL_P_ALL_ADQ_SELL_20210629_HUNTINGRESELLERSALWAYSON",
+                                            "target": "interno"
+                                        }
+                                    },
+                                    "background_color": "#5D97B2",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_P_ALL_ADQ_SELL_20210629_HUNTINGRESELLERSALWAYSON",
+                                    "front_image": "xsell_mlb_point_resellers",
+                                    "header": "SEJA UM REVENDEDOR ",
+                                    "text_color": "#ffffff",
+                                    "title": "GANHE DINHEIRO POR CADA \nPOINT QUE VENDER\n",
+                                    "title_border_sprite": "merchengine_home_section_cross_selling_border_sprite_light_blue"
+                                },
+                                "end_date": "2023-01-04T02:00:00Z",
+                                "event_data": {
+                                    "audience": "all_no_reseller_mlb",
+                                    "bu": "4",
+                                    "bu_line": "9",
+                                    "component_id": "cross_selling_home_mp_5",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_P_ALL_ADQ_SELL_20210629_HUNTINGRESELLERSALWAYSON",
+                                    "flow": "45",
+                                    "logic": "campaigns",
+                                    "position": 5
+                                },
+                                "event_tracking": {
+                                    "click": [],
+                                    "print": []
+                                },
+                                "source": "MERCH",
+                                "start_date": "2021-06-29T03:00:00Z",
+                                "type": "native"
+                            },
+                            {
+                                "content": {
+                                    "actions": {
+                                        "content_link": {
+                                            "action_id": "default_indique",
+                                            "event_data": {},
+                                            "link": "mercadopago://mgm/share?program_id=11&from=MLB_MP_BANN-MP_XSELL_W_MGM_ALL_IND__MGM",
+                                            "target": "internal_link"
+                                        }
+                                    },
+                                    "background_color": "#F5A018",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_W_MGM_ALL_IND__MGM",
+                                    "footer": "Saiba mais!",
+                                    "front_image": "mgm_recurrent_promoter_header",
+                                    "header": "INDIQUE E GANHE",
+                                    "text_color": "#000000",
+                                    "title": "MÊS DO AMIGO: GANHE R$20 \nINDICANDO SEUS AMIGOS  ",
+                                    "title_border_sprite": "merchengine_home_section_cross_selling_border_sprite_dark_blue"
+                                },
+                                "end_date": "2023-12-31T03:00:00Z",
+                                "event_data": {
+                                    "audience": "all",
+                                    "bu": "4",
+                                    "bu_line": "10",
+                                    "component_id": "cross_selling_home_mp_6",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_W_MGM_ALL_IND__MGM",
+                                    "flow": "20",
+                                    "logic": "campaigns",
+                                    "position": 6
+                                },
+                                "event_tracking": {
+                                    "click": [],
+                                    "print": []
+                                },
+                                "source": "MERCH",
+                                "start_date": "2022-01-19T03:00:00Z",
+                                "type": "native"
+                            },
+                            {
+                                "content": {
+                                    "actions": {
+                                        "content_link": {
+                                            "action_id": "action_link",
+                                            "event_data": {},
+                                            "link": "mercadopago://webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Ftools%2Fcreate&from=MLB_MP_BANN-MP_XSELL_OP_LINK_ACT_ALL_ALLLINKDEPAGO",
+                                            "target": "internal_link"
+                                        }
+                                    },
+                                    "background_color": "#2D3277",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_OP_LINK_ACT_ALL_ALLLINKDEPAGO",
+                                    "front_image": "banner-cross-link",
+                                    "header": "LINK DE PAGAMENTO",
+                                    "text_color": "#FFFFFF",
+                                    "title": "COBRE PELO WHATSAPP COM O LINK DE PAGAMENTO",
+                                    "title_border_sprite": "merchengine_home_section_cross_selling_border_sprite_light_blue"
+                                },
+                                "end_date": "2029-07-01T02:00:00Z",
+                                "event_data": {
+                                    "audience": "all_no_seller_link_mlb",
+                                    "bu": "4",
+                                    "bu_line": "8",
+                                    "component_id": "cross_selling_home_mp_7",
+                                    "content_id": "MLB_MP_BANN-MP_XSELL_OP_LINK_ACT_ALL_ALLLINKDEPAGO",
+                                    "flow": "15",
+                                    "logic": "campaigns",
+                                    "position": 7
+                                },
+                                "event_tracking": {
+                                    "click": [],
+                                    "print": []
+                                },
+                                "source": "MERCH",
+                                "start_date": "2022-03-04T13:00:00Z",
+                                "type": "native"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "ordinal": 5,
+                    "id": "discount_center",
+                    "type": "DISCOUNT_CENTER",
+                    "partial": true
+                },
+                {
+                    "ordinal": 6,
+                    "id": "prepaid_banner",
+                    "type": "BANNER",
+                    "partial": false,
+                    "content": {
+                        "actions": {
+                            "content_link": {
+                                "action_id": "default_saiba_mais",
+                                "event_data": {},
+                                "link": "mercadopago://webview/?authentication_mode=required&hides_bottom_bar=true&use_web_title=false&title=Criptomoedas&refresh_mode=pull&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcrypto%2F&from=MLB_MP_BANN-MP_DISS_DACC_CRIPTO_ACT_IND_20220602_FM-020622-CRITPO-P2P",
+                                "target": "internal_link"
+                            }
+                        },
+                        "close_button": true,
+                        "content_id": "MLB_MP_BANN-MP_DISS_DACC_CRIPTO_ACT_IND_20220602_FM-020622-CRITPO-P2P",
+                        "event_data": {
+                            "audience": "p2p_complianceynocompliance_mlb",
+                            "bu": "4",
+                            "bu_line": "3",
+                            "component_id": "dismissible_row",
+                            "content_id": "MLB_MP_BANN-MP_DISS_DACC_CRIPTO_ACT_IND_20220602_FM-020622-CRITPO-P2P",
+                            "flow": "66",
+                            "logic": "campaigns",
+                            "position": 0
+                        },
+                        "icon": "Ilus_dismissible_P2P",
+                        "text": "Transfira criptomoedas para seus contatos do jeito mais fácilTransfira criptomoedas para seus contatos do jeito mais fácilTransfira criptomoedas para seus contatos do jeito mais fácil"
+                    },
+                    "start_date": "2022-05-31T14:00:00Z",
+                    "end_date": "2022-09-01T02:59:00Z"
+                },
+                {
+                    "ordinal": 7,
+                    "id": "benefits",
+                    "type": "VERTICAL_LIST",
+                    "partial": false,
+                    "content": {
+                        "actions": {},
+                        "header": {
+                            "title": ""
+                        },
+                        "items": [
+                            {
+                                "content": {
+                                    "actions": {
+                                        "content_link": {
+                                            "action_id": "action_tap",
+                                            "event_data": {},
+                                            "link": "mercadopago://webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmp%2Fconvide-e-ganhe%2Fwebview&from=MLB_MP_BANN-MP_ROWS_P_MGM_ADQ_ALL_MGM-ALWAYSON",
+                                            "target": "internal_link"
+                                        }
+                                    },
+                                    "content_id": "MLB_MP_BANN-MP_ROWS_P_MGM_ADQ_ALL_MGM-ALWAYSON",
+                                    "icon": "merchengine_mgm-point_icon_mp_mlb-mlm",
+                                    "title": "Recomende a Point e ganhe R$150"
+                                },
+                                "control_group": 7589,
+                                "control_group_exp": {
+                                    "id": 7589,
+                                    "name": "wallet/merch_engine_MLB_MP_BANN-MP_ROWS_P_MGM_ADQ_ALL_MGM-ALWAYSON"
+                                },
+                                "created_at": 1649251062715231000,
+                                "end_date": "2054-02-06T02:00:00.000Z",
+                                "event_data": {
+                                    "audience": "all",
+                                    "bu": "4",
+                                    "bu_line": "27",
+                                    "component_id": "discount_benefits_mp_0",
+                                    "content_id": "MLB_MP_BANN-MP_ROWS_P_MGM_ADQ_ALL_MGM-ALWAYSON",
+                                    "flow": "60",
+                                    "logic": "campaigns",
+                                    "position": 0
+                                },
+                                "exposure": 100,
+                                "id": "MLB_MP_BANN-MP_ROWS_P_MGM_ADQ_ALL_MGM-ALWAYSON",
+                                "priority": 8,
+                                "realestate_id": "discount_benefits_mp",
+                                "start_date": "2022-04-06T12:00:00.000Z"
+                            },
+                            {
+                                "content": {
+                                    "actions": {
+                                        "content_link": {
+                                            "action_id": "action_descuento",
+                                            "event_data": {},
+                                            "link": "mercadopago://coupon/input?title=Cupom%20de%20desconto&input_title=Insira%20seu%20cupom%20para%20obter%20um%20benef%C3%ADcio&from=mlb_discount_benefits_coupon_mp",
+                                            "target": "internal_link"
+                                        }
+                                    },
+                                    "content_id": "mlb_discount_benefits_coupon_mp",
+                                    "icon": "merchengine_coupon_icon_mp",
+                                    "title": "Insira seu cupom"
+                                },
+                                "created_at": 1593483899858417200,
+                                "end_date": "9999-05-28T12:11:01.000-03:00",
+                                "event_data": {
+                                    "audience": "all",
+                                    "bu": "4",
+                                    "bu_line": "10",
+                                    "component_id": "discount_benefits_mp_1",
+                                    "content_id": "mlb_discount_benefits_coupon_mp",
+                                    "flow": "-1",
+                                    "logic": "user_journey",
+                                    "position": 1
+                                },
+                                "exposure": 100,
+                                "id": "mlb_discount_benefits_coupon_mp",
+                                "priority": 8,
+                                "realestate_id": "discount_benefits_mp",
+                                "start_date": "2019-01-01T23:11:10.000-03:00"
+                            },
+                            {
+                                "content": {
+                                    "actions": {
+                                        "content_link": {
+                                            "action_id": "action_payers",
+                                            "event_data": {},
+                                            "link": "mercadopago://mgm/share?program_id=11&from=mlb_mgm_payers_all_mp",
+                                            "target": "internal_link"
+                                        }
+                                    },
+                                    "content_id": "mlb_mgm_payers_all_mp",
+                                    "icon": "mgm_row_benefits_home",
+                                    "title": "Indique o app e ganhe R$20"
+                                },
+                                "created_at": 1610388092805239800,
+                                "end_date": "2024-01-01T03:00:00.000Z",
+                                "event_data": {
+                                    "audience": "all",
+                                    "bu": "4",
+                                    "bu_line": "10",
+                                    "component_id": "discount_benefits_mp_2",
+                                    "content_id": "mlb_mgm_payers_all_mp",
+                                    "flow": "20",
+                                    "logic": "user_journey",
+                                    "position": 2
+                                },
+                                "exposure": 100,
+                                "id": "mlb_mgm_payers_all_mp",
+                                "priority": 8,
+                                "realestate_id": "discount_benefits_mp",
+                                "start_date": "2022-04-20T20:00:00.000Z"
+                            }
+                        ]
+                    },
+                    "start_date": "2019-04-20T12:00:00-03:00",
+                    "end_date": "2999-04-20T12:00:00-03:00"
+              },
+            {
+              "ordinal":7,
+              "id":"subscription",
+              "type":"SUBSCRIPTION",
+              "partial":false,
+              "content":{
+                 "button":{
+                    "label":"Ver todos os benefícios",
+                    "link":"mercadopago://loyalty/webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmercado-pontos%23origin%3Dmp_home\u0026title=Mercado%20Pontos\u0026use_web_title=false\u0026back_style=menu\u0026back_action=close\u0026swipe_gesture=false\u0026loading_mode=none\u0026authentication_mode=required",
+                    "type":"link"
+                 },
+                 "content_cards":{
+                    "alignment":"center",
+                    "cards":[
+                       {
+                          "gradient_color":"#081330",
+                          "image":"https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/promo-disney-mlb@1x.png",
+                          "link":"mercadopago://loyalty/webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fassinaturas%2Fnivel-6%23origin%3Dmp_home\u0026title=N%C3%ADvel%206\u0026use_web_title=false\u0026mp_back=arrow\u0026loading_mode=none\u0026authentication_mode=optional",
+                          "logo":{
+                             "image":"https://http2.mlstatic.com/resources/frontend/statics/loyal/comboplus-brand.png?v=1",
+                             "position":"left",
+                             "size":48
+                          },
+                          "subtitle":{
+                             "color":"#ffffff",
+                             "label":"Inclui Disney+ e Star+"
+                          },
+                          "title":{
+                             "label":"Assine o nível 6 com 80% OFF"
+                          }
+                       },
+                       {
+                          "gradient_color":"#3c034e",
+                          "image":"https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbo/widget/hbo-max-mlb-mlm@2x.jpg",
+                          "link":"mercadopago://loyalty/webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fassinaturas%2Fhbo%23origin%3Dmp_home\u0026title=HBO%20Max\u0026use_web_title=false\u0026mp_back=arrow\u0026loading_mode=none\u0026authentication_mode=optional",
+                          "logo":{
+                             "image":"https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/logo/logoSquare@2x.png?v=1",
+                             "position":"left",
+                             "size":48
+                          },
+                          "subtitle":{
+                             "color":"#ffffff",
+                             "label":"HBO Max"
+                          },
+                          "title":{
+                             "color":"#ffffff",
+                             "label":"Até 50% OFF"
+                          },
+                          "top_title":{
+                             "color":"#ffffff",
+                             "label":"7 DIAS GRÁTIS"
+                          }
+                       },
+                       {
+                          "gradient_color":"#0064ff",
+                          "image":"https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/mlb/widget/paramount-widget-mlb@2x.jpg",
+                          "link":"mercadopago://loyalty/webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fassinaturas%2Fparamount%23origin%3Dmp_home\u0026title=Paramount%2B\u0026use_web_title=false\u0026mp_back=arrow\u0026loading_mode=none\u0026authentication_mode=optional",
+                          "logo":{
+                             "image":"https://http2.mlstatic.com/resources/frontend/statics/loyal/paramount/logos/paramount-logo-vdp-56-x-56-filled@2x.png",
+                             "position":"left",
+                             "size":48
+                          },
+                          "subtitle":{
+                             "color":"#ffffff",
+                             "label":"Paramount+"
+                          },
+                          "title":{
+                             "color":"#ffffff",
+                             "label":"Até 40% OFF"
+                          },
+                          "top_title":{
+                             "color":"#ffffff",
+                             "label":"7 DIAS GRÁTIS"
+                          }
+                       },
+                       {
+                          "gradient_color":"#352772",
+                          "image":"https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/vdp/deezer/deezer-widget-mlb@2x.jpg",
+                          "link":"mercadopago://loyalty/webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fassinaturas%2Fdeezer%23origin%3Dmp_home\u0026title=Deezer\u0026use_web_title=false\u0026mp_back=arrow\u0026loading_mode=none\u0026authentication_mode=optional",
+                          "logo":{
+                             "image":"https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/deezer/deezer-logo-vdp-filled@2x.png",
+                             "position":"left",
+                             "size":48
+                          },
+                          "subtitle":{
+                             "color":"#ffffff",
+                             "label":"Deezer / App de música"
+                          },
+                          "title":{
+                             "color":"#ffffff",
+                             "label":"Até 40% OFF"
+                          },
+                          "top_title":{
+                             "color":"#ffffff",
+                             "label":"7 DIAS GRÁTIS"
+                          }
+                       }
+                    ],
+                    "height":188,
+                    "is_grid":false,
+                    "pager_animation":true,
+                    "shadow":true,
+                    "width":130
+                 },
+                 "elements":[
+        
+                 ],
+                 "event_data":{
+                    "level":1,
+                    "partner":"multi-partner"
+                 },
+                 "header":{
+                    "has_divider":true,
+                    "title":{
+                       "color":"#333333",
+                       "label":"Benefícios do Mercado Pontos"
+                    }
+                 },
+                 "track":{
+                    "origin":"mp_home",
+                    "partner_name":"multi-partner"
+                 }
+              }
+           }
+           ],
+            "tracking_info":{
+              "events":{
+                 "print":{
+                    "event_data":{
+                       
+                    },
+                    "stream":"component_prints"
+                 },
+                 "pull":{
+                    "stream":"melidata",
+                    "event_data":{
+                       
+                    }
+                 },
+                 "show":{
+                    "stream":"melidata",
+                    "event_data":{
+                       
+                    }
+                 }
+              },
+              "event_data":{
+                 "metadata_user":{
+                    "type":"payer"
+                 }
+              }
+           }
+        }
+        
+        ## Test Collection [/testhome]
+        
+        ### Get home [GET]
+        
+        + Response 200 (application/json)
+        
+        {
+            "header":{
+               "title":"Olá, Front",
+               "link":"mercadopago://webview/?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmercado-pontos%23origin%3Dwidget_header\u0026title=Mercado%20Pontos\u0026use_web_title=false\u0026mp_back=menu\u0026loading_mode=none\u0026authentication_mode=required",
+               "buttons":[
+                  {
+                     "id":"help",
+                     "link":"mercadopago://cx/help?from=home_mp",
+                     "accessibility_text":"Ajuda",
+                     "icon":"wallet_home_help_header",
+                     "event_data":{
+                        "id":"help",
+                        "link":"mercadopago://cx/help?from=home_mp"
+                     }
+                  },
+                  {
+                     "id":"data",
+                     "title":"Pix",
+                     "link":"mercadopago://money-out/accounts/pix/home?from=home_mp",
+                     "accessibility_text":"Pix",
+                     "icon":"wallet_home_pix_header",
+                     "event_data":{
+                        "id":"data",
+                        "link":"mercadopago://money-out/accounts/pix/home?from=home_mp"
+                     }
+                  }
+               ],
+               "accessibility_text":"Olá, Front Nível 1",
+               "event_data":{
+                  "link":"mercadopago://webview/?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmercado-pontos%23origin%3Dwidget_header\u0026title=Mercado%20Pontos\u0026use_web_title=false\u0026mp_back=menu\u0026loading_mode=none\u0026authentication_mode=required",
+                  "buttons":[
+                     "help",
+                     "data"
+                  ]
+               },
+               "avatar":{
+                  "loyalty":{
+                     "percentage_level":0,
+                     "level":1,
+                     "color_level":"#1DBA56",
+                     "fill":"#FFFFFF",
+                     "empty":"#30FFFFFF"
+                  }
+               }
+            },
+            "items":[
+                {
+                    "ordinal": 1,
+                    "id": "ifpe_regulation",
+                    "type": "PARAGRAPH",
+                    "partial": false,
+                    "content": {
+                        "labels": [
+                            {
+                                "text": "Test Test",
+                                "size": 12,
+                                "color": "#828282",
+                                "alignment": "left"
+                            },
+                            {
+                                "text": "Último ingreso Mercado Pago Standard: 1 jul 2022 · 14:29 hs.",
+                                "size": 12,
+                                "color": "#828282",
+                                "alignment": "left"
+                            }
+                        ],
+                        "event_data": {}
+                    }
+                },
+                        {
+                    "ordinal": 2,
+                    "id": "new_section",
+                    "type": "NEW_SECTION",
+                    "partial": false,
+                    "content": {
+                        "labels": [
+                            {
+                                "text": "Section for Marcos to do",
+                                "size": 16,
+                                "color": "#828282",
+                                "alignment": "left"
+                            },
+                            {
+                                "text": "Último ingreso Mercado Pago Standard: 1 jul 2022 · 14:29 hs.",
+                                "size": 12,
+                                "color": "#828282",
+                                "alignment": "left"
+                            }
+                        ],
+                        "event_data": {}
+                    }
+                },
+                        {
+                    "ordinal": 3,
+                    "id": "cifpe_regulation",
+                    "type": "PARAGRAPH",
+                    "partial": false,
+                    "content": {
+                        "labels": [
+                            {
+                                "text": "Test Test",
+                                "size": 12,
+                                "color": "#828282",
+                                "alignment": "left"
+                            },
+                            {
+                                "text": "Último ingreso Mercado Pago Standard: 1 jul 2022 · 14:29 hs.",
+                                "size": 12,
+                                "color": "#828282",
+                                "alignment": "left"
+                            }
+                        ],
+                        "event_data": {}
+                    }
+                },
+                        {
+                    "ordinal": 4,
+                    "id": "aifpe_regulation",
+                    "type": "PARAGRAPH",
+                    "partial": false,
+                    "content": {
+                        "labels": [
+                            {
+                                "text": "Test Test",
+                                "size": 12,
+                                "color": "#828282",
+                                "alignment": "left"
+                            },
+                            {
+                                "text": "Último ingreso Mercado Pago Standard: 1 jul 2022 · 14:29 hs.",
+                                "size": 12,
+                                "color": "#828282",
+                                "alignment": "left"
+                            }
+                        ],
+                        "event_data": {}
+                    }
+                }
+           ],
+            "tracking_info":{
+              "events":{
+                 "print":{
+                    "event_data":{
+                       
+                    },
+                    "stream":"component_prints"
+                 },
+                 "pull":{
+                    "stream":"melidata",
+                    "event_data":{
+                       
+                    }
+                 },
+                 "show":{
+                    "stream":"melidata",
+                    "event_data":{
+                       
+                    }
+                 }
+              },
+              "event_data":{
+                 "metadata_user":{
+                    "type":"payer"
+                 }
+              }
+           }
+        }
