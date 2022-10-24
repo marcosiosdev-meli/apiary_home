@@ -5,6 +5,111 @@ HOST: https://polls.apiblueprint.org/
 
 Polls is a simple API allowing consumers to view polls and vote in them.
 
+## Tabbar with tracking characteres.
+
+### Get Tabbar [GET]
+
++ Response 200 (application/json)
+
+        {
+            "theme": "highlighted_middle",
+            "site_id": "MLB",
+            "tracking_enabled": true,
+            "definitions": [
+                {
+                    "tab_id": "home",
+                    "accessibility_id": "",
+                    "title": "InícioBeta",
+                    "image_name": "inicio_tabbar_icon",
+                    "selected_image_name": "inicio_tabbar_icon_selected",
+                    "root_deeplink": "mercadopago://home?from=tabbar",
+                    "is_default": true,
+                    "event_data": [
+                        {
+                            "link": "home",
+                            "metadata_user": {
+                                "character": "gold",
+                                "segment": "individual"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "tab_id": "actividad_tabbar",
+                    "accessibility_id": "",
+                    "title": "Atividade",
+                    "image_name": "operations_tabbar_icon",
+                    "selected_image_name": "operations_tabbar_icon_selected",
+                    "root_deeplink": "mercadopago://webview/?url=https%3A%2F%2Fwww.mercadopago.com.br%2Factivities%2Fwebview-list&from=tabbar&back_style=none&hides_bottom_bar=false&title=Atividade",
+                    "is_default": false,
+                    "event_data": [
+                        {
+                            "link": "actividad_tabbar",
+                            "metadata_user": {
+                                "character": "gold",
+                                "segment": "individual"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "tab_id": "qr_code",
+                    "accessibility_id": "Escanear código QR",
+                    "title": "",
+                    "image_name": "qr_pix_tabbar_icon",
+                    "selected_image_name": "qr_pix_tabbar_icon",
+                    "root_deeplink": "mercadopago://instore/scan_qr?from=tabbar",
+                    "is_default": false,
+                    "event_data": [
+                        {
+                            "link": "qr_code",
+                            "metadata_user": {
+                                "character": "gold",
+                                "segment": "individual"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "tab_id": "notifications_center",
+                    "accessibility_id": "",
+                    "title": "Notificações",
+                    "image_name": "notifications_icon_tabbar",
+                    "selected_image_name": "notifications_icon_tabbar_roll",
+                    "root_deeplink": "mercadopago://notifications_center",
+                    "is_default": false,
+                    "show_notification_badge": true,
+                    "event_data": [
+                        {
+                            "link": "notifications_center",
+                            "metadata_user": {
+                                "character": "gold",
+                                "segment": "individual"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "tab_id": "more",
+                    "accessibility_id": "",
+                    "title": "Mais",
+                    "image_name": "configuracion_tabbar_icon",
+                    "selected_image_name": "configuracion_tabbar_icon_selected",
+                    "root_deeplink": "mercadopago://navigation_sections?page_id=navigation_menu_mp&from=tabbar",
+                    "is_default": false,
+                    "event_data": [
+                        {
+                            "link": "more",
+                            "metadata_user": {
+                                "character": "gold",
+                                "segment": "individual"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+
 ## Home Collection [/home?page_id=mp_home]
 
 ### Get home [GET]
