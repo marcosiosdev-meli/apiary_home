@@ -70,8 +70,8 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                             "icon_right":{
                                                 "name":"wallet_home_asset_loyaltyChevron"
                                             },
-                                            "title":"Test",
-                                            "background_color":"",
+                                            "title":"Olá Test",
+                                            "background_color":"#009EE3",
                                             "event_data":{
                                                 
                                             },
@@ -167,36 +167,6 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                             }
                                         },
                                         {
-                                        "id":"navigation_based_home",
-                                        "ui_type":"icon_row",
-                                        "data":{
-                                            "icon":{
-                                                "name":"more_icon_tabbar"
-                                            },
-                                            "page_id":"navigation_menu_mp",
-                                            "title":{
-                                                "text":"Navigation Based Home"
-                                            },
-                                            "badge":{
-                                        "id":"navigation_menu_mp",
-                                        "background_color":"#009ee3",
-                                        "text_color":"#ffffff",
-                                        "text":"NOVO"
-                                    },
-                                            "events":[
-                                                {
-                                                "id":"navigation_based_home",
-                                                "data":{
-                                                    "external":"false",
-                                                    "mode":"push",
-                                                    "url":"mercadopago:\/\/navigation_menu?page_id=navigation_menu_mp&from=navigation_mp"
-                                                },
-                                                "type":"deeplink"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                        {
                                             "id":"notifications",
                                             "ui_type":"icon_row",
                                             "data":{
@@ -287,32 +257,36 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                             }
                                         },
                                         {
-                                            "id":"tu_dinero",
-                                            "ui_type":"icon_row",
-                                            "data":{
+                                        "id":"tu_dinero",
+                                        "ui_type":"icon_row",
+                                        "data":{
                                             "icon":{
-                                                "name":"ic_navigation_detail_money"
+                                                "name":"more_icon_tabbar_ml"
                                             },
                                             "page_id":"navigation_menu_mp",
                                             "title":{
-                                                "text":"Seu dinheiro"
+                                                "text":"Navigation Based Home"
                                             },
+                                            "badge":{
+                                        "id":"tu_dinero",
+                                        "background_color":"#009ee3",
+                                        "text_color":"#ffffff",
+                                        "text":"NOVO"
+                                    },
                                             "events":[
                                                 {
-                                                    "id":"your_money",
-                                                    "data":{
-                                                        "external":"false",
-                                                        "mode":"push",
-                                                        "url":"mercadopago:\/\/webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fbanking%2Fbalance%2Fwebview&from_drawer=true&from=navigation_mp"
-                                                    },
-                                                    "type":"deeplink"
+                                                "id":"tu_dinero",
+                                                "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/navigation_menu?page_id=navigation_menu_mp&from=navigation_mp"
+                                                },
+                                                "type":"deeplink"
                                                 }
-                                            ],
-                                            "icon_right":{
-                                                "name":"wallet_home_asset_chevronRight"
-                                            }
-                                            }
-                                        },
+                                            ]
+                                        }
+                                    },
+                                        
                                         {
                                             "id":"crypto",
                                             "ui_type":"icon_row",
