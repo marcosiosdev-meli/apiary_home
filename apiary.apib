@@ -669,154 +669,211 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 + Response 200 (application/json)
 
         {
-            "items": [
-                {
-                    "ordinal": 1,
-                    "id": "center_separator_header",
-                    "type": "CENTER_SEPARATOR",
-                    "partial": false,
-                    "content": {
-                                "background_color": "#009EE3",
-                                "height": "20",
-                                "margin_bottom": "0",
-                                "margin_top": "0"
-                                }
-                },
-                {
-                    "ordinal": 2,
-                    "id": "header_loyalty_avatar",
-                    "type": "HEADER_LOYALTY_AVATAR",
-                    "partial": false,
-                    "content": {
-                        "accessibility_text": "Hola Front",
-                        "background_color": "#009EE3",
-                        "secondary_icon": "wallet_home_asset_loyaltyChevron",
-                        "title": "Front"
-                }
-                },
-                {
-                    "ordinal": 3,
-                    "id": "cross_selling_mp",
-                    "type": "CROSS_SELLING",
-                    "partial": false,
-                    "content": {
-                        "background_color": "#009ee3",
-                        "icon": "ic_crossseling_icon_dynamic",
-                        "icon_arrow":"wallet_home_asset_sliceOverSelection",
-                        "title": {
-                            "color": "#FFFFFF",
-                            "text": "Mercado Libre"
-                        },
-                        "navigation_type":"push",
-                        "link":"meli://home?from=navigation_mp",
-                        "secondary_icon":""
-                        }
-                },
-                {
-                    "ordinal": 4,
-                    "id": "padding",
-                    "type": "PADDING",
-                    "partial": false,
-                    "content": {
-                                "background_color": "#009EE3",
-                                "height": "20",
-                                "margin_bottom": "0",
-                                "margin_top": "0"
-                                }
-                },
-                {
-                    "ordinal": 5,
-                    "id": "shortcuts",
-                    "type": "SHORTCUTS",
-                    "partial": false,
-                    "content":{
-                        "items":[
-                            {
-                            "id": "inicio",
-                            "type":"icon_row",
-                            "title": "Inicio",
-                            "navigation": {
-                                "type": "go_to_tabbar_ios",
-                                "data": {
-                                "index": 0
-                                }
-                            },
-                            "icon": "ic_navigation_home",
-                            "secondary_icon":""
-                            },
-                            {
-                            "id": "notificaciones",
-                            "type":"icon_row",
-                            "title": "Notificaciones",
-                            "navigation": {
-                                "type": "go_to_tabbar_ios",
-                                "data": {
-                                "index": 3
-                                }
-                            },
-                            "icon": "ic_navigation_notifications",
-                            "secondary_icon":"",
-                            "badge": {
-                                "background_color": "#f84b57",
-                                "id": "notifications_badge",
-                                "text": "",
-                                "text_color": "#ffffff",
-                                "text_provider": "notifications"
-                                },
-                            },
-                            {
-                            "id": "center_separator",
-                            "type":"center_separator",
-                            "content":  {
-                                "background_color": "#000000",
-                                "height": "",
-                                "margin_bottom": "",
-                                "margin_top": ""
-                                }
-                            },
-                            {
-                            "id": "tu_perfil",
-                            "type":"icon_row",
-                            "title": "Tu perfil",
-                            "navigation": {
-                                "type": "push"
-                            },
-                            "link": "mercadopago://hub/show?url=https%3A%2F%2Fwww.mercadopago.com.ar%2Fhub-engine%2Fhubs%2Fmy-profile&auto_reload=true&authentication_mode=required&bar_color=009EE3&use_web_title=true&OPV=fend",
-                            "icon": "ic_navigation_profile_v2",
-                            "secondary_icon":"wallet_home_asset_chevronRight",
-                            },
-                            {
-                                "id":"big_padding",
-                                "type":"big_padding"
-                            }
-                        ]
+           "items":[
+              {
+                 "ordinal":1,
+                 "id":"padding_header",
+                 "type":"PADDING",
+                 "partial":false,
+                 "content":{
+                    "background_color":"#009EE3",
+                    "height":"20"
+                 }
+              },
+              {
+                 "ordinal":2,
+                 "id":"header_loyalty_avatar",
+                 "type":"HEADER_LOYALTY_AVATAR",
+                 "partial":false,
+                 "content":{
+                    "accessibility_text":"Hola Front",
+                    "background_color":"#009EE3",
+                    "secondary_icon":"wallet_home_asset_loyaltyChevron",
+                    "title":"Front",
+                    "subtitle":"Front",
+                    "navigation":{
+                         "type":"push"
+                     },
+                    "link":"meli://home?from=navigation_mp",
+                    "avatar":{
+                       "loyalty":{
+                          "color_level":"#7C00FF",
+                          "empty":"#30FFFFFF",
+                          "fill":"#FFFFFF",
+                          "level":5,
+                          "percentage_level":0.43
+                       }
                     }
-                },
-            ],
-            "tracking_info": {
-                "events": {
-                    "print": {
-                        "event_data": {},
-                        "stream": "component_prints"
+                 }
+              },
+              {
+                 "order": 4,
+                 "partial":false,
+                 "id":"header_account_cvu",
+                 "type":"header_account",
+                 "data":{
+                    "accessibility_text":"Copiar tu CVU",
+                    "background_color":"#009EE3",
+                    "events":[
+                       {
+                          "type":"copy_to_clipboard",
+                          "data":{
+                             "value":"0000003100085997120708"
+                          }
+                       },
+                       {
+                          "type":"show_snackbar",
+                          "data":{
+                             "duration":"short",
+                             "style":"success",
+                             "text":"CVU copiado"
+                          }
+                       }
+                    ],
+                    "secondary_icon":"nav_sections_ic_copy",
+                    "subtitle":{
+                       "color":"#FFFFFF",
+                       "font_size":14,
+                       "style":"semibold",
+                       "text":"0000003100085997120708"
                     },
-                    "pull": {
-                        "event_data": {},
-                        "stream": "melidata"
+                    "title":{
+                       "color":"#FFFFFF",
+                       "font_size":12,
+                       "style":"normal",
+                       "text":"CVU"
+                    }
+                 }
+              },
+              {
+                 "ordinal":3,
+                 "id":"cross_selling_mp",
+                 "type":"CROSS_SELLING",
+                 "partial":false,
+                 "content":{
+                    "background_color":"#009ee3",
+                    "icon":"ic_crossseling_icon_dynamic",
+                    "secondary_icon":"wallet_home_asset_sliceOverSelection",
+                    "title":{
+                       "color":"#FFFFFF",
+                       "text":"Mercado Libre"
                     },
-                    "show": {
-                        "event_data": {},
-                        "stream": "melidata"
-                    }
-                },
-                "event_data": {
-                    "metadata_user": {
-                        "type": "newbie",
-                        "is_minor": false,
-                        "character": "smb",
-                        "segment": "seller"
-                    }
-                }
-            }
+                    "navigation":{
+                         "type":"push"
+                     },
+                    "link":"meli://home?from=navigation_mp"
+                 }
+              },
+              {
+                 "ordinal":5,
+                 "id":"padding",
+                 "type":"PADDING",
+                 "partial":false,
+                 "content":{
+                    "background_color":"#009EE3",
+                    "height":"20"
+                 }
+              },
+              {
+                 "ordinal":6,
+                 "id":"navigation_menu",
+                 "type":"NAVIGATION_MENU",
+                 "partial":false,
+                 "content":{
+                    "items":[
+                       {
+                          "id":"inicio",
+                          "type":"icon_row",
+                          "title":"Inicio",
+                          "accessibility_text":"Inicio",
+                          "navigation":{
+                             "type":"go_to_tabbar_ios",
+                             "data":{
+                                "index":0
+                             }
+                          },
+                          "icon":"ic_navigation_home",
+                          "secondary_icon":""
+                       },
+                       {
+                          "id":"notificaciones",
+                          "type":"notifications",
+                          "title":"Notificaciones",
+                          "navigation":{
+                             "type":"go_to_tabbar_ios",
+                             "data":{
+                                "index":3
+                             }
+                          },
+                          "icon":"ic_navigation_notifications",
+                          "secondary_icon":"",
+                          "badge":{
+                             "background_color":"#f84b57",
+                             "id":"notifications_badge",
+                             "text":"",
+                             "text_color":"#ffffff",
+                             "text_provider":"notifications"
+                          }
+                       },
+                       {
+                          "id":"center_separator",
+                          "type":"center_separator",
+                          "content":{
+                             "background_color":"#000000",
+                             "height":"",
+                             "margin_bottom":"",
+                             "margin_top":""
+                          }
+                       },
+                       {
+                          "id":"tu_perfil",
+                          "type":"icon_row",
+                          "title":"Tu perfil",
+                          "navigation":{
+                             "type":"push"
+                          },
+                          "link":"mercadopago://hub/show?url=https%3A%2F%2Fwww.mercadopago.com.ar%2Fhub-engine%2Fhubs%2Fmy-profile&auto_reload=true&authentication_mode=required&bar_color=009EE3&use_web_title=true&OPV=fend",
+                          "icon":"ic_navigation_profile_v2",
+                          "secondary_icon":"wallet_home_asset_chevronRight"
+                       },
+                       {
+                          "id":"big_padding",
+                          "type":"big_padding"
+                       }
+                    ]
+                 }
+              }
+           ],
+           "tracking_info":{
+              "events":{
+                 "print":{
+                    "event_data":{
+                       
+                    },
+                    "stream":"component_prints"
+                 },
+                 "pull":{
+                    "event_data":{
+                       
+                    },
+                    "stream":"melidata"
+                 },
+                 "show":{
+                    "event_data":{
+                       
+                    },
+                    "stream":"melidata"
+                 }
+              },
+              "event_data":{
+                 "metadata_user":{
+                    "type":"newbie",
+                    "is_minor":false,
+                    "character":"smb",
+                    "segment":"seller"
+                 }
+              }
+           }
         }
 
 ## Home - Shortcut with Header [/home-shortcut-header]
