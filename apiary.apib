@@ -256,7 +256,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                             "color":"#000000"
                                             }
                                         },
-                                        {
+                                    {
                                         "id":"tu_dinero",
                                         "ui_type":"icon_row",
                                         "data":{
@@ -268,11 +268,38 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                                 "text":"Navigation Based Home"
                                             },
                                             "badge":{
-                                        "id":"tu_dinero",
-                                        "background_color":"#009ee3",
-                                        "text_color":"#ffffff",
-                                        "text":"NOVO"
+                                                "id":"tu_dinero",
+                                                "background_color":"#009ee3",
+                                                "text_color":"#ffffff",
+                                                "text":"NOVO"
+                                            },
+                                            "events":[
+                                                {
+                                                "id":"tu_dinero",
+                                                "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/navigation_menu?page_id=navigation_menu_mp&from=navigation_mp"
+                                                },
+                                                "type":"deeplink"
+                                                }
+                                            ]
+                                        }
                                     },
+                                    {
+                                        "id":"tu_dinero_cf",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                            "icon":{
+                                                "name":"testing_icon_tu_dinero_cf_v3"
+                                            },
+                                            "page_id":"navigation_menu_mp",
+                                            "title":{
+                                                "text":"Tu Dinero"
+                                            },
+                                            "icon_right":{
+                                                "name":"testing_icon_cf"
+                                            },
                                             "events":[
                                                 {
                                                 "id":"tu_dinero",
@@ -752,6 +779,10 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                  "partial":false,
                  "content":{
                     "background_color":"#009ee3",
+                    "button_style":{
+                       "background_color":"#3EB5E9",
+                       "ripple_color":"#0092D2"
+                    },
                     "icon":"ic_crossseling_icon_dynamic",
                     "secondary_icon":"wallet_home_asset_sliceOverSelection",
                     "title":{
