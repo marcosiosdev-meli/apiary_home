@@ -257,25 +257,28 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                             }
                                         },
                                     {
-                                        "id":"tu_dinero",
+                                        "id":"navigation_based_home",
                                         "ui_type":"icon_row",
                                         "data":{
                                             "icon":{
-                                                "name":"more_icon_tabbar_ml"
+                                                "name":"configuracion_tabbar_icon"
                                             },
                                             "page_id":"navigation_menu_mp",
                                             "title":{
                                                 "text":"Navigation Based Home"
                                             },
+                                            "icon_right":{
+                                                "name":"wallet_home_asset_chevronRight"
+                                            },
                                             "badge":{
-                                                "id":"tu_dinero",
+                                                "id":"navigation_based_home",
                                                 "background_color":"#009ee3",
                                                 "text_color":"#ffffff",
                                                 "text":"NOVO"
                                             },
                                             "events":[
                                                 {
-                                                "id":"tu_dinero",
+                                                "id":"navigation_based_home",
                                                 "data":{
                                                     "external":"false",
                                                     "mode":"push",
@@ -286,6 +289,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                             ]
                                         }
                                     },
+                                    
                                     {
                                         "id":"tu_dinero_cf",
                                         "ui_type":"icon_row",
@@ -311,6 +315,32 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                                 "type":"deeplink"
                                                 }
                                             ]
+                                        }
+                                    },
+
+                                    {
+                                        "id": "tu_dinero",
+                                        "ui_type": "icon_row",
+                                        "data": {
+                                            "events": [{
+                                                "data": {
+                                                    "external": "false",
+                                                    "mode": "push",
+                                                    "url": "mercadopago://webview?url=https%3A%2F%2Fwww.mercadopago.com.co%2Fbanking%2Fbalance%2Fwebview&from_drawer=true&from=navigation_mp"
+                                                },
+                                                "id": "your_money",
+                                                "type": "deeplink"
+                                            }],
+                                            "icon": {
+                                                "name": "ic_navigation_detail_money"
+                                            },
+                                            "icon_right": {
+                                                "name": "badge_cf_drawer"
+                                            },
+                                            "page_id": "navigation_menu_mp",
+                                            "title": {
+                                                "text": "Tu cuenta"
+                                            }
                                         }
                                     },
                                         
@@ -912,44 +942,8 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 ### Get Ferramentas y Cobrar [GET]
 
 + Response 200 (application/json)
-
+    
         {
-            "header":{
-                "title":"Olá, Ana",
-                "link":"mercadopago://webview/?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmercado-pontos%23origin%3Dwidget_header\u0026title=Mercado%20Pontos\u0026use_web_title=false\u0026mp_back=arrow\u0026loading_mode=none\u0026authentication_mode=required",
-                "buttons":[
-                    {
-                        "id":"help",
-                        "title":"Ajuda",
-                        "link":"mercadopago://cx/help?from=home_mp",
-                        "accessibility_text":"Ajuda",
-                        "icon":"wallet_home_help_qm_header_v2",
-                        "event_data":{
-                        "id":"help",
-                        "link":"mercadopago://cx/help?from=home_mp"
-                        }
-                    }
-                ],
-                "accessibility_text":"Olá, Ana Nível 1",
-                "event_data":{
-                    "link":"mercadopago://webview/?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmercado-pontos%23origin%3Dwidget_header\u0026title=Mercado%20Pontos\u0026use_web_title=false\u0026mp_back=arrow\u0026loading_mode=none\u0026authentication_mode=required",
-                    "buttons":[
-                        "help"
-                    ]
-                },
-                "avatar":{
-                    "loyalty":{
-                        "percentage_level":0,
-                        "level":1,
-                        "color_level":"#1DBA56",
-                        "fill":"#FFFFFF",
-                        "empty":"#30FFFFFF"
-                    }
-                },
-                "header_style":{
-                    "type":"loyalty"
-                }
-            },
             "items":[
                 {
                     "ordinal":1,
@@ -1144,6 +1138,281 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     }
                 },
                 {
+                    "ordinal": 3,
+                    "id": "pendings",
+                    "type": "PENDINGS",
+                    "partial": false,
+                    "content": {
+                        "header": {
+                            "accessibility_text": "Você tem 4 pendências",
+                            "text": "Você tem 4 pendências",
+                            "view_more": {
+                                "accessibility_text": "Conferir todas as suas pendências",
+                                "link": "mercadopago://pendings_sheet/?section_id=pendings&from=home_mp&page_id=mp_home",
+                                "text": "Ver todas"
+                            }
+                        },
+                        "items": [
+                            {
+                                "accessibility_text": "Teste Teste web 04 Cadastrar",
+                                "background_color": "#FFFFFF",
+                                "background_color_pressed": "#F5F5F5",
+                                "badge": {
+                                    "background_color": "#F23D4F",
+                                    "hierarchy": "Loud",
+                                    "text": "Teste web 04",
+                                    "text_color": "#F23D4F",
+                                    "type": "error"
+                                },
+                                "bu": "14",
+                                "bu_line": "39",
+                                "button": {
+                                    "background_color": "#009EE3",
+                                    "background_color_pressed": "#007EB5",
+                                    "link": "mercadopago://kyc/?initiative=active-accounts&landing=true&congrats=true&callback=mercadopago%3A%2F%2Fhome&from=784873640_test_pendings_784873640-test-web-04",
+                                    "text": "Cadastrar",
+                                    "text_color": "#FFFFFF"
+                                },
+                                "event_data": {
+                                    "audience": "784873640",
+                                    "bu": "14",
+                                    "bu_line": "39",
+                                    "component_id": "pendigs_home_mp_0",
+                                    "content_id": "784873640_test_pendings_784873640-test-web-04",
+                                    "criticality": 2,
+                                    "dismissible": true,
+                                    "due_date": "2023-08-25T18:26:00Z",
+                                    "flow": "80",
+                                    "logic": "priority_message",
+                                    "position": 0,
+                                    "priority": 1,
+                                    "total_pendings": 4
+                                },
+                                "flow": "80",
+                                "id": "784873640_test_pendings_784873640-test-web-04",
+                                "image": {
+                                    "border_color": "#40000000",
+                                    "tint_color": "#CC000000",
+                                    "type": "initials",
+                                    "value": "TT"
+                                },
+                                "link": "mercadopago://kyc/?initiative=active-accounts&landing=true&congrats=true&callback=mercadopago%3A%2F%2Fhome&from=784873640_test_pendings_784873640-test-web-04",
+                                "marker": {
+                                    "background_color": "#F23D4F"
+                                },
+                                "overflow_menu": {
+                                    "image": "overflow_icon",
+                                    "items": [
+                                        {
+                                            "action": {
+                                                "type": "dismiss"
+                                            },
+                                            "has_item_divider": false,
+                                            "text": "Excluir"
+                                        }
+                                    ]
+                                },
+                                "reference_id": "784873640-test-web-04",
+                                "title": {
+                                    "text": "Teste",
+                                    "text_color": "#CC000000"
+                                }
+                            },
+                            {
+                                "accessibility_text": "Teste Teste web 02 Cadastrar",
+                                "background_color": "#FFFFFF",
+                                "background_color_pressed": "#F5F5F5",
+                                "badge": {
+                                    "background_color": "#8C000000",
+                                    "text": "Teste web 02",
+                                    "text_color": "#9B9B9B"
+                                },
+                                "bu": "14",
+                                "bu_line": "39",
+                                "button": {
+                                    "background_color": "#009EE3",
+                                    "background_color_pressed": "#007EB5",
+                                    "link": "mercadopago://kyc/?initiative=active-accounts&landing=true&congrats=true&callback=mercadopago%3A%2F%2Fhome&from=784873640_test_pendings_784873640-test-web-02",
+                                    "text": "Cadastrar",
+                                    "text_color": "#FFFFFF"
+                                },
+                                "event_data": {
+                                    "audience": "784873640",
+                                    "bu": "14",
+                                    "bu_line": "39",
+                                    "component_id": "pendigs_home_mp_1",
+                                    "content_id": "784873640_test_pendings_784873640-test-web-02",
+                                    "criticality": 4,
+                                    "dismissible": true,
+                                    "due_date": "2023-08-25T18:26:00Z",
+                                    "flow": "80",
+                                    "logic": "priority_message",
+                                    "position": 1,
+                                    "priority": 1,
+                                    "total_pendings": 4
+                                },
+                                "flow": "80",
+                                "id": "784873640_test_pendings_784873640-test-web-02",
+                                "image": {
+                                    "border_color": "#40000000",
+                                    "tint_color": "#CC000000",
+                                    "type": "initials",
+                                    "value": "TT"
+                                },
+                                "link": "mercadopago://kyc/?initiative=active-accounts&landing=true&congrats=true&callback=mercadopago%3A%2F%2Fhome&from=784873640_test_pendings_784873640-test-web-02",
+                                "marker": {
+                                    "background_color": "#9B9B9B"
+                                },
+                                "overflow_menu": {
+                                    "image": "overflow_icon",
+                                    "items": [
+                                        {
+                                            "action": {
+                                                "type": "dismiss"
+                                            },
+                                            "has_item_divider": false,
+                                            "text": "Excluir"
+                                        }
+                                    ]
+                                },
+                                "reference_id": "784873640-test-web-02",
+                                "title": {
+                                    "text": "Teste",
+                                    "text_color": "#CC000000"
+                                }
+                            },
+                            {
+                                "accessibility_text": "Teste Teste Cadastrar",
+                                "background_color": "#FFFFFF",
+                                "background_color_pressed": "#F5F5F5",
+                                "badge": {
+                                    "background_color": "#8C000000",
+                                    "text": "Teste",
+                                    "text_color": "#9B9B9B"
+                                },
+                                "bu": "14",
+                                "bu_line": "39",
+                                "button": {
+                                    "background_color": "#009EE3",
+                                    "background_color_pressed": "#007EB5",
+                                    "link": "mercadopago://kyc/?initiative=active-accounts&landing=true&congrats=true&callback=mercadopago%3A%2F%2Fhome&from=784873640_test_pendings_784873640-test-001",
+                                    "text": "Cadastrar",
+                                    "text_color": "#FFFFFF"
+                                },
+                                "event_data": {
+                                    "audience": "784873640",
+                                    "bu": "14",
+                                    "bu_line": "39",
+                                    "component_id": "pendigs_home_mp_2",
+                                    "content_id": "784873640_test_pendings_784873640-test-001",
+                                    "criticality": 11,
+                                    "dismissible": true,
+                                    "due_date": "2023-08-25T18:26:00Z",
+                                    "flow": "80",
+                                    "logic": "priority_message",
+                                    "position": 2,
+                                    "priority": 1,
+                                    "total_pendings": 4
+                                },
+                                "flow": "80",
+                                "id": "784873640_test_pendings_784873640-test-001",
+                                "image": {
+                                    "border_color": "#40000000",
+                                    "tint_color": "#CC000000",
+                                    "type": "initials",
+                                    "value": "TT"
+                                },
+                                "link": "mercadopago://kyc/?initiative=active-accounts&landing=true&congrats=true&callback=mercadopago%3A%2F%2Fhome&from=784873640_test_pendings_784873640-test-001",
+                                "marker": {
+                                    "background_color": "#9B9B9B"
+                                },
+                                "overflow_menu": {
+                                    "image": "overflow_icon",
+                                    "items": [
+                                        {
+                                            "action": {
+                                                "type": "dismiss"
+                                            },
+                                            "has_item_divider": false,
+                                            "text": "Excluir"
+                                        }
+                                    ]
+                                },
+                                "reference_id": "784873640-test-001",
+                                "title": {
+                                    "text": "Teste",
+                                    "text_color": "#CC000000"
+                                }
+                            },
+                            {
+                                "accessibility_text": "Teste Teste web 01 Cadastrar",
+                                "background_color": "#FFFFFF",
+                                "background_color_pressed": "#F5F5F5",
+                                "badge": {
+                                    "background_color": "#8C000000",
+                                    "text": "Teste web 01",
+                                    "text_color": "#9B9B9B"
+                                },
+                                "bu": "14",
+                                "bu_line": "39",
+                                "button": {
+                                    "background_color": "#009EE3",
+                                    "background_color_pressed": "#007EB5",
+                                    "link": "mercadopago://kyc/?initiative=active-accounts&landing=true&congrats=true&callback=mercadopago%3A%2F%2Fhome&from=784873640_test_pendings_784873640-test-web-01",
+                                    "text": "Cadastrar",
+                                    "text_color": "#FFFFFF"
+                                },
+                                "event_data": {
+                                    "audience": "784873640",
+                                    "bu": "14",
+                                    "bu_line": "39",
+                                    "component_id": "pendigs_home_mp_3",
+                                    "content_id": "784873640_test_pendings_784873640-test-web-01",
+                                    "criticality": 11,
+                                    "dismissible": true,
+                                    "due_date": "2023-08-25T18:26:00Z",
+                                    "flow": "80",
+                                    "logic": "priority_message",
+                                    "position": 3,
+                                    "priority": 1,
+                                    "total_pendings": 4
+                                },
+                                "flow": "80",
+                                "id": "784873640_test_pendings_784873640-test-web-01",
+                                "image": {
+                                    "border_color": "#40000000",
+                                    "tint_color": "#CC000000",
+                                    "type": "initials",
+                                    "value": "TT"
+                                },
+                                "link": "mercadopago://kyc/?initiative=active-accounts&landing=true&congrats=true&callback=mercadopago%3A%2F%2Fhome&from=784873640_test_pendings_784873640-test-web-01",
+                                "marker": {
+                                    "background_color": "#9B9B9B"
+                                },
+                                "overflow_menu": {
+                                    "image": "overflow_icon",
+                                    "items": [
+                                        {
+                                            "action": {
+                                                "type": "dismiss"
+                                            },
+                                            "has_item_divider": false,
+                                            "text": "Excluir"
+                                        }
+                                    ]
+                                },
+                                "reference_id": "784873640-test-web-01",
+                                "title": {
+                                    "text": "Teste",
+                                    "text_color": "#CC000000"
+                                }
+                            }
+                        ],
+                        "sheet": {
+                            "title": "Suas pendências"
+                        }
+                    }
+                },{
                     "ordinal":2,
                     "id":"subaccounts",
                     "type":"SUBACCOUNTS",
@@ -1172,12 +1441,6 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                         "bottom":20
                         }
                     }
-                },
-                {
-                    "ordinal":3,
-                    "id":"loan",
-                    "type":"LOAN",
-                    "partial":true
                 },
                 {
                     "ordinal":4,
