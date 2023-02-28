@@ -141,6 +141,125 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                             }
                                         },
                                         {
+                                           "id":"mp",
+                                           "ui_type":"header_account",
+                                           "data":{
+                                              "accessibility_text":"Copiar tu CVU",
+                                              "background_color":"#009EE3",
+                                              "events":[
+                                                 {
+                                                    "data":{
+                                                       "value":"0000003100036507882203"
+                                                    },
+                                                    "id":"header_account",
+                                                    "type":"copy_to_clipboard"
+                                                 },
+                                                 {
+                                                    "data":{
+                                                       "duration":"short",
+                                                       "style":"success",
+                                                       "text":"CVU copiado"
+                                                    },
+                                                    "id":"show_snackbar",
+                                                    "type":"show_snackbar"
+                                                 }
+                                              ],
+                                              "page_id":"navigation_menu_mp",
+                                              "right_icon":{
+                                                 "name":"nav_sections_ic_copy"
+                                              },
+                                              "subtitle":{
+                                                 "color":"#FFFFFF",
+                                                 "font_size":14,
+                                                 "style":"semibold",
+                                                 "text":"0000003100036507882203"
+                                              },
+                                              "title":{
+                                                 "color":"#FFFFFF",
+                                                 "font_size":12,
+                                                 "style":"normal",
+                                                 "text":"CVU"
+                                              }
+                                           }
+                                        },
+                                        {
+                                           "id":"mp-cadastre",
+                                           "ui_type":"header_account",
+                                           "data":{
+                                              "accessibility_text":"Cadastrar suas chaves Pix",
+                                              "background_color":"#009EE3",
+                                              "events":[
+                                                 {
+                                                    "data":{
+                                                       "external":"false",
+                                                       "mode":"push",
+                                                       "url":"mercadopago://money-out/accounts/pix/home"
+                                                    },
+                                                    "id":"header_account",
+                                                    "type":"deeplink"
+                                                 }
+                                              ],
+                                              "left_icon":{
+                                                 "name":"nav_sections_ic_pix"
+                                              },
+                                              "page_id":"navigation_menu_mp",
+                                              "right_icon":{
+                                                 "name":"chevron_right"
+                                              },
+                                              "title":{
+                                                 "color":"#FFFFFF",
+                                                 "font_size":14,
+                                                 "style":"semibold",
+                                                 "text":"Cadastre suas chaves Pix"
+                                              }
+                                           }
+                                        },
+                                        {
+                                           "id":"mp-pix",
+                                           "ui_type":"header_account",
+                                           "data":{
+                                              "accessibility_text":"Copiar sua chave Pix (XXX)",
+                                              "background_color":"#009EE3",
+                                              "events":[
+                                                 {
+                                                    "data":{
+                                                       "value":"XXX.XXX.XXX-XX"
+                                                    },
+                                                    "id":"header_account",
+                                                    "type":"copy_to_clipboard"
+                                                 },
+                                                 {
+                                                    "data":{
+                                                       "duration":"short",
+                                                       "style":"success",
+                                                       "text":"Chave Pix copiada"
+                                                    },
+                                                    "id":"show_snackbar",
+                                                    "type":"show_snackbar"
+                                                 }
+                                              ],
+                                              "left_icon":{
+                                                 "name":"nav_sections_ic_pix"
+                                              },
+                                              "page_id":"navigation_menu_mp",
+                                              "right_icon":{
+                                                 "name":"nav_sections_ic_copy"
+                                              },
+                                              "subtitle":{
+                                                 "color":"#ffffff",
+                                                 "font_size":14,
+                                                 "style":"semibold",
+                                                 "text":"XXX.XXX.XXX-XX"
+                                              },
+                                              "title":{
+                                                 "color":"#ffffff",
+                                                 "font_size":12,
+                                                 "style":"normal",
+                                                 "text":"Chave pix XXX"
+                                              }
+                                           }
+                                        }
+                                        ,{
                                             "id":"padding",
                                             "ui_type":"padding"
                                         },
@@ -765,7 +884,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                  }
               },
               {
-                 "order": 4,
+                 "ordinal": 4,
                  "partial":false,
                  "id":"header_account_cvu",
                  "type":"HEADER_ACCOUNT",
