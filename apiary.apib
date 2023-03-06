@@ -869,8 +869,8 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     "title":"Front",
                     "subtitle":"Front",
                     "navigation":{
-                         "type":"push"
-                     },
+                       "type":"push"
+                    },
                     "link":"meli://home?from=navigation_mp",
                     "avatar":{
                        "loyalty":{
@@ -884,18 +884,22 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                  }
               },
               {
-                 "ordinal": 4,
+                 "ordinal":4,
                  "partial":false,
                  "id":"header_account_cvu",
                  "type":"HEADER_ACCOUNT",
                  "content":{
                     "accessibility_text":"Copiar tu CVU",
-                    "background_color":"#009EE3",
+                    "background_color": "#009ee3",
+                    "button_style":{
+                       "background_color":"#3EB5E9",
+                       "ripple_color":"#0092D2"
+                    },
                     "events":[
                        {
                           "type":"copy_to_clipboard",
                           "data":{
-                             "value":"0000003100085997120708"
+                             "text":"0000003100085997120708"
                           }
                        },
                        {
@@ -923,12 +927,89 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                  }
               },
               {
+                 "ordinal":5,
+                 "partial":false,
+                 "id":"header_account_pix",
+                 "type":"HEADER_ACCOUNT",
+                 "content":{
+                    "accessibility_text":"Copiar a chave do pix",
+                    "background_color": "#009ee3",
+                    "button_style":{
+                       "background_color":"#3EB5E9",
+                       "ripple_color":"#0092D2"
+                    },
+                    "events":[
+                       {
+                          "type":"copy_to_clipboard",
+                          "data":{
+                             "text":"130.992.213-99"
+                          }
+                       },
+                       {
+                          "type":"show_snackbar",
+                          "data":{
+                             "duration":"short",
+                             "style":"success",
+                             "text":"Pix copiado com sucesso."
+                          }
+                       }
+                    ],
+                    "secondary_icon":"nav_sections_ic_copy",
+                    "icon":"nav_sections_ic_pix",
+                    "subtitle":{
+                       "color":"#FFFFFF",
+                       "font_size":14,
+                       "style":"semibold",
+                       "text":"130.992.213-99"
+                    },
+                    "title":{
+                       "color":"#FFFFFF",
+                       "font_size":12,
+                       "style":"normal",
+                       "text":"Chave do Pix"
+                    }
+                 }
+              },
+              {
+                 "ordinal":6,
+                 "partial":false,
+                 "id":"header_account_no_registre",
+                 "type":"HEADER_ACCOUNT",
+                 "content":{
+                    "accessibility_text":"Cadastre suas chaves Pix",
+                    "background_color": "#009ee3",
+                    "button_style":{
+                       "background_color":"#3EB5E9",
+                       "ripple_color":"#0092D2"
+                    },
+                    "events":[
+                       {
+                          "data":{
+                             "external":"false",
+                             "mode":"push",
+                             "link":"mercadopago://money-out/accounts/pix/home"
+                          },
+                          "id":"header_account",
+                          "type":"deeplink"
+                       }
+                    ],
+                    "secondary_icon":"chevron_right",
+                    "icon":"nav_sections_ic_pix",
+                    "title":{
+                         "color":"#FFFFFF",
+                         "font_size":14,
+                         "style":"semibold",
+                         "text":"Cadastre suas chaves Pix"
+                    }
+                 }
+              },
+              {
                  "ordinal":3,
                  "id":"cross_selling_mp",
                  "type":"CROSS_SELLING",
                  "partial":false,
                  "content":{
-                    "background_color":"#009ee3",
+                    "background_color": "#009ee3",
                     "button_style":{
                        "background_color":"#3EB5E9",
                        "ripple_color":"#0092D2"
@@ -940,14 +1021,22 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                        "text":"Mercado Libre"
                     },
                     "accessibility_text":"Abrir Mercado Livre app.",
-                    "navigation":{
-                         "type":"push"
-                     },
+                    "events":[
+                       {
+                          "data":{
+                             "external":"false",
+                             "mode":"push",
+                             "link":"meli://home?from=navigation_mp"
+                          },
+                          "id":"header_account",
+                          "type":"deeplink"
+                       }
+                    ],
                     "link":"meli://home?from=navigation_mp"
                  }
               },
               {
-                 "ordinal":5,
+                 "ordinal":7,
                  "id":"padding",
                  "type":"PADDING",
                  "partial":false,
@@ -957,7 +1046,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                  }
               },
               {
-                 "ordinal":6,
+                 "ordinal":8,
                  "id":"navigation_menu",
                  "type":"NAVIGATION_MENU",
                  "partial":false,
