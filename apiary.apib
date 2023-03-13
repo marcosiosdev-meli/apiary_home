@@ -1051,67 +1051,85 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                  "type":"NAVIGATION_MENU",
                  "partial":false,
                  "content":{
-                    "items":[
-                       {
-                          "id":"inicio",
-                          "type":"icon_row",
-                          "title":"Inicio",
-                          "accessibility_text":"Inicio",
-                          "navigation":{
-                             "type":"go_to_tabbar_ios",
-                             "data":{
-                                "index":0
-                             }
+                    "items": [
+                        {
+                          "id": "shortcut_inicio",
+                          "content_id": "inicio_123",
+                          "type": "icon_row",
+                          "title": "Inicio",
+                          "navigation": {
+                            "type": "go_to_tabbar_ios",
+                            "data": {
+                              "index": 0
+                            }
                           },
-                          "icon":"ic_navigation_home",
-                          "secondary_icon":""
-                       },
-                       {
-                          "id":"notificaciones",
-                          "type":"notifications",
-                          "title":"Notificaciones",
-                          "navigation":{
-                             "type":"go_to_tabbar_ios",
-                             "data":{
-                                "index":3
-                             }
+                          "link": "mercadopago://home",
+                          "style": {
+                            "icon": "ic_navigation_home",
+                            "icon_color": "#ffff",
+                            "background": "#ffff"
                           },
-                          "icon":"ic_navigation_notifications",
-                          "secondary_icon":"",
-                          "badge":{
-                             "background_color":"#f84b57",
-                             "id":"notifications_badge",
-                             "text":"",
-                             "text_color":"#ffffff",
-                             "text_provider":"notifications"
+                          "accesibility_text": "Inicio",
+                          "event_data": {}
+                        },
+                        {
+                          "id": "shortcut_tu_perfil",
+                          "content_id": "tu_perfil_id",
+                          "type": "icon_row",
+                          "title": "Tu perfil",
+                          "navigation": {
+                            "type": "push",
+                            "data": {
+                              "link": ""
+                            }
+                          },
+                          "link": "mercadopago://hub/show?url=https%3A%2F%2Fwww.mercadopago.com.ar%2Fhub-engine%2Fhubs%2Fmy-profile&auto_reload=true&authentication_mode=required&bar_color=009EE3&use_web_title=true&OPV=fend",
+                          "style": {
+                            "icon": "ic_navigation_profile_v2",
+                            "icon_color": "#ffff",
+                            "background": "#ffff"
+                          },
+                          "secondarys_style": {
+                            "icon": "wallet_home_asset_chevronRight",
+                            "icon_color": "#ffff",
+                            "background": "#ffff"
+                          },
+                          "accesibility_text": "Tu perfil",
+                          "event_data": {}
+                        },
+                        {
+                            "id": "shortcut_tu_dinero",
+                            "content_id": "tu_dinero_clb",
+                            "type": "icon_row",
+                            "title": "Tu Dinero Colombia",
+                            "navigation": {
+                              "type": "push",
+                              "data": {
+                                "link": ""
+                              }
+                            },
+                            "link": "mercadopago:\/\/navigation_menu?page_id=navigation_menu_mp&from=navigation_mp",
+                            "style": {
+                              "icon": "testing_icon_tu_dinero_cf_v3",
+                              "icon_color": "#ffff",
+                              "background": "#ffff"
+                            },
+                            "secondarys_style": {
+                              "icon": "testing_icon_cf",
+                              "icon_color": "#ffff",
+                              "background": "#ffff"
+                            },
+                            "label": {
+                              "text": "Nuevo",
+                              "text_color": "#ffffff",
+                              "background": "#009ee3",
+                              "border": "#009ee3",
+                              "text_provider": "NUEVO"
+                            },
+                            "accesibility_text": "Tu Dinero Colombia",
+                            "event_data": {}
                           }
-                       },
-                       {
-                          "id":"center_separator",
-                          "type":"center_separator",
-                          "content":{
-                             "background_color":"#000000",
-                             "height":"",
-                             "margin_bottom":"",
-                             "margin_top":""
-                          }
-                       },
-                       {
-                          "id":"tu_perfil",
-                          "type":"icon_row",
-                          "title":"Tu perfil",
-                          "navigation":{
-                             "type":"push"
-                          },
-                          "link":"mercadopago://hub/show?url=https%3A%2F%2Fwww.mercadopago.com.ar%2Fhub-engine%2Fhubs%2Fmy-profile&auto_reload=true&authentication_mode=required&bar_color=009EE3&use_web_title=true&OPV=fend",
-                          "icon":"ic_navigation_profile_v2",
-                          "secondary_icon":"wallet_home_asset_chevronRight"
-                       },
-                       {
-                          "id":"big_padding",
-                          "type":"big_padding"
-                       }
-                    ]
+                      ]
                  }
               }
            ],
