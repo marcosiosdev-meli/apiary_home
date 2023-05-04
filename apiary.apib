@@ -5,6 +5,1067 @@ HOST: https://polls.apiblueprint.org/
 
 Polls is a simple API allowing consumers to view polls and vote in them.
 
+## Navigation - Navigation Section new Tu Perfil [/navigation-section-meli]
+
+### Get theirs bricks [GET]
+
++ Response 200 
+
+        {
+            "id" : "navigation_menu_ml",
+            "type" : "execute_and_save_events",
+            "data" : {
+              "page_id" : "navigation_menu_ml",
+              "events" : [
+                {
+                  "type" : "reload",
+                  "data" : {
+                    "bricks" : [
+                      {
+                        "id" : "container_id",
+                        "ui_type" : "container",
+                        "bricks" : [
+                          {
+                            "id" : "the_header_navigation_menu",
+                            "ui_type" : "status_bar",
+                            "data" : {
+                              "text_style" : "dark"
+                            }
+                          },
+                          {
+                            "id" : "list_nav_menu",
+                            "data" : {
+                              "separator" : {
+                                "disabled" : "true"
+                              }
+                            },
+                            "bricks" : [
+                              {
+                                "id" : "header_loyalty",
+                                "ui_type" : "header_loyalty",
+                                "data" : {
+                                  "events" : [
+                                    {
+                                      "id" : "loyalty_row",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : ""
+                                      },
+                                      "type" : "deeplink"
+                                    },
+                                    {
+                                      "id" : "loyalty_avatar",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : ""
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ],
+                                  "page_id" : "navigation_menu_ml",
+                                  "primary_color" : "#DC143C",
+                                  "subtitle" : "One subtitle test",
+                                  "platform" : "mercadoLibre",
+                                  "level" : 6,
+                                  "title" : "One test",
+                                  "percentage" : 0.0,
+                                  "icon" : {
+                                    "name" : "https:\/\/api.mercadopago.com\/mpmobile\/profile_picture\/me"
+                                  }
+                                }
+                              },
+                              {
+                                "id": "header_avatar",
+                                "ui_type": "header_avatar",
+                                "data": {
+                                  "accessibility_text": "Hola Test. Ingresar a Mercado Puntos",
+                                  "avatar": {
+                                    "image": "https://mla-s1-p.mlstatic.com/779461-MLA48751075584_012022-O.jpg"
+                                  },
+                                  "background_color": "#009EE3",
+                                  "events": [
+                                    {
+                                      "data": {
+                                        "external": "false",
+                                        "mode": "push",
+                                        "url": "mercadopago://webview/?url=https%3A%2F%2Fwww.mercadopago.com.ar%2Fmercado-puntos%23origin%3Dapp_setup\u0026title=Mercado%20Puntos\u0026use_web_title=false\u0026mp_back=arrow\u0026loading_mode=none\u0026authentication_mode=required"
+                                      },
+                                      "id": "loyalty_row",
+                                      "type": "deeplink"
+                                    }
+                                  ],
+                                  "icon_right": {
+                                    "name": "wallet_home_asset_loyaltyChevron"
+                                  },
+                                  "page_id": "navigation_menu_mp",
+                                  "title": "Test",
+                                  "subtitle": "Ver perfil"
+                                }
+                              },
+                              {
+                                "id" : "cross_selling_ml",
+                                "ui_type" : "cross_selling",
+                                "data" : {
+                                  "events" : [
+                                    {
+                                      "id" : "cross_selling_store",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : "itms-apps:\/\/itunes.apple.com\/app\/apple-store\/id925436649?mt=8"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ],
+                                  "icon_arrow" : {
+                                    "name" : "nav_sections_arrow_black"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "selected_color" : "#f0d023",
+                                  "title" : {
+                                    "color" : "#000000",
+                                    "text" : "Mercado Pago"
+                                  },
+                                  "background_color" : "#ffdb15",
+                                  "icon" : {
+                                    "name" : "ic_crossseling_icon"
+                                  }
+                                }
+                              },
+                              {
+                                "id" : "padding",
+                                "ui_type" : "padding"
+                              },
+                              {
+                                "id" : "inicio",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_home"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Inicio"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "inicio",
+                                      "data" : {
+                                        "index" : 0
+                                      },
+                                      "type" : "go_to_tabbar_ios"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "buscar",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_search"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Buscar"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "buscar",
+                                      "data" : {
+                                        "index" : 0,
+                                        "deeplink" : "meli:\/\/search\/input"
+                                      },
+                                      "type" : "go_to_tabbar_ios"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "notificaciones",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_notifications"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Notificaciones"
+                                  },
+                                  "badge" : {
+                                    "text_provider" : "notifications",
+                                    "id" : "notifications_badge",
+                                    "background_color" : "#f84b57",
+                                    "text_color" : "#ffffff",
+                                    "text" : "3"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "notificaciones",
+                                      "data" : {
+                                        "index" : 3
+                                      },
+                                      "type" : "go_to_tabbar_ios"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "mis_compras",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_purchases"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Mis compras"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "mis_compras",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : "meli:\/\/my_purchases"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "favoritos",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_bookmarks"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Favoritos"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "favoritos",
+                                      "data" : {
+                                        "index" : 1
+                                      },
+                                      "type" : "go_to_tabbar_ios"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "ofertas",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_weekdeals"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Ofertas"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "Ofertas",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : "meli:\/\/webview\/?url=https%3A%2F%2Fwww.mercadolibre.com.ar%2Fofertas&search_mode=collapsed&cart_mode=default&navigationcp_mode=default&bar_left_button_style=back&back_action=close&authentication_mode=optional&webkit-engine=2"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "cupons",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_coupons"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Cupones"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "cupons",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : "meli:\/\/webview\/?url=https%3A%2F%2Fwww.mercadolibre.com.ar%2Fcupones%3Fsource_page%3Ddrawer&search_mode=none&cart_mode=none&navigationcp_mode=none&back_style=arrow&back_action=close&authentication_mode=required&loading_mode=true&title=Cupones&use_web_title=false"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "historial",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_history"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Historial"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "historial",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : "meli:\/\/home\/navigation_history"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "mi_cuenta",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_myaccount"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Mi cuenta"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "mi_cuenta",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : "meli:\/\/my_account"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "help_v2",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_help"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Ayuda"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "ayuda",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : "meli:\/\/cx\/help"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "center_separator",
+                                "ui_type" : "center_separator",
+                                "data" : {
+                                  "color" : "#000000"
+                                }
+                              },
+                              {
+                                "id" : "supermercado",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_supermarket"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Supermercado"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "supermercado",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : "meli:\/\/generic_landing?url=https%3A%2F%2Fwww.mercadolibre.com.ar%2Fofertas%2Fsupermercadolibre&cart_mode=default&navigationcp_mode=default&search_mode=collapsed&filter_id=cpg&filter_value=yes&filter_name=Supermercado&filter_checked=true"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "best_sellers",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "title" : {
+                                    "text" : "Más vendidos"
+                                  },
+                                  "icon" : {
+                                    "name" : "ic_navigation_best_sellers"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "best_sellers",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : "meli:\/\/webview\/?url=https%3A%2F%2Fwww.mercadolibre.com.ar%2Fmas-vendidos&use_web_title=false"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "tiendas_oficiales",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_officialstores"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Tiendas oficiales"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "tiendas_oficiales",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : "meli:\/\/official_stores"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "categorias",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_categories"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Categorías"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "categorias",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : "meli:\/\/categories\/"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "center_separator",
+                                "ui_type" : "center_separator",
+                                "data" : {
+                                  "color" : "#000000"
+                                }
+                              },
+                              {
+                                "id" : "vender",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_sell"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Vender"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "vender",
+                                      "data" : {
+                                        "index" : 2
+                                      },
+                                      "type" : "go_to_tabbar_ios"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "biolibre",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_biolibre"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Bio libre"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "biolibre",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                        "url" : "meli:\/\/webview\/?webkit-engMetricsine=2&hides_bottom_bar=true&search_mode=none&url=https%3A%2F%2Fwww.mercadolibre.com.ar%2Flink-in-bio%2Fbio%2Fonboarding"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "mercado_shops",
+                                "ui_type" : "icon_row",
+                                "data" : {
+                                  "icon" : {
+                                    "name" : "ic_navigation_officialstores"
+                                  },
+                                  "page_id" : "navigation_menu_ml",
+                                  "title" : {
+                                    "text" : "Mercado Shops"
+                                  },
+                                  "events" : [
+                                    {
+                                      "id" : "mercado_shops",
+                                      "data" : {
+                                        "external" : "false",
+                                        "mode" : "push",
+                                         "url" : "meli:\/\/webview\/?url=https%3A%2F%2Fwww.mercadolibre.com.ar%2Fmercadoshops%3Futm_source%3Dmercadolibre%26utm_medium%3Dreferral%26utm_campaign%3Dhunting_always_on%26utm_content%3Dmenu_drawer&authentication_mode=required&search_mode=none&refresh_mode=pull#from=menu-user"
+                                      },
+                                      "type" : "deeplink"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id" : "center_separator_auth",
+                                "ui_type" : "center_separator",
+                                "data" : {
+                                  "color" : "#000000"
+                                }
+                              },
+                              {
+                                "id" : "big_padding",
+                                "ui_type" : "big_padding"
+                              }
+                            ],
+                            "ui_type" : "list_inset"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "tracking" : {
+          
+                    "tracks" : [
+                      {
+                        "provider" : "no_track"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+
+## Navigation - Navigation Section new Tu Perfil [/navigation-section-perfil]
+
+### Get theirs bricks [GET]
+
++ Response 200 
+
+        {
+          "id" : "navigation_menu_mp",
+          "type" : "execute_and_save_events",
+          "data" : {
+            "page_id" : "navigation_menu_mp",
+            "events" : [
+              {
+                "type" : "reload",
+                "data" : {
+                  "bricks" : [
+                    {
+                      "id" : "container_id",
+                      "ui_type" : "container",
+                      "bricks" : [
+                        {
+                          "id" : "list_nav_menu",
+                          "data" : {
+                            "separator" : {
+                              "disabled" : "true"
+                            }
+                          },
+                          "bricks" : [
+                            {
+                              "id" : "header_loyalty",
+                              "ui_type" : "header_loyalty",
+                              "data" : {
+                                "events" : [
+                                  {
+                                    "id" : "loyalty_row",
+                                    "data" : {
+                                      "external" : "false",
+                                      "mode" : "push",
+                                      "url" : ""
+                                    },
+                                    "type" : "deeplink"
+                                  },
+                                  {
+                                    "id" : "loyalty_avatar",
+                                    "data" : {
+                                      "external" : "false",
+                                      "mode" : "push",
+                                      "url" : "mecardopago:\/\/navigation_sections?from=navigation_mp&page_id=your_profile"
+                                    },
+                                    "type" : "deeplink"
+                                  }
+                                ],
+                                "page_id" : "navigation_menu_mp",
+                                "primary_color" : "",
+                                "subtitle" : "",
+                                "platform" : "mercadoPago",
+                                "level" : "",
+                                "title" : "",
+                                "percentage" : "",
+                                "icon" : {
+                                  "name" : "https:\/\/api.mercadopago.com\/mpmobile\/profile_picture\/me"
+                                }
+                              }
+                            },
+                            {
+                              "id": "header_avatar",
+                              "ui_type": "header_avatar",
+                              "data": {
+                                "accessibility_text": "Hola Test. Ingresar a Mercado Puntos",
+                                "avatar": {
+                                  "image": "https://mla-s1-p.mlstatic.com/779461-MLA48751075584_012022-O.jpg"
+                                },
+                                "background_color": "#009EE3",
+                                "events": [
+                                  {
+                                    "data": {
+                                      "external": "false",
+                                      "mode": "push",
+                                      "url": "mercadopago://webview/?url=https%3A%2F%2Fwww.mercadopago.com.ar%2Fmercado-puntos%23origin%3Dapp_setup\u0026title=Mercado%20Puntos\u0026use_web_title=false\u0026mp_back=arrow\u0026loading_mode=none\u0026authentication_mode=required"
+                                    },
+                                    "id": "loyalty_row",
+                                    "type": "deeplink"
+                                  }
+                                ],
+                                "icon_right": {
+                                  "name": "wallet_home_asset_loyaltyChevron"
+                                },
+                                "page_id": "navigation_menu_mp",
+                                "title": "Test",
+                                "subtitle": "Ver perfil"
+                              }
+                            },
+                            {
+                              "id" : "padding",
+                              "ui_type" : "padding"
+                            },
+                            {
+                              "id" : "inicio",
+                              "ui_type" : "icon_row",
+                              "data" : {
+                                "icon" : {
+                                  "name" : "ic_navigation_home"
+                                },
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Início"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "inicio",
+                                    "data" : {
+                                      "index" : 0
+                                    },
+                                    "type" : "go_to_tabbar_ios"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id" : "tu_perfil",
+                              "ui_type" : "icon_row",
+                              "data" : {
+                                "icon" : {
+                                  "name" : "ic_navigation_profile_v2"
+                                },
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Seu perfil"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "your_profile",
+                                    "data" : {
+                                      "external" : "false",
+                                      "mode" : "push",
+                                      "url" : "mercadopago:\/\/navigation_sections?from=navigation_mp&page_id=your_profile"
+                                    },
+                                    "type" : "deeplink"
+                                  }
+                                ],
+                                "icon_right" : {
+                                  "name" : "wallet_home_asset_chevronRight"
+                                }
+                              }
+                            },
+                            {
+                              "id" : "help_v2",
+                              "ui_type" : "icon_row",
+                              "data" : {
+                                "icon" : {
+                                  "name" : "ic_navigation_help"
+                                },
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Ajuda"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "ayuda",
+                                    "data" : {
+                                      "external" : "false",
+                                      "mode" : "push",
+                                      "url" : "mercadopago:\/\/help?from=navigation_mp"
+                                    },
+                                    "type" : "deeplink"
+                                  }
+                                ],
+                                "icon_right" : {
+                                  "name" : "wallet_home_asset_chevronRight"
+                                }
+                              }
+                            },
+                            {
+                              "id" : "center_separator",
+                              "ui_type" : "center_separator",
+                              "data" : {
+                                "color" : "#000000"
+                              }
+                            },
+                            {
+                              "id" : "tu_dinero",
+                              "ui_type" : "icon_row",
+                              "data" : {
+                                "icon" : {
+                                  "name" : "ic_navigation_detail_money"
+                                },
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Seu dinheiro"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "your_money",
+                                    "data" : {
+                                      "index" : 1
+                                    },
+                                    "type" : "go_to_tabbar_ios"
+                                  }
+                                ],
+                                "icon_right" : {
+                                  "name" : "wallet_home_asset_chevronRight"
+                                }
+                              }
+                            },
+                            {
+                              "id" : "investments",
+                              "ui_type" : "icon_row",
+                              "data" : {
+                                "icon" : {
+                                  "name" : "investment_marketplace_l1"
+                                },
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Investimentos"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "investments_mlb",
+                                    "data" : {
+                                      "external" : "false",
+                                      "mode" : "push",
+                                      "url" : "mercadopago:\/\/webview?webkit-engine=2&bar_visibility=visible&authentication_mode=required&hides_bottom_bar=true&use_web_title=false&toolbar_elevation=none&url=https:\/\/www.mercadopago.com.br\/investment-mktp\/home"
+                                    },
+                                    "type" : "deeplink"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id" : "tarjetas",
+                              "ui_type" : "icon_row",
+                              "data" : {
+                                "icon" : {
+                                  "name" : "ic_navigation_cards"
+                                },
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Cartões"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "tarjetas",
+                                    "data" : {
+                                      "external" : "false",
+                                      "mode" : "push",
+                                      "url" : "mercadopago:\/\/my-cards?from=navigation_mp"
+                                    },
+                                    "type" : "deeplink"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id" : "actividad",
+                              "ui_type" : "icon_row",
+                              "data" : {
+                                "icon" : {
+                                  "name" : "ic_navigation_operations"
+                                },
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Atividade"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "actividad",
+                                    "data" : {
+                                      "external" : "false",
+                                      "mode" : "push",
+                                      "url" : "mercadopago:\/\/activities_v2_list\/?from=navigation_mp&back_action=back&from_drawer=true&authentication_mode=required&authenticate=true&swipe_gesture=true&loading_mode=none&use_web_title=false&title=Atividade&url=https%3A%2F%2Fmercadopago.com.br%2Factivities%2Fwebview-list\/"
+                                    },
+                                    "type" : "deeplink"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id" : "center_separator",
+                              "ui_type" : "center_separator",
+                              "data" : {
+                                "color" : "#000000"
+                              }
+                            },
+                            {
+                              "id" : "insurtech",
+                              "ui_type" : "icon_row",
+                              "data" : {
+                                "icon" : {
+                                  "name" : "ic_navigation_insurtech_dynamic"
+                                },
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Seguros"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "insurtech",
+                                    "data" : {
+                                      "external" : "false",
+                                      "mode" : "push",
+                                      "url" : "mercadopago:\/\/webview\/?webkit-engine=2&wk2-android-version=2.249.4&refresh_mode=pull&hides_bottom_bar=false&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fprotections"
+                                    },
+                                    "type" : "deeplink"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id" : "center_separator",
+                              "ui_type" : "center_separator",
+                              "data" : {
+                                "color" : "#000000"
+                              }
+                            },
+                            {
+                              "id" : "pagar",
+                              "ui_type" : "icon_row",
+                              "data" : {
+                                "icon" : {
+                                  "name" : "ic_navigation_pay_section"
+                                },
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Pagar"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "pay",
+                                    "data" : {
+                                      "index" : 2
+                                    },
+                                    "type" : "go_to_tabbar_ios"
+                                  }
+                                ],
+                                "icon_right" : {
+                                  "name" : "wallet_home_asset_chevronRight"
+                                }
+                              }
+                            },
+                            {
+                              "id" : "center_separator",
+                              "ui_type" : "center_separator",
+                              "data" : {
+                                "color" : "#000000"
+                              }
+                            },
+                            {
+                              "id" : "cobrar",
+                              "ui_type" : "icon_row",
+                              "data" : {
+                                "icon" : {
+                                  "name" : "ic_navigation_receive"
+                                },
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Cobrar"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "charge",
+                                    "data" : {
+                                      "external" : "false",
+                                      "mode" : "push",
+                                      "url" : "mercadopago:\/\/new_payment?from=navigation_mp"
+                                    },
+                                    "type" : "deeplink"
+                                  }
+                                ],
+                                "icon_right" : {
+                                  "name" : "wallet_home_asset_chevronRight"
+                                }
+                              }
+                            },
+                            {
+                              "id" : "tu_negocio",
+                              "ui_type" : "icon_row",
+                              "data" : {
+                                "icon" : {
+                                  "name" : "ic_navigation_business"
+                                },
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Seu negócio"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "your_business",
+                                    "data" : {
+                                      "external" : "false",
+                                      "mode" : "push",
+                                      "url" : "mercadopago:\/\/navigation_sections?from=navigation_mp&page_id=your_business"
+                                    },
+                                    "type" : "deeplink"
+                                  }
+                                ],
+                                "icon_right" : {
+                                  "name" : "wallet_home_asset_chevronRight"
+                                }
+                              }
+                            },
+                            {
+                              "id" : "center_separator",
+                              "ui_type" : "center_separator",
+                              "data" : {
+                                "color" : "#000000"
+                              }
+                            },
+                            {
+                              "id" : "exit",
+                              "ui_type" : "icon_row",
+                              "data" : {
+                                "icon" : {
+                                  "name" : "ic_navigation_logout"
+                                },
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Sair"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "salir",
+                                    "type" : "logout_mp"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id" : "center_separator",
+                              "ui_type" : "center_separator",
+                              "data" : {
+                                "color" : "#000000"
+                              }
+                            },
+                            {
+                              "id" : "about",
+                              "ui_type" : "row",
+                              "data" : {
+                                "page_id" : "navigation_menu_mp",
+                                "title" : {
+                                  "text" : "Sobre o Mercado Pago"
+                                },
+                                "events" : [
+                                  {
+                                    "id" : "about",
+                                    "data" : {
+                                      "external" : "false",
+                                      "mode" : "push",
+                                      "url" : "mercadopago:\/\/about?from=navigation_mp"
+                                    },
+                                    "type" : "deeplink"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id" : "big_padding",
+                              "ui_type" : "big_padding"
+                            }
+                          ],
+                          "ui_type" : "list_inset"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "tracking" : {
+                  "tracks" : [
+                    {
+                      "provider" : "no_track"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+
+
 ## Navigation - Navigation Section [/navigation-section]
 
 ### Get theirs bricks [GET]
@@ -1133,14 +2194,14 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                           "id": "shortcut_inicio",
                           "content_id": "inicio_123",
                           "type": "icon_row",
-                          "title": "Inicio",
+                          "title": "Inicio sem link",
                           "navigation": {
                             "type": "go_to_tabbar_ios",
                             "data": {
                               "index": 0
                             }
                           },
-                          "link": "mercadopago://home",
+                          "link": "",
                           "style": {
                             "icon": "ic_navigation_home",
                             "icon_color": "#ffff",
@@ -8658,6 +9719,22 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                  }
               },
               "buttons":[
+                  {
+                    "id": "notifications",
+                    "link": "mercadopago://notifications_center?from=home_mp",
+                    "accessibility_text": "Notificaciones",
+                    "icon": "wallet_home_notifications_header",
+                    "event_data": {
+                      "id": "notifications",
+                      "link": "mercadopago://notifications_center?from=home_mp"
+                    },
+                    "button_style": {
+                      "type": "oval",
+                      "padding_left": 4,
+                      "padding_right": 4
+                    },
+                    "has_badge": true
+                  },
                  {
                     "id":"help",
                     "title":"Ajuda",
