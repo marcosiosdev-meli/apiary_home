@@ -70,6 +70,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                     "platform" : "mercadoLibre",
                                     "level" : 6,
                                     "title" : "One test",
+                                    "background_color": "#f8de4c",
                                     "percentage" : 0.0,
                                     "icon" : {
                                       "name" : "https:\/\/api.mercadopago.com\/mpmobile\/profile_picture\/me"
@@ -84,7 +85,6 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                       "avatar": {
                                         "image": "https://3news.com/wp-content/uploads/2023/02/Lionel-Messi_186112ac6c5_large.jpg"
                                       },
-                                      "background_color": "#ffdb15",
                                       "events": [
                                         {
                                           "data": {
@@ -97,13 +97,121 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                         }
                                       ],
                                       "icon_right": {
-                                        "name": "wallet_home_asset_loyaltyChevron"
+                                        "name": "nav_sections_arrow_black"
                                       },
                                       "page_id": "navigation_menu_mp",
                                       "title": "Test",
                                       "subtitle": "Ver perfil"
                                     }
                                   },
+                                  {
+                                            "id":"header_loyalty_avatar",
+                                            "ui_type":"header_loyalty_avatar",
+                                            "data":{
+                                            "avatar":{
+                                                "image":"https:\/\/mla-s2-p.mlstatic.com\/909816-MLA52774124139_122022-O.jpg",
+                                                "loyalty":{
+                                                    "points": 20,
+                                                    "level": 1,
+                                                    "level_points_to": 200,
+                                                    "pending_notifications": 0,
+                                                    "primary_color": "#20C261",
+                                                    "percentage": 0.1,
+                                                    "drawer": {
+                                                        "title": "Hola Test",
+                                                        "subtitle": "Nivel %s - Mercado Puntos",
+                                                        "action": "meli://webview/?url=https%3A%2F%2Fwww.mercadolibre.com.ar%2Fmercado-puntos%23origin%3Dapp_setup&title=Mercado%20Puntos&use_web_title=false&back_style=arrow&loading_mode=none&authentication_mode=required&search_mode=none",
+                                                        "image": "loyalty_drawer_pill_v2_mla",
+                                                        "link": "meli://loyalty/webview?url=https%3A%2F%2Fwww.mercadolibre.com.ar%2Fsuscripciones%2Fnivel-6%23origin%3Ddrawer_pill&title=Nivel%206&use_web_title=false&back_action=close&back_style=arrow&swipe_gesture=false&authentication_mode=optional&action_bar=hidden&search_mode=none"
+                                                    }
+                                                }
+                                            },
+                                            "events":[
+                                                {
+                                                    "id":"loyalty_row",
+                                                    "data":{
+                                                        "external":"false",
+                                                        "mode":"push",
+                                                        "url":"mercadopago:\/\/webview\/?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmercado-pontos%23origin%3Dapp_setup&title=Mercado%20Pontos&use_web_title=false&back_style=arrow&back_action=close&swipe_gesture=true&loading_mode=none&authentication_mode=required&from=navigation_mp"
+                                                    },
+                                                    "type":"deeplink"
+                                                }
+                                            ],
+                                            "page_id":"navigation_menu_mp",
+                                            "accessibility_text":"Olá, Test. Acessar o Mercado Pontos.",
+                                            "icon_right":{
+                                                "name":"wallet_home_asset_loyaltyChevron"
+                                            },
+                                            "title":"Olá Test",
+                                            "background_color": "#f8de4c",
+                                            "event_data":{
+                                                
+                                            },
+                                            "user_local_timestamp":"2023-01-18T11:18:20.140-0300",
+                                            "secure":false,
+                                            "experiments":{
+                                                
+                                            },
+                                            "context":{
+                                                
+                                            },
+                                            "sequential_id":53,
+                                            "user_time":1674051500139,
+                                            "type":"view",
+                                            "path":"\/navigation_sections\/navigation_menu_mp",
+                                            "priority":"NORMAL",
+                                            "application":{
+                                                "app_id":"1945000207238192",
+                                                "app_name":"navigation-sections-ios",
+                                                "site_id":"MLB",
+                                                "version":"2.254.0",
+                                                "secured":{
+                                                    "signature":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzaXRlX2lkIjoiTUxCIiwidWlkIjoiU0lELVRFU1QiLCJ1c2VyX2lkIjoiMTI1NzY5MTgyOSIsInBsYXRmb3JtIjoiXC9tb2JpbGVcL2lvcyJ9.Q_dcaV0JU7cqInRhuBpkTaleQYfLDXim6rCYG0Y7cr8",
+                                                    "key_version":"2"
+                                                },
+                                                "view_context":"front_core",
+                                                "business":"mercadopago",
+                                                "sdk_version":{
+                                                    
+                                                }
+                                            },
+                                            "platform":{
+                                                "webview":{
+                                                    
+                                                },
+                                                "mobile":{
+                                                    "mode":"normal",
+                                                    "from_background":false
+                                                }
+                                            },
+                                            "geo":{
+                                                
+                                            },
+                                            "retry":0,
+                                            "device":{
+                                                "device_name":"x86_64",
+                                                "resolution_width":1179,
+                                                "device_id":"7727D467-B4BA-4789-916D-16FAAD1E6ABB",
+                                                "resolution_height":2556,
+                                                "platform":"\/mobile\/ios",
+                                                "os_version":"16.0",
+                                                "connectivity_type":"WIFI",
+                                                "accessibility":false,
+                                                "orientation":0
+                                            },
+                                            "user":{
+                                                "uid":"SID-TEST",
+                                                "advertiser_id":"00000000-0000-0000-0000-000000000000",
+                                                "session_id":"e85ba765-a498-4000-9ff0-f4ef674483e4",
+                                                "fingerprint":"5c2dfb3ee5449a6e07f1e71822f45fc7a60ca7280f6339d10740fded7688cb81",
+                                                "user_id":"1257691829",
+                                                "user_tags":[
+                                                    "test_user"
+                                                ],
+                                                "advertising_enabled":true
+                                            }
+                                            }
+                                        },
                                 {
                                   "id" : "cross_selling_ml",
                                   "ui_type" : "cross_selling",
@@ -128,7 +236,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                       "color" : "#000000",
                                       "text" : "Mercado Pago"
                                     },
-                                    "background_color" : "#ffdb15",
+                                    "background_color": "#f8de4c",
                                     "icon" : {
                                       "name" : "ic_crossseling_icon"
                                     }
@@ -660,7 +768,6 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                 "avatar": {
                                   "image": "https://3news.com/wp-content/uploads/2023/02/Lionel-Messi_186112ac6c5_large.jpg"
                                 },
-                                "background_color": "#009EE3",
                                 "events": [
                                   {
                                     "data": {
@@ -676,7 +783,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                   "name": "wallet_home_asset_loyaltyChevron"
                                 },
                                 "page_id": "navigation_menu_mp",
-                                "title": "Test",
+                                "title": "Olá Hubert Blaine Wolfeschlegelsteinhausenbergerdorff Sr",
                                 "subtitle": "Ver perfil"
                               }
                             },
