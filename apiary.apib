@@ -84,26 +84,26 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                       "accessibility_text": "Hola Test. Ingresar a Mercado Puntos",
                                       "avatar": {
                                         "image": "https://3news.com/wp-content/uploads/2023/02/Lionel-Messi_186112ac6c5_large.jpg"
-                                  },
-                                  "events": [
-                                    {
-                                      "data": {
-                                        "external": "false",
-                                        "mode": "push",
-                                        "url": "mercadopago://webview/?url=https%3A%2F%2Fwww.mercadopago.com.ar%2Fmercado-puntos%23origin%3Dapp_setup\u0026title=Mercado%20Puntos\u0026use_web_title=false\u0026mp_back=arrow\u0026loading_mode=none\u0026authentication_mode=required"
                                       },
-                                      "id": "loyalty_row",
-                                      "type": "deeplink"
+                                      "events": [
+                                        {
+                                          "data": {
+                                            "external": "false",
+                                            "mode": "push",
+                                            "url": "mercadopago://webview/?url=https%3A%2F%2Fwww.mercadopago.com.ar%2Fmercado-puntos%23origin%3Dapp_setup\u0026title=Mercado%20Puntos\u0026use_web_title=false\u0026mp_back=arrow\u0026loading_mode=none\u0026authentication_mode=required"
+                                          },
+                                          "id": "loyalty_row",
+                                          "type": "deeplink"
+                                        }
+                                      ],
+                                      "icon_right": {
+                                        "name": "nav_sections_arrow_black"
+                                      },
+                                      "page_id": "navigation_menu_mp",
+                                      "title": "Test",
+                                      "subtitle": "Ver perfil",
+                                      
                                     }
-                                  ],
-                                  "icon_right": {
-                                    "name": "nav_sections_arrow_black"
-                                  },
-                                  "page_id": "navigation_menu_ml",
-                                  "title": "Test",
-                                  "subtitle": "Ver perfil",
-                                  
-                                }
                                   },
                                   {
                                     "id":"header_loyalty_avatar",
@@ -138,7 +138,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                             "type":"deeplink"
                                         }
                                     ],
-                                    "page_id":"navigation_menu_ml",
+                                    "page_id":"navigation_menu_mp",
                                     "accessibility_text":"Olá, Test. Acessar o Mercado Pontos.",
                                     "icon_right":{
                                         "name":"wallet_home_asset_loyaltyChevron"
