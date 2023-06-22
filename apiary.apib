@@ -71,7 +71,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                   }
                                 ],
                                 "page_id": "navigation_menu_mp",
-                                "title": "Lionel ",
+                                "title": "Lionel",
                                 "subtitle": "Tu perfil"
                               }
                             },
@@ -2029,6 +2029,37 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                                 ]
                               }
                             },
+                            {
+                                "id":"notifications",
+                                "ui_type":"icon_row",
+                                "data":{
+                                   "icon":{
+                                      "name":"ic_navigation_notifications"
+                                   },
+                                   "page_id":"navigation_menu_mp",
+                                   "title":{
+                                      "text":"Notificações"
+                                   },
+                                   "badge":{
+                                      "text_provider":"notifications",
+                                      "id":"notifications_badge",
+                                      "background_color":"#f84b57",
+                                      "text_color":"#ffffff",
+                                      "text":""
+                                   },
+                                   "events":[
+                                      {
+                                          "id" : "notifications",
+                                          "data" : {
+                                            "external" : "false",
+                                            "mode" : "push",
+                                            "url" : "mercadopago:\/\/notification_center?from=navigation_mp"
+                                          },
+                                          "type" : "deeplink"
+                                        }
+                                   ]
+                                }
+                             },
                             {
                               "id" : "tu_perfil",
                               "ui_type" : "icon_row",
@@ -8253,22 +8284,6 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             "header": {
                 "title": "Olá, Lionel",
                 "buttons": [
-                    {
-                         "id":"notifications",
-                         "link":"mercadopago://notifications_center?from=home_mp",
-                         "accessibility_text":"Notificaciones",
-                         "icon":"wallet_home_notifications_header",
-                         "event_data":{
-                            "id":"notifications",
-                            "link":"mercadopago://notifications_center?from=home_mp"
-                         },
-                         "button_style":{
-                            "type":"oval",
-                            "padding_left":4,
-                            "padding_right":4
-                         },
-                         "has_badge":true
-                    },
                     {
                         "id": "help",
                         "title": "Ajuda",
