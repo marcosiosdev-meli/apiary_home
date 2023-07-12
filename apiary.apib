@@ -1878,6 +1878,708 @@ Polls is a simple API allowing consumers to view polls and vote in them.
           }
         }
 
+
+
+## Navigation - Navigation Section new Tu Perfil [/navigation-section-reload]
+
+### Get theirs bricks [GET]
+
++ Response 200 
+
+        {
+          "id":"navigation_menu_mp",
+          "type":"execute_and_save_events",
+          "data":{
+             "page_id":"navigation_menu_mp",
+             "events":[
+                {
+                   "type":"reload",
+                   "data":{
+                      "bricks":[
+                         {
+                            "id":"container_id",
+                            "ui_type":"container",
+                            "bricks":[
+                               {
+                                  "id":"the_header_navigation_menu",
+                                  "ui_type":"status_bar",
+                                  "data":{
+                                     "text_style":"light"
+                                  }
+                               },
+                               {
+                                  "id":"list_nav_menu",
+                                  "data":{
+                                     "separator":{
+                                        "disabled":"true"
+                                     }
+                                  },
+                                  "bricks":[
+                                     {
+                                        "id":"header_loyalty_avatar",
+                                        "ui_type":"header_loyalty_avatar",
+                                        "data":{
+                                           "avatar":{
+                                              "image":"https:\/\/mla-s2-p.mlstatic.com\/909816-MLA52774124139_122022-O.jpg",
+                                              "loyalty":{
+                                                 "percentage_level":0.34999999999999998,
+                                                 "empty":"#30FFFFFF",
+                                                 "fill":"#FFFFFF",
+                                                 "color_level":"#1DBA56",
+                                                 "level":1
+                                              }
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"loyalty_row",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/webview\/?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmercado-pontos%23origin%3Dapp_setup&title=Mercado%20Pontos&use_web_title=false&back_style=arrow&back_action=close&swipe_gesture=true&loading_mode=none&authentication_mode=required&from=navigation_mp"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ],
+                                           "page_id":"navigation_menu_mp",
+                                           "accessibility_text":"Olá, Test. Acessar o Mercado Pontos.",
+                                           "icon_right":{
+                                              "name":"wallet_home_asset_loyaltyChevron"
+                                           },
+                                           "title":"Test",
+                                           "event_data":{
+                                              
+                                           },
+                                           "user_local_timestamp":"2023-01-18T11:18:20.140-0300",
+                                           "secure":false,
+                                           "experiments":{
+                                              
+                                           },
+                                           "context":{
+                                              
+                                           },
+                                           "sequential_id":53,
+                                           "user_time":1674051500139,
+                                           "type":"view",
+                                           "path":"\/navigation_sections\/navigation_menu_mp",
+                                           "priority":"NORMAL",
+                                           "application":{
+                                              "app_id":"1945000207238192",
+                                              "app_name":"navigation-sections-ios",
+                                              "site_id":"MLB",
+                                              "version":"2.254.0",
+                                              "secured":{
+                                                 "signature":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzaXRlX2lkIjoiTUxCIiwidWlkIjoiU0lELVRFU1QiLCJ1c2VyX2lkIjoiMTI1NzY5MTgyOSIsInBsYXRmb3JtIjoiXC9tb2JpbGVcL2lvcyJ9.Q_dcaV0JU7cqInRhuBpkTaleQYfLDXim6rCYG0Y7cr8",
+                                                 "key_version":"2"
+                                              },
+                                              "view_context":"front_core",
+                                              "business":"mercadopago",
+                                              "sdk_version":{
+                                                 
+                                              }
+                                           },
+                                           "platform":{
+                                              "webview":{
+                                                 
+                                              },
+                                              "mobile":{
+                                                 "mode":"normal",
+                                                 "from_background":false
+                                              }
+                                           },
+                                           "geo":{
+                                              
+                                           },
+                                           "retry":0,
+                                           "device":{
+                                              "device_name":"x86_64",
+                                              "resolution_width":1179,
+                                              "device_id":"7727D467-B4BA-4789-916D-16FAAD1E6ABB",
+                                              "resolution_height":2556,
+                                              "platform":"\/mobile\/ios",
+                                              "os_version":"16.0",
+                                              "connectivity_type":"WIFI",
+                                              "accessibility":false,
+                                              "orientation":0
+                                           },
+                                           "user":{
+                                              "uid":"SID-TEST",
+                                              "advertiser_id":"00000000-0000-0000-0000-000000000000",
+                                              "session_id":"e85ba765-a498-4000-9ff0-f4ef674483e4",
+                                              "fingerprint":"5c2dfb3ee5449a6e07f1e71822f45fc7a60ca7280f6339d10740fded7688cb81",
+                                              "user_id":"1257691829",
+                                              "user_tags":[
+                                                 "test_user"
+                                              ],
+                                              "advertising_enabled":true
+                                           }
+                                        }
+                                     },
+                                     {
+                                        "id":"padding",
+                                        "ui_type":"padding"
+                                     },
+                                     {
+                                        "id":"reload",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"icon_refresh_blue"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Reload para new Tu Perfil"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"inicio",
+                                                 "data":{
+                                                    "index":0
+                                                 },
+                                                 "type":"go_to_tabbar_ios"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                        "id":"inicio",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_home"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Início"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"inicio",
+                                                 "data":{
+                                                    "index":0
+                                                 },
+                                                 "type":"go_to_tabbar_ios"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                      "id":"navigation_based_home",
+                                      "ui_type":"icon_row",
+                                      "data":{
+                                         "icon":{
+                                            "name":"more_icon_tabbar_selected_ml"
+                                         },
+                                         "page_id":"navigation_menu_mp",
+                                         "title":{
+                                            "text":"Navigation Based Home"
+                                         },
+                                         "events":[
+                                            {
+                                               "id":"navigation_based_home",
+                                               "data":{
+                                                  "external":"false",
+                                                  "mode":"push",
+                                                  "url":"mercadopago:\/\/navigation_menu?page_id=navigation_menu_mp&from=navigation_mp"
+                                               },
+                                               "type":"deeplink"
+                                            }
+                                         ]
+                                      }
+                                   },
+                                     {
+                                        "id":"notifications",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_notifications"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Notificações"
+                                           },
+                                           "badge":{
+                                              "text_provider":"notifications",
+                                              "id":"notifications_badge",
+                                              "background_color":"#f84b57",
+                                              "text_color":"#ffffff",
+                                              "text":""
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"notifications",
+                                                 "data":{
+                                                    "index":3
+                                                 },
+                                                 "type":"go_to_tabbar_ios"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                        "id":"tu_perfil",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_profile_v2"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Seu perfil"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"your_profile",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/hub\/show?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fhub-engine%2Fhubs%2Fmy-profile&auto_reload=true&authentication_mode=required&bar_color=009EE3&use_web_title=true&OPV=fend"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ],
+                                           "icon_right":{
+                                              "name":"wallet_home_asset_chevronRight"
+                                           }
+                                        }
+                                     },
+                                     {
+                                        "id":"help_v2",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_help"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Ajuda"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"ayuda",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/cx\/help?from=navigation_mp"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ],
+                                           "icon_right":{
+                                              "name":"wallet_home_asset_chevronRight"
+                                           }
+                                        }
+                                     },
+                                     {
+                                        "id":"center_separator",
+                                        "ui_type":"center_separator",
+                                        "data":{
+                                           "color":"#000000"
+                                        }
+                                     },
+                                     {
+                                        "id":"tu_dinero",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_detail_money"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Seu dinheiro"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"your_money",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fbanking%2Fbalance%2Fwebview&from_drawer=true&from=navigation_mp"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ],
+                                           "icon_right":{
+                                              "name":"wallet_home_asset_chevronRight"
+                                           }
+                                        }
+                                     },
+                                     {
+                                        "id":"crypto",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"wallet_home_shortcuts_cripto_v2"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Criptomoedas"
+                                           },
+                                           "badge":{
+                                              "id":"crypto_badge",
+                                              "background_color":"#009ee3",
+                                              "text_color":"#ffffff",
+                                              "text":"NOVO"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"crypto",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/webview\/?authentication_mode=required&hides_bottom_bar=true&use_web_title=false&title=Criptomoedas&refresh_mode=pull&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcrypto%2F"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                        "id":"investments",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"investment_marketplace"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Investimentos"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"investments_mlb",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/webview?webkit-engine=2&authentication_mode=required&hides_bottom_bar=true&use_web_title=false&toolbar_elevation=none&url=https:\/\/www.mercadopago.com.br\/investment-mktp\/home"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                        "id":"open_banking",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_open_banking"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Open Finance"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"open_banking",
+                                                 "data":{
+                                                    "external":"0",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/webview?from=navigation_mp&hides_bottom_bar=true&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fopen-banking%2Fapp&navigation_icon=icon_disbursements_help"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                        "id":"tarjetas",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_cards"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Cartões"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"tarjetas",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/cards-list\/list?from=navigation_mp"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                        "id":"actividad",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_operations"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Atividade"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"actividad",
+                                                 "data":{
+                                                    "index":1
+                                                 },
+                                                 "type":"go_to_tabbar_ios"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                        "id":"center_separator",
+                                        "ui_type":"center_separator",
+                                        "data":{
+                                           "color":"#000000"
+                                        }
+                                     },
+                                     {
+                                        "id":"credits",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_credits"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Empréstimos"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"credits",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/credits-hub\/?from=navigation_mp&additional_info=credits_access&sk=vl4T5NNR"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                        "id":"insurtech",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_insurtech_dynamic"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Seguros"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"insurtech",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/webview?refresh_mode=pull&hides_bottom_bar=false&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fprotections%3Fwkit-activity%3Dgeneric"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                        "id":"center_separator",
+                                        "ui_type":"center_separator",
+                                        "data":{
+                                           "color":"#000000"
+                                        }
+                                     },
+                                     {
+                                        "id":"pagar",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_pay_section"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Pagar"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"pay_section",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"pu",
+                                                    "url":"mercadopago:\/\/pay-section?from=navigation_mp"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ],
+                                           "icon_right":{
+                                              "name":"wallet_home_asset_chevronRight"
+                                           }
+                                        }
+                                     },
+                                     {
+                                        "id":"center_separator",
+                                        "ui_type":"center_separator",
+                                        "data":{
+                                           "color":"#000000"
+                                        }
+                                     },
+                                     {
+                                        "id":"cobrar",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_receive"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Cobrar"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"receive",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/new_payment?from=navigation_mp"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ],
+                                           "icon_right":{
+                                              "name":"wallet_home_asset_chevronRight"
+                                           }
+                                        }
+                                     },
+                                     {
+                                        "id":"tu_negocio",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_business"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Seu negócio"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"your_business",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/navigation_sections?page_id=your_business_v2&from=navigation_mp"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ],
+                                           "icon_right":{
+                                              "name":"wallet_home_asset_chevronRight"
+                                           }
+                                        }
+                                     },
+                                     {
+                                        "id":"representatives",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_representantes_l1"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Representantes"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"representatives",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/webview\/?OPV=fend&url=https:\/\/mercadopago.com.br\/visit-manager\/home-options"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                        "id":"center_separator",
+                                        "ui_type":"center_separator",
+                                        "data":{
+                                           "color":"#000000"
+                                        }
+                                     },
+                                     {
+                                        "id":"exit",
+                                        "ui_type":"icon_row",
+                                        "data":{
+                                           "icon":{
+                                              "name":"ic_navigation_logout"
+                                           },
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Sair"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"salir",
+                                                 "type":"logout_mp"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                        "id":"center_separator",
+                                        "ui_type":"center_separator",
+                                        "data":{
+                                           "color":"#000000"
+                                        }
+                                     },
+                                     {
+                                        "id":"about",
+                                        "ui_type":"row",
+                                        "data":{
+                                           "page_id":"navigation_menu_mp",
+                                           "title":{
+                                              "text":"Sobre o Mercado Pago"
+                                           },
+                                           "events":[
+                                              {
+                                                 "id":"about",
+                                                 "data":{
+                                                    "external":"false",
+                                                    "mode":"push",
+                                                    "url":"mercadopago:\/\/about?from=navigation_mp"
+                                                 },
+                                                 "type":"deeplink"
+                                              }
+                                           ]
+                                        }
+                                     },
+                                     {
+                                        "id":"big_padding",
+                                        "ui_type":"big_padding"
+                                     }
+                                  ],
+                                  "ui_type":"list_inset"
+                               }
+                            ]
+                         }
+                      ]
+                   },
+                   "tracking":{
+                      "tracks":[
+                         {
+                            "provider":"no_track"
+                         }
+                      ]
+                   }
+                }
+             ]
+          }
+        }
+
+
+
 ## Navigation - Navigation Section new Tu Perfil [/navigation-section-mp]
 
 ### Get theirs bricks [GET]
@@ -10332,4 +11034,1716 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                 "wallet/badge_main_actions": "22755",
                 "wallet/banking_products": "17002"
             }
+        }
+
+## WalkThough Hub Benefits [/mpmobile/home/seller]
+
+### Get WT [GET]
+
++ Response 200 (application/json)
+
+        {
+          "items" : [
+            {
+              "id" : "spacer",
+              "content" : {
+                "id" : "spacer"
+              },
+              "ordinal" : 1,
+              "type" : "SPACER",
+              "partial" : false
+            },
+            {
+              "id" : "your_business",
+              "content" : {
+                "id" : "business_data",
+                "icon" : "https:\/\/mla-s1-p.mlstatic.com\/885037-MLA54778695004_032023-O.jpg",
+                "title" : "Calças Shorts e Mais",
+                "action" : {
+                  "link" : "mercadopago:\/\/business-config\/landing"
+                }
+              },
+              "ordinal" : 2,
+              "type" : "YOUR_BUSINESS",
+              "partial" : false
+            },
+            {
+              "id" : "charge",
+              "content" : {
+                "shortcuts" : [
+                  {
+                    "accessibility_text" : "Área Pix",
+                    "content_id" : "general",
+                    "id" : "pix",
+                    "event_data" : {
+                      "content_id" : "general",
+                      "enabled" : true,
+                      "component_id" : "pix",
+                      "position" : 0
+                    },
+                    "image_style" : {
+                      "icon_color" : "#31DED2",
+                      "icon" : "wallet_home_asset_pix_filled",
+                      "background_color" : "#0A000000",
+                      "border_color" : "#00FFFFFF",
+                      "background_color_pressed" : "#12000000",
+                      "text_color" : "#E6000000"
+                    },
+                    "link" : "mercadopago:\/\/money-out\/accounts\/pix\/home",
+                    "title" : "Área Pix"
+                  },
+                  {
+                    "accessibility_text" : "Point",
+                    "content_id" : "charge_with_point_mlb",
+                    "id" : "charge_with_point",
+                    "event_data" : {
+                      "content_id" : "charge_with_point_mlb",
+                      "enabled" : true,
+                      "component_id" : "charge_with_point",
+                      "position" : 1
+                    },
+                    "image_style" : {
+                      "icon" : "wallet_home_shortcuts_charge_point_mlm_mlb_v2",
+                      "background_color" : "#0A000000",
+                      "border_color" : "#00FFFFFF",
+                      "background_color_pressed" : "#12000000",
+                      "text_color" : "#E6000000"
+                    },
+                    "link" : "mercadopago:\/\/start_new_payment?method=point",
+                    "title" : "Point"
+                  },
+                  {
+                    "accessibility_text" : "QR ou Pix",
+                    "content_id" : "charge_with_qr_mlb",
+                    "id" : "charge_with_qr",
+                    "event_data" : {
+                      "content_id" : "charge_with_qr_mlb",
+                      "enabled" : true,
+                      "component_id" : "charge_with_qr",
+                      "position" : 2
+                    },
+                    "image_style" : {
+                      "icon" : "wallet_home_shortcuts_charge_qr",
+                      "background_color" : "#0A000000",
+                      "border_color" : "#00FFFFFF",
+                      "background_color_pressed" : "#12000000",
+                      "text_color" : "#E6000000"
+                    },
+                    "link" : "mercadopago:\/\/start_new_payment?method=qr",
+                    "title" : "QR ou Pix"
+                  },
+                  {
+                    "accessibility_text" : "Link",
+                    "content_id" : "charge_with_link_mlb",
+                    "id" : "charge_with_link",
+                    "event_data" : {
+                      "content_id" : "charge_with_link_mlb",
+                      "enabled" : true,
+                      "component_id" : "charge_with_link",
+                      "position" : 3
+                    },
+                    "image_style" : {
+                      "icon" : "wallet_home_shortcuts_charge_link",
+                      "background_color" : "#0A000000",
+                      "border_color" : "#00FFFFFF",
+                      "background_color_pressed" : "#12000000",
+                      "text_color" : "#E6000000"
+                    },
+                    "link" : "mercadopago:\/\/webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Ftools%2Flist%3Forigin%3Dapp&toolbar_elevation=none&OPV=fend&hides_bottom_bar=true&navigation_icon=boton-tulink",
+                    "title" : "Link"
+                  }
+                ],
+                "header" : {
+                  "title" : "Cobrar",
+                  "icon" : "wallet_home_shortcuts_header_collect"
+                }
+              },
+              "ordinal" : 3,
+              "type" : "SHORTCUTS",
+              "partial" : false
+            },
+            {
+              "id" : "activities",
+              "content" : {
+                "ftu" : {
+                  "title" : "Você ainda não tem atividade",
+                  "message" : "Comece a vender e aqui você encontrará todos os detalhes.",
+                  "icon" : "wallet_home_activities_ftu_icon"
+                },
+                "refresh_after_seconds" : 45,
+                "event_data" : {
+                  "is_ftu" : true,
+                  "quantity" : 0,
+                  "has_footer" : false
+                }
+              },
+              "ordinal" : 4,
+              "type" : "ACTIVITIES",
+              "partial" : false
+            },
+            {
+              "id" : "seller_metrics",
+              "content" : {
+                "items" : [
+                  {
+                    "content" : {
+                      "amount" : 500,
+                      "currency" : "BRL"
+                    },
+                    "accessibility" : "Volume total de vendas de junho quinhentos reais",
+                    "enabled" : true,
+                    "id" : "tpv_item",
+                    "title" : "Volume total de vendas de junho",
+                    "event_data" : {
+                      "type" : "TPV",
+                      "position" : 1
+                    },
+                    "link" : "mercadopago:\/\/webview\/?webkit-engine=2&OPV=fend&collaborator_validation_mode=fend&authentication_mode=required&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fdashboards%2Fv2%3Fstart_period_dashboard%3D2023-06-01T00%3A00%3A00.000Zto2023-06-30T10%3A53%3A38.295Z",
+                    "type" : "MONEY_AMOUNT",
+                    "icon" : "seller_metrics_widget_item_graph_icon"
+                  },
+                  {
+                    "content" : {
+                      "text" : "6"
+                    },
+                    "accessibility" : "Vendas de junho seis",
+                    "enabled" : true,
+                    "id" : "tpn_item",
+                    "title" : "Vendas de junho",
+                    "event_data" : {
+                      "type" : "TPN",
+                      "position" : 2
+                    },
+                    "link" : "mercadopago:\/\/webview\/?webkit-engine=2&OPV=fend&collaborator_validation_mode=fend&authentication_mode=required&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fdashboards%2Fv2%3Fstart_period_dashboard%3D2023-06-01T00%3A00%3A00.000Zto2023-06-30T10%3A53%3A38.294Z",
+                    "type" : "LABEL",
+                    "icon" : "seller_metrics_widget_item_graph_icon"
+                  }
+                ],
+                "header" : {
+                  "id" : "seller_metrics_header",
+                  "icon" : "seller_metrics_widget_header_graph_icon",
+                  "event_data" : {
+                    "type" : "HEADER",
+                    "position" : 0
+                  },
+                  "title" : "Métricas do seu negócio",
+                  "link" : "mercadopago:\/\/webview\/?webkit-engine=2&OPV=fend&collaborator_validation_mode=fend&authentication_mode=required&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fdashboards%2Fv2%3Fstart_period_dashboard%3D2023-06-01T00%3A00%3A00.000Zto2023-06-30T10%3A53%3A38.295Z"
+                }
+              },
+              "ordinal" : 5,
+              "type" : "SELLER_METRICS",
+              "partial" : false
+            },
+            {
+              "ordinal" : 6,
+              "content" : {
+                "actions" : {
+        
+                },
+                "items" : [
+                  {
+                    "content" : {
+                      "header" : "Empréstimos",
+                      "text_color" : "#00BCFF",
+                      "title_border_sprite" : "merchengine_home_section_cross_selling_border_sprite_dark_blue",
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_MC_X_ALL_SELL_231704_HUB_SELLERS_TEST_MC_SCORING",
+                      "title" : "Consiga um empréstimo para invertir nos seus negócios!",
+                      "background_color" : "#FFFFFF",
+                      "actions" : {
+                        "content_link" : {
+                          "target" : "internal_link",
+                          "event_data" : {
+        
+                          },
+                          "action_id" : "default",
+                          "link" : "mercadopago:\/\/webview\/?webkit-engine=2&from=home_sellers_mp&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcredits%2Fmerchant%2Fscoring%23from%3Dhome_sellers_mp%26additional_info%3Dxsell_banner"
+                        }
+                      },
+                      "front_image" : "banner_merchant_cuota_fija"
+                    },
+                    "exposure" : 100,
+                    "created_at" : 1681753184602341400,
+                    "id" : "MLB_MP_BANN-MP_XSELL_MC_X_ALL_SELL_231704_HUB_SELLERS_TEST_MC_SCORING",
+                    "event_data" : {
+                      "logic" : "campaigns",
+                      "position" : 0,
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_MC_X_ALL_SELL_231704_HUB_SELLERS_TEST_MC_SCORING",
+                      "flow" : "37",
+                      "bu_line" : "29",
+                      "component_id" : "cross_selling_home_mp_hub_seller_0",
+                      "audience" : "seller_sin_oferta_merchant_mark_mlb",
+                      "bu" : "4"
+                    },
+                    "start_date" : "2023-04-03T18:15:00.000-03:00",
+                    "end_date" : "2023-12-31T00:00:00.000-03:00",
+                    "priority" : 9,
+                    "realestate_id" : "cross_selling_home_mp_hub_seller"
+                  },
+                  {
+                    "content" : {
+                      "header" : "Crie grátis seu Bio livre",
+                      "text_color" : "#FFFFFF",
+                      "title_border_sprite" : "merchengine_home_section_cross_selling_border_sprite_dark_blue",
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_X_LINK_ALL_ALL_231704_HUB_SELLERS_BIOLIBRE_AWR",
+                      "title" : "Uma página para a biografia das suas redes sociais.",
+                      "background_color" : "#00BCFF",
+                      "actions" : {
+                        "content_link" : {
+                          "target" : "internal_link",
+                          "event_data" : {
+        
+                          },
+                          "action_id" : "default",
+                          "link" : "mercadopago:\/\/webview?url=https:\/\/mercadopago.com.br\/link-in-bio\/bio\/onboarding?utm_source=mercadopago&utm_medium=notifications&utm_campaign=biolibre_mp_1&utm_content=push_mobile&from=MLB_MP_BANN-MP_XSELL_X_LINK_ALL_ALL_231704_HUB_SELLERS_BIOLIBRE_AWR"
+                        }
+                      },
+                      "front_image" : "DR_mlm_linkdepago"
+                    },
+                    "exposure" : 100,
+                    "created_at" : 1681752161723278000,
+                    "id" : "MLB_MP_BANN-MP_XSELL_X_LINK_ALL_ALL_231704_HUB_SELLERS_BIOLIBRE_AWR",
+                    "event_data" : {
+                      "logic" : "campaigns",
+                      "position" : 1,
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_X_LINK_ALL_ALL_231704_HUB_SELLERS_BIOLIBRE_AWR",
+                      "flow" : "15",
+                      "bu_line" : "8",
+                      "component_id" : "cross_selling_home_mp_hub_seller_1",
+                      "audience" : "all",
+                      "bu" : "4"
+                    },
+                    "start_date" : "2023-04-03T18:15:00.000-03:00",
+                    "end_date" : "2023-12-31T00:00:00.000-03:00",
+                    "priority" : 7,
+                    "realestate_id" : "cross_selling_home_mp_hub_seller"
+                  },
+                  {
+                    "content" : {
+                      "header" : "Pague suas contas com o app!",
+                      "text_color" : "#FFFFFF",
+                      "title_border_sprite" : "merchengine_home_section_cross_selling_border_sprite_dark_blue",
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_W_SVS_ALL_SELL_231704_HUB_SELLERS_SVS_PAY",
+                      "title" : "É mais  rápido e mais  seguro!",
+                      "background_color" : "#00BCFF",
+                      "actions" : {
+                        "content_link" : {
+                          "target" : "internal_link",
+                          "event_data" : {
+        
+                          },
+                          "action_id" : "default",
+                          "link" : "mercadopago:\/\/bill-payments\/?from=MLB_MP_BANN-MP_XSELL_W_SVS_ALL_SELL_231704_HUB_SELLERS_SVS_PAY"
+                        }
+                      },
+                      "front_image" : "xp_evita_reitro_mlb_servicios_sin_desc"
+                    },
+                    "exposure" : 100,
+                    "created_at" : 1681752302532621800,
+                    "id" : "MLB_MP_BANN-MP_XSELL_W_SVS_ALL_SELL_231704_HUB_SELLERS_SVS_PAY",
+                    "event_data" : {
+                      "logic" : "campaigns",
+                      "position" : 2,
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_W_SVS_ALL_SELL_231704_HUB_SELLERS_SVS_PAY",
+                      "flow" : "2",
+                      "bu_line" : "10",
+                      "component_id" : "cross_selling_home_mp_hub_seller_2",
+                      "audience" : "all",
+                      "bu" : "4"
+                    },
+                    "start_date" : "2023-04-03T18:15:00.000-03:00",
+                    "end_date" : "2023-12-31T00:00:00.000-03:00",
+                    "priority" : 6,
+                    "realestate_id" : "cross_selling_home_mp_hub_seller"
+                  },
+                  {
+                    "content" : {
+                      "header" : "Compra no mercado livre",
+                      "text_color" : "#000000",
+                      "title_border_sprite" : "merchengine_home_section_cross_selling_border_sprite_dark_blue",
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_X_X_ALL_ALL_231704_HUB_SELLERS_MKT_XSELL",
+                      "title" : "Todos os produtos que você precisa para o seu negócio",
+                      "background_color" : "#F9D800",
+                      "actions" : {
+                        "content_link" : {
+                          "target" : "internal_link",
+                          "event_data" : {
+        
+                          },
+                          "action_id" : "default",
+                          "link" : "meli:\/\/home\/?from=MLB_MP_BANN-MP_XSELL_X_X_ALL_ALL_231704_HUB_SELLERS_MKT_XSELL"
+                        }
+                      },
+                      "front_image" : "assetmarketplace"
+                    },
+                    "exposure" : 100,
+                    "created_at" : 1681752011751509000,
+                    "id" : "MLB_MP_BANN-MP_XSELL_X_X_ALL_ALL_231704_HUB_SELLERS_MKT_XSELL",
+                    "event_data" : {
+                      "logic" : "campaigns",
+                      "position" : 3,
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_X_X_ALL_ALL_231704_HUB_SELLERS_MKT_XSELL",
+                      "flow" : "-1",
+                      "bu_line" : "92",
+                      "component_id" : "cross_selling_home_mp_hub_seller_3",
+                      "audience" : "all",
+                      "bu" : "4"
+                    },
+                    "start_date" : "2023-04-03T18:15:00.000-03:00",
+                    "end_date" : "2023-12-31T00:00:00.000-03:00",
+                    "priority" : 5,
+                    "realestate_id" : "cross_selling_home_mp_hub_seller"
+                  },
+                  {
+                    "content" : {
+                      "header" : "Conte com o Pix em seus negócios!",
+                      "text_color" : "#FFFFFF",
+                      "title_border_sprite" : "merchengine_home_section_cross_selling_border_sprite_dark_blue",
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_X_PIX_ALL_SELL_231704_HUB_SELLERS_TEST_PIX_CADASTRO",
+                      "title" : "Não perca venda, cadastre sua chave pix",
+                      "background_color" : "#00BCFF",
+                      "actions" : {
+                        "content_link" : {
+                          "target" : "internal_link",
+                          "event_data" : {
+        
+                          },
+                          "action_id" : "default",
+                          "link" : "mercadopago:\/\/webview?url=https:\/\/www.mercadopago.com.br\/admin-pix-keys&from=MLB_MP_BANN-MP_XSELL_X_PIX_ALL_SELL_231704_HUB_SELLERS_TEST_PIX_CADASTRO"
+                        }
+                      },
+                      "front_image" : "PIX-CS"
+                    },
+                    "exposure" : 100,
+                    "created_at" : 1681752642982001200,
+                    "id" : "MLB_MP_BANN-MP_XSELL_X_PIX_ALL_SELL_231704_HUB_SELLERS_TEST_PIX_CADASTRO",
+                    "event_data" : {
+                      "logic" : "campaigns",
+                      "position" : 4,
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_X_PIX_ALL_SELL_231704_HUB_SELLERS_TEST_PIX_CADASTRO",
+                      "flow" : "128",
+                      "bu_line" : "85",
+                      "component_id" : "cross_selling_home_mp_hub_seller_4",
+                      "audience" : "all",
+                      "bu" : "4"
+                    },
+                    "start_date" : "2023-04-03T18:15:00.000-03:00",
+                    "end_date" : "2023-12-31T00:00:00.000-03:00",
+                    "priority" : 4,
+                    "realestate_id" : "cross_selling_home_mp_hub_seller"
+                  },
+                  {
+                    "content" : {
+                      "header" : "Indique e Ganhe!",
+                      "text_color" : "#FFFFFF",
+                      "title_border_sprite" : "merchengine_home_section_cross_selling_border_sprite_dark_blue",
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_P_MGM_ALL_SELL_20230615_POINTMGM_HUBSELLER",
+                      "title" : "Indique a Point e ganhe uma renda extra por cada indicação",
+                      "background_color" : "#00BCFF",
+                      "actions" : {
+                        "content_link" : {
+                          "target" : "internal_link",
+                          "event_data" : {
+        
+                          },
+                          "action_id" : "default",
+                          "link" : "https:\/\/www.mercadopago.com.br\/convide-e-ganhe?from=MLB_MP_BANN-MP_XSELL_P_MGM_ALL_SELL_20230615_POINTMGM_HUBSELLER"
+                        }
+                      },
+                      "front_image" : "MGM_HUNT_17"
+                    },
+                    "exposure" : 100,
+                    "created_at" : 1686836636871531000,
+                    "id" : "MLB_MP_BANN-MP_XSELL_P_MGM_ALL_SELL_20230615_POINTMGM_HUBSELLER",
+                    "event_data" : {
+                      "logic" : "campaigns",
+                      "position" : 5,
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_P_MGM_ALL_SELL_20230615_POINTMGM_HUBSELLER",
+                      "flow" : "62",
+                      "bu_line" : "9",
+                      "component_id" : "cross_selling_home_mp_hub_seller_5",
+                      "audience" : "all",
+                      "bu" : "4"
+                    },
+                    "start_date" : "2023-04-03T18:15:00.000-03:00",
+                    "end_date" : "2023-12-31T00:00:00.000-03:00",
+                    "priority" : 4,
+                    "realestate_id" : "cross_selling_home_mp_hub_seller"
+                  },
+                  {
+                    "content" : {
+                      "header" : "Faça transferências pelo app",
+                      "text_color" : "#FFFFFF",
+                      "title_border_sprite" : "merchengine_home_section_cross_selling_border_sprite_dark_blue",
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_W_TR_ALL_ALL_231704_HUB_SELLERS_TRF_3ROS",
+                      "title" : "Seu Banco digital ao alcance de sua mão",
+                      "background_color" : "#00BCFF",
+                      "actions" : {
+                        "content_link" : {
+                          "target" : "internal_link",
+                          "event_data" : {
+        
+                          },
+                          "action_id" : "default",
+                          "link" : "mercadopago:\/\/send_money\/?from=MLB_MP_BANN-MP_XSELL_W_TR_ALL_ALL_231704_HUB_SELLERS_TRF_3ROS"
+                        }
+                      },
+                      "front_image" : "insurtech_transferencias2"
+                    },
+                    "exposure" : 100,
+                    "created_at" : 1681751805553381000,
+                    "id" : "MLB_MP_BANN-MP_XSELL_W_TR_ALL_ALL_231704_HUB_SELLERS_TRF_3ROS",
+                    "event_data" : {
+                      "logic" : "campaigns",
+                      "position" : 6,
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_W_TR_ALL_ALL_231704_HUB_SELLERS_TRF_3ROS",
+                      "flow" : "60",
+                      "bu_line" : "27",
+                      "component_id" : "cross_selling_home_mp_hub_seller_6",
+                      "audience" : "all",
+                      "bu" : "4"
+                    },
+                    "start_date" : "2023-04-03T18:15:00.000-03:00",
+                    "end_date" : "2023-12-31T00:00:00.000-03:00",
+                    "priority" : 3,
+                    "realestate_id" : "cross_selling_home_mp_hub_seller"
+                  },
+                  {
+                    "content" : {
+                      "header" : "Invista no CDB Mercado Pago!",
+                      "text_color" : "#FFFFFF",
+                      "title_border_sprite" : "merchengine_home_section_cross_selling_border_sprite_dark_blue",
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_X_AM_ALL_SELL_231704_HUB_SELLERS_ASSET_MGT",
+                      "title" : "Aqui seu dinheiro rende sem preocupações.",
+                      "background_color" : "#00BCFF",
+                      "actions" : {
+                        "content_link" : {
+                          "target" : "internal_link",
+                          "event_data" : {
+        
+                          },
+                          "action_id" : "default",
+                          "link" : "mercadopago:\/\/webview?authentication_mode=required&url=https:\/\/mercadopago.com.br\/investment-cdb\/offers&from=MLB_MP_BANN-MP_XSELL_X_AM_ALL_SELL_231704_HUB_SELLERS_ASSET_MGT"
+                        }
+                      },
+                      "front_image" : "banner_mlb_asset_nps"
+                    },
+                    "exposure" : 100,
+                    "created_at" : 1681752533791414800,
+                    "id" : "MLB_MP_BANN-MP_XSELL_X_AM_ALL_SELL_231704_HUB_SELLERS_ASSET_MGT",
+                    "event_data" : {
+                      "logic" : "campaigns",
+                      "position" : 7,
+                      "content_id" : "MLB_MP_BANN-MP_XSELL_X_AM_ALL_SELL_231704_HUB_SELLERS_ASSET_MGT",
+                      "flow" : "10",
+                      "bu_line" : "3",
+                      "component_id" : "cross_selling_home_mp_hub_seller_7",
+                      "audience" : "all",
+                      "bu" : "4"
+                    },
+                    "start_date" : "2023-04-03T18:15:00.000-03:00",
+                    "end_date" : "2023-12-31T00:00:00.000-03:00",
+                    "priority" : 2,
+                    "realestate_id" : "cross_selling_home_mp_hub_seller"
+                  }
+                ],
+                "header" : {
+                  "title" : "Saiba mais"
+                }
+              },
+              "id" : "cross_selling",
+              "partial" : false,
+              "start_date" : "2019-04-20T12:00:00-03:00",
+              "type" : "ADS_CAROUSEL",
+              "end_date" : "2999-04-20T12:00:00-03:00"
+            },
+            {
+              "id" : "shortcuts",
+              "content" : {
+                "header" : {
+                  "title" : "Ferramentas",
+                  "icon" : "wallet_hub_seller_asset_ferramentas"
+                },
+                "sheet" : {
+                  "event_data" : {
+                    "group_ids" : [
+                      "representatives",
+                      "express",
+                      "charge",
+                      "pix",
+                      "seller_pricing",
+                      "seller_business",
+                      "mgm",
+                      "seller_information",
+                      "seller_configuration"
+                    ],
+                    "favorites_ids" : null,
+                    "shortcut_ids" : [
+                      "representatives",
+                      "meli_places",
+                      "hub_charge",
+                      "charge_point",
+                      "charge_link",
+                      "charge_qr",
+                      "charge_caixa",
+                      "pix",
+                      "pix_money_transfer",
+                      "pix_copy_paste",
+                      "pix_qr",
+                      "pix_deposit_money",
+                      "business_fees_installments",
+                      "business_costs_simulator",
+                      "business_psj",
+                      "business_dashboard",
+                      "business_reporting",
+                      "business_billing_reports",
+                      "business_pos_management",
+                      "business_stores_pos",
+                      "business_point_devices",
+                      "business_colaborators",
+                      "business_catalog",
+                      "business_discounts_admin",
+                      "mgm_point",
+                      "mgm_payer",
+                      "business_news",
+                      "business_cdv",
+                      "business_configuration"
+                    ]
+                  },
+                  "header" : {
+                    "title" : "Mais ferramentas"
+                  },
+                  "collections" : [
+                    {
+                      "id" : "representatives",
+                      "shortcuts" : [
+                        {
+                          "content_id" : "representatives_mlb",
+                          "id" : "representatives",
+                          "event_data" : {
+                            "position" : 0,
+                            "enabled" : true,
+                            "group_id" : "representatives",
+                            "content_id" : "representatives_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 0,
+                            "component_id" : "representatives",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "ic_representantes_shortcut",
+                            "icon_color" : "#5D97B2"
+                          },
+                          "title" : "Representantes",
+                          "link" : "mercadopago:\/\/webview?OPV=fend&additional_info=shortcuts&authentication_mode=required&collaborator_validation_mode=fend&from=mp_hub_sellers&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fvisit-manager%2Fhome-options&webkit-engine=2"
+                        }
+                      ],
+                      "title" : "Representantes"
+                    },
+                    {
+                      "id" : "express",
+                      "shortcuts" : [
+                        {
+                          "content_id" : "general",
+                          "id" : "meli_places",
+                          "event_data" : {
+                            "position" : 0,
+                            "enabled" : true,
+                            "group_id" : "express",
+                            "content_id" : "general",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 1,
+                            "component_id" : "meli_places",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_business_meli_places",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Express",
+                          "link" : "mercadopago:\/\/meliplaces\/home?additional_info=shortcuts&from=mp_hub_sellers"
+                        }
+                      ],
+                      "title" : "Express"
+                    },
+                    {
+                      "id" : "charge",
+                      "shortcuts" : [
+                        {
+                          "content_id" : "hub_charge_pt",
+                          "id" : "hub_charge",
+                          "event_data" : {
+                            "position" : 0,
+                            "enabled" : true,
+                            "group_id" : "charge",
+                            "content_id" : "hub_charge_pt",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 2,
+                            "component_id" : "hub_charge",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcut_hub_charge",
+                            "icon_color" : "#475EE8"
+                          },
+                          "title" : "Cobrar agora",
+                          "link" : "mercadopago:\/\/start_new_payment?additional_info=shortcuts&from=mp_hub_sellers"
+                        },
+                        {
+                          "content_id" : "general_mlb",
+                          "id" : "charge_point",
+                          "event_data" : {
+                            "position" : 1,
+                            "enabled" : true,
+                            "group_id" : "charge",
+                            "content_id" : "general_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 2,
+                            "component_id" : "charge_point",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_charge_point_mlm_mlb_v2",
+                            "icon_color" : "#475EE8"
+                          },
+                          "title" : "Cobrar\ncom Point",
+                          "link" : "mercadopago:\/\/start_new_payment?additional_info=shortcuts&from=mp_hub_sellers&method=point"
+                        },
+                        {
+                          "content_id" : "webview_mlb_ios",
+                          "id" : "charge_link",
+                          "event_data" : {
+                            "position" : 2,
+                            "enabled" : true,
+                            "group_id" : "charge",
+                            "content_id" : "webview_mlb_ios",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 2,
+                            "component_id" : "charge_link",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_charge_link",
+                            "icon_color" : "#475EE8"
+                          },
+                          "title" : "Cobrar com\nlink",
+                          "link" : "mercadopago:\/\/webview?OPV=fend&additional_info=shortcuts&from=mp_hub_sellers&hides_bottom_bar=true&navigation_icon=boton-tulink&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Ftools%2Flist%3Forigin%3Dapp"
+                        },
+                        {
+                          "content_id" : "general_mlb_pix",
+                          "id" : "charge_qr",
+                          "event_data" : {
+                            "position" : 3,
+                            "enabled" : true,
+                            "group_id" : "charge",
+                            "content_id" : "general_mlb_pix",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 2,
+                            "component_id" : "charge_qr",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_charge_qr",
+                            "icon_color" : "#475EE8"
+                          },
+                          "title" : "Cobrar com\nQR ou Pix",
+                          "link" : "mercadopago:\/\/start_new_payment?additional_info=shortcuts&from=mp_hub_sellers&method=qr"
+                        },
+                        {
+                          "content_id" : "general",
+                          "id" : "charge_caixa",
+                          "event_data" : {
+                            "position" : 4,
+                            "enabled" : true,
+                            "group_id" : "charge",
+                            "content_id" : "general",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 2,
+                            "component_id" : "charge_caixa",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_charge_caixa",
+                            "icon_color" : "#475EE8"
+                          },
+                          "title" : "Cobrar com\ndébito Caixa",
+                          "link" : "mercadopago:\/\/start_new_payment?additional_info=shortcuts&from=mp_hub_sellers&method=caixa"
+                        }
+                      ],
+                      "title" : "Cobrar"
+                    },
+                    {
+                      "id" : "pix",
+                      "shortcuts" : [
+                        {
+                          "content_id" : "general",
+                          "id" : "pix",
+                          "event_data" : {
+                            "position" : 0,
+                            "enabled" : true,
+                            "group_id" : "pix",
+                            "content_id" : "general",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 3,
+                            "component_id" : "pix",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_asset_pix_filled",
+                            "icon_color" : "#31DED2"
+                          },
+                          "title" : "Área Pix",
+                          "link" : "mercadopago:\/\/money-out\/accounts\/pix\/home?additional_info=shortcuts&from=mp_hub_sellers"
+                        },
+                        {
+                          "content_id" : "general_mlb",
+                          "id" : "pix_money_transfer",
+                          "event_data" : {
+                            "position" : 1,
+                            "enabled" : true,
+                            "group_id" : "pix",
+                            "content_id" : "general_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 3,
+                            "component_id" : "pix_money_transfer",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_money_out",
+                            "icon_color" : "#31DED2"
+                          },
+                          "title" : "Transferir dinheiro",
+                          "link" : "mercadopago:\/\/money-out\/home?additional_info=shortcuts&from=mp_hub_sellers"
+                        },
+                        {
+                          "content_id" : "general_mlb_native_support",
+                          "id" : "pix_copy_paste",
+                          "event_data" : {
+                            "position" : 2,
+                            "enabled" : true,
+                            "group_id" : "pix",
+                            "content_id" : "general_mlb_native_support",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 3,
+                            "component_id" : "pix_copy_paste",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_asset_copy",
+                            "icon_color" : "#31DED2"
+                          },
+                          "title" : "Copia e cola Pix",
+                          "link" : "mercadopago:\/\/instore\/copy_paste?additional_info=shortcuts&from=mp_hub_sellers"
+                        },
+                        {
+                          "content_id" : "general_mlb",
+                          "id" : "pix_qr",
+                          "event_data" : {
+                            "position" : 3,
+                            "enabled" : true,
+                            "group_id" : "pix",
+                            "content_id" : "general_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 3,
+                            "component_id" : "pix_qr",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_asset_qr",
+                            "icon_color" : "#31DED2"
+                          },
+                          "title" : "Pagar com QR Pix",
+                          "link" : "mercadopago:\/\/instore\/scan_qr\/?additional_info=shortcuts&from=mp_hub_sellers"
+                        },
+                        {
+                          "content_id" : "general_mlb_new_hub",
+                          "id" : "pix_deposit_money",
+                          "event_data" : {
+                            "position" : 4,
+                            "enabled" : true,
+                            "group_id" : "pix",
+                            "content_id" : "general_mlb_new_hub",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 3,
+                            "component_id" : "pix_deposit_money",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_money_in",
+                            "icon_color" : "#31DED2"
+                          },
+                          "title" : "Depositar dinheiro",
+                          "link" : "mercadopago:\/\/money-in\/pix_keys\/router?additional_info=shortcuts&from=mp_hub_sellers"
+                        }
+                      ],
+                      "title" : "Fazer e receber um Pix"
+                    },
+                    {
+                      "id" : "seller_pricing",
+                      "shortcuts" : [
+                        {
+                          "content_id" : "general_162_mlb",
+                          "id" : "business_fees_installments",
+                          "event_data" : {
+                            "position" : 0,
+                            "enabled" : true,
+                            "group_id" : "seller_pricing",
+                            "content_id" : "general_162_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 4,
+                            "component_id" : "business_fees_installments",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_business_fees_installments_v2",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Custos",
+                          "link" : "mercadopago:\/\/pricing_section?additional_info=shortcuts&from=mp_hub_sellers"
+                        },
+                        {
+                          "content_id" : "general_mlb",
+                          "id" : "business_costs_simulator",
+                          "event_data" : {
+                            "position" : 1,
+                            "enabled" : true,
+                            "group_id" : "seller_pricing",
+                            "content_id" : "general_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 4,
+                            "component_id" : "business_costs_simulator",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_business_costs_simulator_v3",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Simulador\nde custos",
+                          "link" : "mercadopago:\/\/webview\/?OPV=fend&additional_info=shortcuts&authentication_mode=required&from=mp_hub_sellers&title=Simulador%20de%20custos&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcost-simulator&use_web_title=false"
+                        },
+                        {
+                          "content_id" : "business_psj_mlb",
+                          "id" : "business_psj",
+                          "event_data" : {
+                            "position" : 2,
+                            "enabled" : true,
+                            "group_id" : "seller_pricing",
+                            "content_id" : "business_psj_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 4,
+                            "component_id" : "business_psj",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_asset_psj",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Parcelar sem juros",
+                          "link" : "mercadopago:\/\/webview?OPV=fend&additional_info=shortcuts&authenticate=true&collaborator_validation_mode=fend&from=mp_hub_sellers&title=Oferecer%20parcelamento%20sem%20juros&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcosts-section%2Fpsj&use_web_title=false"
+                        }
+                      ],
+                      "title" : "Custos"
+                    },
+                    {
+                      "id" : "seller_business",
+                      "shortcuts" : [
+                        {
+                          "content_id" : "general_mlb",
+                          "id" : "business_dashboard",
+                          "event_data" : {
+                            "position" : 0,
+                            "enabled" : true,
+                            "group_id" : "seller_business",
+                            "content_id" : "general_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 5,
+                            "component_id" : "business_dashboard",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_business_dashboard_v2",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Métricas do\nseu negócio",
+                          "link" : "mercadopago:\/\/dashboard?additional_info=shortcuts&from=mp_hub_sellers"
+                        },
+                        {
+                          "content_id" : "business_reporting_mlb",
+                          "id" : "business_reporting",
+                          "event_data" : {
+                            "position" : 1,
+                            "enabled" : true,
+                            "group_id" : "seller_business",
+                            "content_id" : "business_reporting_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 5,
+                            "component_id" : "business_reporting",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_hub_seller_asset_reporting",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Extratos",
+                          "link" : "mercadopago:\/\/webview\/?additional_info=shortcuts&from=mp_hub_sellers&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fbalance%2Freports&webkit-engine=2"
+                        },
+                        {
+                          "content_id" : "business_billing_reports_mlb",
+                          "id" : "business_billing_reports",
+                          "event_data" : {
+                            "position" : 2,
+                            "enabled" : true,
+                            "group_id" : "seller_business",
+                            "content_id" : "business_billing_reports_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 5,
+                            "component_id" : "business_billing_reports",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_asset_billing_reports",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Relatórios e faturamento",
+                          "link" : "mercadopago:\/\/webview\/?OPV=fend&additional_info=shortcuts&authentication_mode=required&collaborator_validation_mode=fend&from=mp_hub_sellers&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fbilling%2Fsummary"
+                        },
+                        {
+                          "content_id" : "general_mlb",
+                          "id" : "business_pos_management",
+                          "event_data" : {
+                            "position" : 3,
+                            "enabled" : true,
+                            "group_id" : "seller_business",
+                            "content_id" : "general_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 5,
+                            "component_id" : "business_pos_management",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_business_pos_management_v2",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Gestão de\ncaixa",
+                          "link" : "mercadopago:\/\/cash_balance\/opt_in?additional_info=shortcuts&from=mp_hub_sellers"
+                        },
+                        {
+                          "content_id" : "general_mlb",
+                          "id" : "business_stores_pos",
+                          "event_data" : {
+                            "position" : 4,
+                            "enabled" : true,
+                            "group_id" : "seller_business",
+                            "content_id" : "general_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 5,
+                            "component_id" : "business_stores_pos",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_business_stores_pos_v3",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Lojas e\ncaixas",
+                          "link" : "mercadopago:\/\/stores_pos?additional_info=shortcuts&from=mp_hub_sellers"
+                        },
+                        {
+                          "content_id" : "business_point_devices_mlb",
+                          "id" : "business_point_devices",
+                          "event_data" : {
+                            "position" : 5,
+                            "enabled" : true,
+                            "group_id" : "seller_business",
+                            "content_id" : "business_point_devices_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 5,
+                            "component_id" : "business_point_devices",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_asset_point_devices",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Suas maquininhas Point",
+                          "link" : "mercadopago:\/\/webview\/?OPV=fend&additional_info=shortcuts&collaborator_validation_mode=fend&from=mp_hub_sellers&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fpoint%2Fdevices%2Fkinds"
+                        },
+                        {
+                          "content_id" : "general_mlb",
+                          "id" : "business_colaborators",
+                          "event_data" : {
+                            "position" : 6,
+                            "enabled" : true,
+                            "group_id" : "seller_business",
+                            "content_id" : "general_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 5,
+                            "component_id" : "business_colaborators",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_business_colaborators_v2",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Colaboradores",
+                          "link" : "mercadopago:\/\/webview\/?OPV=fend&additional_info=shortcuts&authentication_mode=required&bar_left_button_style=back&bar_right_button_icon=ic_help&collaborator_validation_mode=fend&from=mp_hub_sellers&hides_bottom_bar=true&refresh_mode=pull&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcollaborators&webkit-engine=2&wk2-android-version=2.249.4&wk2-ios-version=2.249.4"
+                        },
+                        {
+                          "content_id" : "general_mlb",
+                          "id" : "business_catalog",
+                          "event_data" : {
+                            "position" : 7,
+                            "enabled" : true,
+                            "group_id" : "seller_business",
+                            "content_id" : "general_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 5,
+                            "component_id" : "business_catalog",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_business_catalog_v2",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Seus produtos",
+                          "link" : "mercadopago:\/\/webview\/?OPV=fend&additional_info=shortcuts&collaborator_validation_mode=fend&from=mp_hub_sellers&hides_bottom_bar=true&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fanuncios%2Flista%2Floja"
+                        },
+                        {
+                          "content_id" : "mlb_2_124",
+                          "id" : "business_discounts_admin",
+                          "event_data" : {
+                            "position" : 8,
+                            "enabled" : true,
+                            "group_id" : "seller_business",
+                            "content_id" : "mlb_2_124",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 5,
+                            "component_id" : "business_discounts_admin",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_business_discounts_admin",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Administrar\ncampanhas",
+                          "link" : "mercadopago:\/\/webview\/?OPV=fend&additional_info=shortcuts&authentication_mode=required&from=mp_hub_sellers&hides_bottom_bar=true&toolbar_elevation=none&url=https%3A%2F%2Fwww.mercadopago.com.br%2Finstore%2Fself-service-discounts%3Ffrom%3Dshortcut&use_web_title=true"
+                        }
+                      ],
+                      "title" : "Gestão do negócio"
+                    },
+                    {
+                      "id" : "mgm",
+                      "shortcuts" : [
+                        {
+                          "content_id" : "general_mlb",
+                          "id" : "mgm_point",
+                          "event_data" : {
+                            "position" : 0,
+                            "enabled" : true,
+                            "group_id" : "mgm",
+                            "content_id" : "general_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 6,
+                            "component_id" : "mgm_point",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_mgm_point_mlbmlm",
+                            "icon_color" : "#F2AB39"
+                          },
+                          "title" : "Recomendar\na Point",
+                          "link" : "mercadopago:\/\/webview?additional_info=shortcuts&from=mp_hub_sellers&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmp%2Fconvide-e-ganhe%2Fwebview"
+                        },
+                        {
+                          "content_id" : "general_mlb_share",
+                          "id" : "mgm_payer",
+                          "event_data" : {
+                            "position" : 1,
+                            "enabled" : true,
+                            "group_id" : "mgm",
+                            "content_id" : "general_mlb_share",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 6,
+                            "component_id" : "mgm_payer",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_shortcuts_mgm_payer",
+                            "icon_color" : "#F2AB39"
+                          },
+                          "title" : "Indicar\no app",
+                          "link" : "mercadopago:\/\/webview?additional_info=shortcuts&from=mp_hub_sellers&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmp%2Fconvide-e-ganhe%3FisActive%3D123"
+                        }
+                      ],
+                      "title" : "Convide e ganhe"
+                    },
+                    {
+                      "id" : "seller_information",
+                      "shortcuts" : [
+                        {
+                          "content_id" : "news_mlb",
+                          "id" : "business_news",
+                          "event_data" : {
+                            "position" : 0,
+                            "enabled" : true,
+                            "group_id" : "seller_information",
+                            "content_id" : "news_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 7,
+                            "component_id" : "business_news",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "cdn_shortcut_your_business",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Novidades",
+                          "link" : "mercadopago:\/\/webview\/?OPV=fend&additional_info=shortcuts&authentication_mode=required&from=mp_hub_sellers&title=Novidades&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fnews&use_web_title=false"
+                        },
+                        {
+                          "content_id" : "business_cdv_mlb",
+                          "id" : "business_cdv",
+                          "event_data" : {
+                            "position" : 1,
+                            "enabled" : true,
+                            "group_id" : "seller_information",
+                            "content_id" : "business_cdv_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 7,
+                            "component_id" : "business_cdv",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_asset_blog",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Blog",
+                          "link" : "mercadopago:\/\/webview\/?additional_info=shortcuts&back_action=close&back_style=cross&from=mp_hub_sellers&url=https%3A%2F%2Fconteudo.mercadopago.com.br%3Futm_campaign%3D%255BMP%255D%2520Deep%2520Link%26utm_source%3Dapp-blog%26utm_medium%3Dapp%26utm_term%3Dapp-blog%26utm_content%3Dapp-blog"
+                        }
+                      ],
+                      "title" : "Conteúdo"
+                    },
+                    {
+                      "id" : "seller_configuration",
+                      "shortcuts" : [
+                        {
+                          "content_id" : "business_configuration_mlb",
+                          "id" : "business_configuration",
+                          "event_data" : {
+                            "position" : 0,
+                            "enabled" : true,
+                            "group_id" : "seller_configuration",
+                            "content_id" : "business_configuration_mlb",
+                            "has_label" : false,
+                            "has_aware" : false,
+                            "is_favorite" : false,
+                            "preset_id" : "general_mlb",
+                            "group_position" : 8,
+                            "component_id" : "business_configuration",
+                            "user_profile" : "newbie"
+                          },
+                          "image_style" : {
+                            "background_color" : "#FFFFFF",
+                            "icon" : "wallet_home_asset_configuration",
+                            "icon_color" : "#578474"
+                          },
+                          "title" : "Configuração",
+                          "link" : "mercadopago:\/\/business-config\/landing?additional_info=shortcuts&from=mp_hub_sellers"
+                        }
+                      ],
+                      "title" : "Configuração"
+                    }
+                  ],
+                  "tracking_info" : {
+                    "events" : {
+                      "print" : {
+                        "stream" : "component_prints",
+                        "event_data" : {
+        
+                        }
+                      },
+                      "pull" : {
+                        "stream" : "melidata",
+                        "event_data" : {
+        
+                        }
+                      },
+                      "show" : {
+                        "stream" : "melidata",
+                        "event_data" : {
+        
+                        }
+                      }
+                    }
+                  }
+                },
+                "view_more" : {
+                  "accessibility_text" : "Mostrar mais acessos",
+                  "content_id" : "default",
+                  "id" : "view_more",
+                  "event_data" : {
+                    "position" : 7,
+                    "enabled" : true,
+                    "has_label" : false,
+                    "content_id" : "default",
+                    "is_favorite" : false,
+                    "has_aware" : false,
+                    "preset_id" : "general_mlb",
+                    "user_profile" : "newbie",
+                    "component_id" : "view_more"
+                  },
+                  "image_style" : {
+                    "background_color" : "#FFFFFF",
+                    "icon" : "wallet_home_view_more",
+                    "icon_color" : "#595959"
+                  },
+                  "link" : "mercadopago:\/\/shortcuts_sheet\/?section_id=shortcuts&page_id=mp_hub_sellers",
+                  "title" : "Ver mais"
+                },
+                "favorites" : [
+                  {
+                    "content_id" : "general_mlb",
+                    "id" : "business_costs_simulator",
+                    "event_data" : {
+                      "position" : 0,
+                      "enabled" : true,
+                      "group_id" : "seller_pricing",
+                      "content_id" : "general_mlb",
+                      "has_label" : false,
+                      "has_aware" : false,
+                      "is_favorite" : true,
+                      "preset_id" : "general_mlb",
+                      "group_position" : 4,
+                      "component_id" : "business_costs_simulator",
+                      "user_profile" : "newbie"
+                    },
+                    "image_style" : {
+                      "background_color" : "#FFFFFF",
+                      "icon" : "wallet_home_shortcuts_business_costs_simulator_v3",
+                      "icon_color" : "#578474"
+                    },
+                    "title" : "Simulador\nde custos",
+                    "link" : "mercadopago:\/\/webview\/?OPV=fend&additional_info=shortcuts&authentication_mode=required&from=mp_hub_sellers&title=Simulador%20de%20custos&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcost-simulator&use_web_title=false"
+                  },
+                  {
+                    "content_id" : "general_162_mlb",
+                    "id" : "business_fees_installments",
+                    "event_data" : {
+                      "position" : 1,
+                      "enabled" : true,
+                      "group_id" : "seller_pricing",
+                      "content_id" : "general_162_mlb",
+                      "has_label" : false,
+                      "has_aware" : false,
+                      "is_favorite" : true,
+                      "preset_id" : "general_mlb",
+                      "group_position" : 4,
+                      "component_id" : "business_fees_installments",
+                      "user_profile" : "newbie"
+                    },
+                    "image_style" : {
+                      "background_color" : "#FFFFFF",
+                      "icon" : "wallet_home_shortcuts_business_fees_installments_v2",
+                      "icon_color" : "#578474"
+                    },
+                    "title" : "Custos",
+                    "link" : "mercadopago:\/\/pricing_section?additional_info=shortcuts&from=mp_hub_sellers"
+                  },
+                  {
+                    "content_id" : "business_psj_mlb",
+                    "id" : "business_psj",
+                    "event_data" : {
+                      "position" : 2,
+                      "enabled" : true,
+                      "group_id" : "seller_pricing",
+                      "content_id" : "business_psj_mlb",
+                      "has_label" : false,
+                      "has_aware" : false,
+                      "is_favorite" : true,
+                      "preset_id" : "general_mlb",
+                      "group_position" : 4,
+                      "component_id" : "business_psj",
+                      "user_profile" : "newbie"
+                    },
+                    "image_style" : {
+                      "background_color" : "#FFFFFF",
+                      "icon" : "wallet_home_asset_psj",
+                      "icon_color" : "#578474"
+                    },
+                    "title" : "Parcelar sem juros",
+                    "link" : "mercadopago:\/\/webview?OPV=fend&additional_info=shortcuts&authenticate=true&collaborator_validation_mode=fend&from=mp_hub_sellers&title=Oferecer%20parcelamento%20sem%20juros&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcosts-section%2Fpsj&use_web_title=false"
+                  },
+                  {
+                    "content_id" : "business_reporting_mlb",
+                    "id" : "business_reporting",
+                    "event_data" : {
+                      "position" : 3,
+                      "enabled" : true,
+                      "group_id" : "seller_business",
+                      "content_id" : "business_reporting_mlb",
+                      "has_label" : false,
+                      "has_aware" : false,
+                      "is_favorite" : true,
+                      "preset_id" : "general_mlb",
+                      "group_position" : 5,
+                      "component_id" : "business_reporting",
+                      "user_profile" : "newbie"
+                    },
+                    "image_style" : {
+                      "background_color" : "#FFFFFF",
+                      "icon" : "wallet_hub_seller_asset_reporting",
+                      "icon_color" : "#578474"
+                    },
+                    "title" : "Extratos",
+                    "link" : "mercadopago:\/\/webview\/?additional_info=shortcuts&from=mp_hub_sellers&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fbalance%2Freports&webkit-engine=2"
+                  },
+                  {
+                    "content_id" : "news_mlb",
+                    "id" : "business_news",
+                    "event_data" : {
+                      "position" : 4,
+                      "enabled" : true,
+                      "group_id" : "seller_information",
+                      "content_id" : "news_mlb",
+                      "has_label" : false,
+                      "has_aware" : false,
+                      "is_favorite" : true,
+                      "preset_id" : "general_mlb",
+                      "group_position" : 7,
+                      "component_id" : "business_news",
+                      "user_profile" : "newbie"
+                    },
+                    "image_style" : {
+                      "background_color" : "#FFFFFF",
+                      "icon" : "cdn_shortcut_your_business",
+                      "icon_color" : "#578474"
+                    },
+                    "title" : "Novidades",
+                    "link" : "mercadopago:\/\/webview\/?OPV=fend&additional_info=shortcuts&authentication_mode=required&from=mp_hub_sellers&title=Novidades&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fnews&use_web_title=false"
+                  },
+                  {
+                    "content_id" : "general_mlb",
+                    "id" : "business_colaborators",
+                    "event_data" : {
+                      "position" : 5,
+                      "enabled" : true,
+                      "group_id" : "seller_business",
+                      "content_id" : "general_mlb",
+                      "has_label" : false,
+                      "has_aware" : false,
+                      "is_favorite" : true,
+                      "preset_id" : "general_mlb",
+                      "group_position" : 5,
+                      "component_id" : "business_colaborators",
+                      "user_profile" : "newbie"
+                    },
+                    "image_style" : {
+                      "background_color" : "#FFFFFF",
+                      "icon" : "wallet_home_shortcuts_business_colaborators_v2",
+                      "icon_color" : "#578474"
+                    },
+                    "title" : "Colaboradores",
+                    "link" : "mercadopago:\/\/webview\/?OPV=fend&additional_info=shortcuts&authentication_mode=required&bar_left_button_style=back&bar_right_button_icon=ic_help&collaborator_validation_mode=fend&from=mp_hub_sellers&hides_bottom_bar=true&refresh_mode=pull&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fcollaborators&webkit-engine=2&wk2-android-version=2.249.4&wk2-ios-version=2.249.4"
+                  }
+                ],
+                "shortcuts" : [
+                  {
+                    "id" : "business_shortcut",
+                    "content_id" : "MLB_MP_BANN-MP_SHORT_P_ALL_RET_PAY_14062023_BIOLIBRE",
+                    "image_style" : {
+                      "background_color" : "#FFFFFF",
+                      "icon" : "biolibre"
+                    },
+                    "event_data" : {
+                      "is_favorite" : false,
+                      "preset_id" : "general_mlb",
+                      "position" : 6,
+                      "has_label" : true,
+                      "bu_line" : "8",
+                      "content_id" : "MLB_MP_BANN-MP_SHORT_P_ALL_RET_PAY_14062023_BIOLIBRE",
+                      "user_profile" : "newbie",
+                      "audience" : "all",
+                      "logic" : "campaigns",
+                      "bu" : "4",
+                      "component_id" : "business_shortcut",
+                      "enabled" : true,
+                      "has_aware" : false,
+                      "flow" : "15"
+                    },
+                    "link" : "mercadopago:\/\/webview\/?url=https:\/\/mercadopago.com.br\/link-in-bio\/bio\/onboarding&from=MLB_MP_BANN-MP_SHORT_P_ALL_RET_PAY_14062023_BIOLIBRE",
+                    "label" : {
+                      "background_color" : "#009EE3",
+                      "border_color" : "#009EE3",
+                      "text_color" : "#FFFFFF",
+                      "text" : "NOVO"
+                    },
+                    "title" : "Bio Livre"
+                  }
+                ],
+                "event_data" : {
+                  "has_view_more" : true,
+                  "preset_id" : "general_mlb",
+                  "favorite_ids" : [
+                    "business_costs_simulator",
+                    "business_fees_installments",
+                    "business_psj",
+                    "business_reporting",
+                    "business_news",
+                    "business_colaborators"
+                  ],
+                  "shortcut_ids" : [
+                    "business_shortcut"
+                  ]
+                },
+                "disable_ripple" : false
+              },
+              "ordinal" : 7,
+              "type" : "SHORTCUTS",
+              "partial" : false
+            }
+          ],
+          "tracking_info" : {
+            "event_data" : {
+              "metadata_user" : {
+                "is_minor" : false,
+                "segment" : "individual",
+                "page_id" : "mp_hub_sellers",
+                "type" : "newbie",
+                "character" : "silver"
+              }
+            },
+            "events" : {
+              "print" : {
+                "stream" : "component_prints",
+                "event_data" : {
+        
+                }
+              },
+              "pull" : {
+                "stream" : "melidata",
+                "event_data" : {
+        
+                }
+              },
+              "show" : {
+                "stream" : "melidata",
+                "event_data" : {
+        
+                }
+              }
+            }
+          },
+          "header" : {
+            "avatar" : {
+              "image" : "https:\/\/mla-s1-p.mlstatic.com\/885037-MLA54778695004_032023-O.jpg",
+              "loyalty" : {
+                "empty" : "#7AD4FB",
+                "percentage_level" : 0,
+                "level" : 1,
+                "color_level" : "#1DBA56",
+                "fill" : "#FFFFFF"
+              }
+            },
+            "buttons" : [
+              {
+                "id" : "hub_sellers_help",
+                "icon" : "wallet_home_help_qm_header",
+                "accessibility_text" : "Ajuda",
+                "event_data" : {
+                  "id" : "hub_sellers_help",
+                  "link" : "mercadopago:\/\/cx\/help?url=https%3a%2f%2fwww.mercadopago.com.br%2fajuda%2f19083"
+                },
+                "button_style" : {
+                  "type" : "oval",
+                  "padding_left" : 8,
+                  "padding_right" : 0
+                },
+                "link" : "mercadopago:\/\/cx\/help?url=https%3a%2f%2fwww.mercadopago.com.br%2fajuda%2f19083"
+              }
+            ],
+            "accessibility_text" : "Seu negócio",
+            "header_style" : {
+              "type" : "default"
+            },
+            "title" : "Seu negócio",
+            "event_data" : {
+              "link" : "mercadopago:\/\/webview\/?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmercado-pontos%23origin%3Dwidget_header&title=Mercado%20Pontos&use_web_title=false&back_style=arrow&back_action=close&swipe_gesture=true&loading_mode=none&authentication_mode=required",
+              "buttons" : [
+                "hub_sellers_help"
+              ]
+            },
+            "link" : "mercadopago:\/\/webview\/?url=https%3A%2F%2Fwww.mercadopago.com.br%2Fmercado-pontos%23origin%3Dwidget_header&title=Mercado%20Pontos&use_web_title=false&back_style=arrow&back_action=close&swipe_gesture=true&loading_mode=none&authentication_mode=required"
+          }
+        }
+        
+## WalkThough Hub Benefits [/mpmobile/home/walkthrough]
+
+### Get WT [GET]
+
++ Response 200 (application/json)
+
+        {
+          "id": "WT_MLB_NOTIFICATIONS_HUB_BENEFITS_IOS",
+          "steps": [
+            {
+              "button": {
+                "style": "blue",
+                "text": "Seguinte"
+              },
+              "id": "benefits_hub_tabbar_1",
+              "title": "Conheça a nova seção de Benefícios",
+              "style_frame": {
+                "type": "rectangle",
+                "arrow": true
+              },
+              "event_data": {
+                "id": "WT_MLB_NOTIFICATIONS_HUB_BENEFITS_IOS",
+                "step_id": "benefits_hub_tabbar_1",
+                "step_number": 1
+              },
+              "description": "Acesse de maneira rápida todos os benefícios exclusivos disponíveis para você.",
+              "component_id": "component.id.no.exist.3",
+              "close": true
+            },
+            {
+              "button": {
+                "style": "blue",
+                "text": "Entendi"
+              },
+              "id": "header.notifications_1",
+              "title": "Notificações mudou de lugar",
+              "style_frame": {
+                "type": "MENU_ITEM",
+                "arrow": true
+              },
+              "event_data": {
+                "id": "WT_MLB_NOTIFICATIONS_HUB_BENEFITS_IOS",
+                "step_id": "header.notifications_1",
+                "step_number": 2
+              },
+              "description": "Agora ela vai estar na parte superior da tela, ao lado de Ajuda.",
+              "component_id": "header.notifications",
+              "close": true
+            }
+          ],
+          "audiences": null,
+          "event_data": {
+            "id": "WT_MLB_NOTIFICATIONS_HUB_BENEFITS_IOS",
+            "total_steps": 2,
+            "step_ids": ["benefits_hub_tabbar_1", "header.notifications_1"]
+          },
+          "excluded_audiences": null,
+          "section_id": "benefits_hub_tabbar",
+          "component_id": "bottomNavigationView",
+          "index": 0
         }
